@@ -35,15 +35,18 @@ You run once each morning. Produce a first-principles learning briefing.
    - **Why it matters**
    - Source link (the primary one).
 
-6. **Publish.** Update the SINGLE briefing Artifact IN PLACE (same URL — pass
-   its `url`, find it via Artifact `action: list` if unknown). Page: dated
-   title, three sections (Tech / Science / World), 9 items, light/dark aware.
-   Stable URL: https://claude.ai/code/artifact/f5f8e349-8624-43fe-8c39-499027b4497c
-   (pass this as `url` so the same page is updated in place every day).
+6. **Publish (GitHub Pages).** Overwrite `index.html` in the repo root with the
+   new briefing page: dated title, three sections (Tech / Science / World), 9
+   items, light/dark aware, source links. Keep the same visual design as the
+   existing `index.html` — replace only the content. GitHub Pages serves it at
+   the STABLE URL **https://monistdavid.github.io/knowledge/** (never changes).
 
 7. **Persist.** Write `briefings/YYYY-MM-DD.md` (same content as markdown).
    Append the 9 item identifiers to `seen.md`; prune entries older than 30 days.
-   `git commit -m "Briefing YYYY-MM-DD"` and `git push`.
+   Then `git add -A && git commit -m "Briefing YYYY-MM-DD" && git push`. The push
+   is what makes both the archive and the live page update — it is required.
 
-8. **Notify (best-effort).** Email the user (mimi.ai.system@gmail.com) the
-   stable link + the 9 headlines. If Gmail is unavailable, skip silently.
+8. **Notify.** Email the user (mimi.ai.system@gmail.com) via the Gmail connector:
+   the stable link (https://monistdavid.github.io/knowledge/) plus the 9
+   headlines. If Gmail is unavailable, skip silently — the page is the reliable
+   channel.
