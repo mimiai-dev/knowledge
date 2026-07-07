@@ -1,0 +1,170 @@
+<title>Daily Knowledge Briefing — 2026-07-07</title>
+<style>
+  :root{
+    --paper:#f5f6f8; --raise:#ffffff; --ink:#1b2230; --muted:#5b6472;
+    --hair:#dfe3e9; --faint:#eef0f4;
+    --tech:#0f766e; --sci:#4338ca; --world:#b45309;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#12151b; --raise:#181c24; --ink:#e7eaf0; --muted:#98a2b3;
+      --hair:#28303c; --faint:#1e232c;
+      --tech:#2dd4bf; --sci:#a5b4fc; --world:#f59e0b;
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#f5f6f8; --raise:#ffffff; --ink:#1b2230; --muted:#5b6472;
+    --hair:#dfe3e9; --faint:#eef0f4;
+    --tech:#0f766e; --sci:#4338ca; --world:#b45309;
+  }
+  :root[data-theme="dark"]{
+    --paper:#12151b; --raise:#181c24; --ink:#e7eaf0; --muted:#98a2b3;
+    --hair:#28303c; --faint:#1e232c;
+    --tech:#2dd4bf; --sci:#a5b4fc; --world:#f59e0b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin:0 auto;padding:clamp(1.5rem,4vw,3.5rem) 1.25rem 5rem}
+
+  /* Masthead */
+  .mast{border-bottom:2px solid var(--ink);padding-bottom:1rem;margin-bottom:2.5rem}
+  .kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .kick .sig{color:var(--ink)}
+  h1{font-size:clamp(2rem,6vw,3rem);line-height:1.05;margin:.5rem 0 .3rem;
+    font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+  .sub{font-family:var(--mono);font-size:.8rem;color:var(--muted);
+    font-variant-numeric:tabular-nums}
+
+  /* Section */
+  .sec{margin-top:3rem}
+  .sec-head{display:flex;align-items:baseline;gap:.75rem;margin-bottom:1.25rem}
+  .sec-head .no{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+  .sec-head h2{font-family:var(--mono);font-size:.82rem;letter-spacing:.16em;
+    text-transform:uppercase;margin:0;font-weight:600}
+  .sec-head .rule{flex:1;height:2px;border-radius:2px;background:var(--accent);opacity:.85}
+  .sec[data-b="tech"]{--accent:var(--tech)}
+  .sec[data-b="sci"]{--accent:var(--sci)}
+  .sec[data-b="world"]{--accent:var(--world)}
+
+  /* Item */
+  .item{background:var(--raise);border:1px solid var(--hair);border-left:3px solid var(--accent);
+    border-radius:4px;padding:1.4rem 1.5rem;margin-bottom:1.1rem}
+  .item h3{font-size:1.3rem;line-height:1.25;margin:.1rem 0 .9rem;font-weight:600;text-wrap:balance}
+  .beat{display:grid;grid-template-columns:5.5rem 1fr;gap:.9rem;padding:.55rem 0}
+  .beat + .beat{border-top:1px solid var(--faint)}
+  .beat .lab{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--accent);
+    text-transform:uppercase;padding-top:.3rem}
+  .beat .lab small{display:block;color:var(--muted);letter-spacing:.1em;font-size:.62rem;margin-top:.15rem}
+  .beat p{margin:0;font-size:1.02rem}
+  .src{margin-top:1rem;font-family:var(--mono);font-size:.74rem}
+  .src a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--hair)}
+  .src a:hover,.src a:focus{color:var(--accent);border-color:var(--accent)}
+  .src a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  @media (max-width:30rem){
+    .beat{grid-template-columns:1fr;gap:.25rem}
+    .beat .lab small{display:inline;margin-left:.4rem}
+  }
+  footer{margin-top:4rem;padding-top:1.25rem;border-top:1px solid var(--hair);
+    font-family:var(--mono);font-size:.72rem;color:var(--muted);line-height:1.7}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="kick"><span class="sig">📡 DISPATCH · Nº 001</span><span>3 TECH · 3 SCIENCE · 3 WORLD</span></div>
+    <h1>Daily Knowledge Briefing</h1>
+    <div class="sub">Tuesday, 7 July 2026 · first-principles · 第一性原理</div>
+  </header>
+
+  <section class="sec" data-b="tech">
+    <div class="sec-head"><span class="no">01</span><h2>Edge Tech</h2><span class="rule"></span></div>
+
+    <article class="item">
+      <h3>Nvidia's Vera Rubin NVL72 enters mass production</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Nvidia's next-generation rack-scale AI system — 72 Rubin GPUs lashed to Vera CPUs and run as a single machine — is now in production, claiming up to ~5× Blackwell on some workloads.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A modern AI "computer" is no longer one chip but a whole rack behaving as one accelerator. The real bottleneck is moving data <em>between</em> chips, so an NVLink fabric plus liquid cooling let 72 GPUs share memory at near-local speed. Useful compute scales with how tightly chips are coupled, not transistor count alone.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Frontier AI is now gated by rack-scale interconnect, power and cooling — not the individual GPU. Whoever integrates the rack best sets the pace.</p></div>
+      <div class="src"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-ceo-confirms-vera-rubin-nvl72-is-now-in-production-jensen-huang-uses-ces-keynote-to-announce-the-milestone">Tom's Hardware →</a></div>
+    </article>
+
+    <article class="item">
+      <h3>Intel's Xeon 6+ ships on the 18A process node</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Intel's "Clearwater Forest" server CPU — up to 288 efficiency cores, ~30% claimed per-thread gains — is its first high-volume test of the 18A (1.8nm-class) manufacturing process.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A "process node" sets how small and dense transistors are. 18A introduces gate-all-around transistors (RibbonFET) and backside power delivery — routing power <em>beneath</em> the transistors so the signal wiring above is less congested. Smaller, better-fed transistors mean more cores within the same power budget.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>If 18A yields well, Intel re-enters the leading-edge fab race it lost to TSMC — a shift that ripples through the entire chip supply chain, not just one CPU line.</p></div>
+      <div class="src"><a href="https://www.tomshardware.com/tech-industry/computex-2026-day-zero-wrap-up-nvidia-launches-rtx-spark-superchip-assault-on-laptop-and-desktop-markets-intel-readies-xeon-6">Tom's Hardware →</a></div>
+    </article>
+
+    <article class="item">
+      <h3>AgentGym2 benchmarks AI agents in messy, real-world conditions</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>A new arXiv benchmark evaluates LLM "agents" in de-idealized environments — noisy, ambiguous, production-like tasks — instead of the clean toy problems that flatter leaderboard scores.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A high score on a tidy benchmark says little about deployment, because real environments bring <em>distribution shift</em> — inputs unlike anything seen in training. Agent progress is really measured by how gracefully a system handles the unexpected, so the benchmark itself is the scientific instrument: a bad ruler hides real failure.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>As companies push agents into production, honest reliability testing under realistic conditions matters more than peak numbers on a curated set.</p></div>
+      <div class="src"><a href="https://arxiv.org/html/2607.05174v1">arXiv 2607.05174 →</a></div>
+    </article>
+  </section>
+
+  <section class="sec" data-b="sci">
+    <div class="sec-head"><span class="no">02</span><h2>Science</h2><span class="rule"></span></div>
+
+    <article class="item">
+      <h3>Blue perovskite LEDs hit record efficiency via engineered hydrogen bonds</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Researchers reached 22% external quantum efficiency for stable, saturated blue perovskite LEDs by using isomeric molecules to build hydrogen-bond networks inside and around the crystal.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Perovskites are cheap crystals that emit a pure color set by their bandgap. Blue is the hard one: it needs a wide bandgap and defects easily quench the light, so blue devices stayed dim and short-lived. Hydrogen bonds — weak, directional attractions — pin the lattice and heal defects, so more injected electrons leave as photons rather than heat. (Efficiency = photons out ÷ electrons in.)</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Blue is the missing leg of RGB; a stable, efficient blue unlocks cheap, printable, ultra-saturated displays.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10723-0">Nature →</a></div>
+    </article>
+
+    <article class="item">
+      <h3>A cosmic neutrino traced to a galaxy 11 billion years ago</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Aided by a gravitational lens, astronomers identified the likely source of a high-energy neutrino as a compact star-forming galaxy from "cosmic noon," 11 billion years in the past.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Neutrinos barely interact with matter, so they travel straight across the universe without being absorbed or deflected — unlike light. That makes them ideal messengers but almost impossible to catch or locate. Here a foreground galaxy's gravity magnified the source (lensing), making the identification possible for the first time at such distance.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Neutrino astronomy at cosmological distances opens a fresh window on how galaxies assembled themselves in the young universe.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41550-026-02904-8">Nature Astronomy →</a></div>
+    </article>
+
+    <article class="item">
+      <h3>A new histone mark ties metabolism directly to gene control</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Scientists found a new chemical tag on histone proteins — lysine pyruvylation — added by the enzymes HAT1/p300 and removed by SIRT3, linking the metabolite pyruvate to gene regulation.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>DNA wraps around histones, and chemical tags on those histones act as switches deciding which genes are readable — the "histone code." This tag is built from pyruvate, the end product of glycolysis (sugar breakdown). So the cell's metabolic state writes directly onto chromatin: what you burn for energy helps set which genes turn on.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A concrete molecular bridge between metabolism and epigenetics — with implications for cancer, aging, and how diet influences gene expression.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s42255-026-01561-5">Nature Metabolism →</a></div>
+    </article>
+  </section>
+
+  <section class="sec" data-b="world">
+    <div class="sec-head"><span class="no">03</span><h2>World</h2><span class="rule"></span></div>
+
+    <article class="item">
+      <h3>NATO leaders convene in Ankara as defense-spending pressure builds</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>President Trump and NATO leaders are meeting in Ankara, Turkey, for the annual summit, with the agenda dominated by pressure on allies to raise military spending.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>NATO is a collective-defense pact: under Article 5, an attack on one member is an attack on all. That guarantee only deters if members actually fund their militaries, so burden-sharing (the ~2%+-of-GDP target) is the recurring fault line — deterrence is credible only when capabilities are real, not promised.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Alliance cohesion and Europe's security posture hinge on whether spending pledges convert into actual capability.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/liveblog/2026/7/7/natos-turkiye-summit-live-trump-leaders-to-meet-in-ankara">Al Jazeera →</a></div>
+    </article>
+
+    <article class="item">
+      <h3>Super Typhoon Bavi devastates Rota in the Northern Marianas</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Bavi's eye passed directly over Rota with winds near 180 mph, knocking out power, water and communications for its ~1,500 residents. Two non-fatal injuries; no deaths reported.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A typhoon is a heat engine: warm ocean water evaporates, rises and condenses, releasing heat that lowers pressure and pulls in more air, which Earth's rotation spins into a vortex. Warmer seas mean more fuel, so storm intensity scales with ocean heat content — the mechanism behind climate-linked "super" typhoons.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Small island territories absorb outsized, slow-to-recover damage from intensifying storms — an infrastructure and climate-adaptation warning.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/05/g-s1-132052/guam-pacific-islands-brace-super-typhoon-bavi">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/6/super-typhoon-bavi-makes-landfall-on-us-pacific-islands">Al Jazeera →</a></div>
+    </article>
+
+    <article class="item">
+      <h3>Xi promotes two new PLA generals amid an anti-corruption purge</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Xi Jinping promoted generals Zhang Shuguang and Wang Gang as his long-running anti-graft campaign has thinned the Chinese military's top ranks.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>In a party-state, the military answers to the party, not the state. Promotions and purges are levers to guarantee loyalty: removing entrenched officers and elevating trusted ones concentrates control — though constant churn at the top can also dent readiness and signal internal insecurity.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Turbulence in the PLA's leadership bears on China's military capability and how confidently it might act in the region.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/04/g-s1-131994/chinas-military-promotes-2-new-generals-after-anti-corruption-purge-thins-ranks">NPR →</a></div>
+    </article>
+  </section>
+
+  <footer>
+    Sources vetted against an allowlist (arXiv · Nature · Tom's Hardware · NPR · Al Jazeera). Every claim links a primary or corroborated source.<br>
+    Assembled from the last ~24h · first-principles teaching, not headlines.
+  </footer>
+</div>
