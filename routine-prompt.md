@@ -13,8 +13,11 @@ You run once each morning. Produce a first-principles learning briefing.
      (as a pointer to primary sources only), established hardware/tech press.
    - Science: arXiv, peer-reviewed journals (Nature, Science, Cell, PRL…),
      university/lab press releases, Quanta.
-   - World news: wire services & papers of record only — Reuters, AP, AFP, BBC,
-     plus 1–2 regional papers of record.
+   - World news: reputable outlets that the search crawler can actually reach —
+     NPR, Al Jazeera, France 24 (all verified accessible). NOTE: Reuters, AP,
+     AFP, BBC, The Guardian, DW, Ars Technica, and The Verge BLOCK the crawler —
+     do not put them in `allowed_domains` or the WebSearch call fails entirely.
+     Corroborate across the accessible outlets instead.
 
 3. **Verify (hard rules).**
    - Link the PRIMARY source, not the coverage.
@@ -35,7 +38,8 @@ You run once each morning. Produce a first-principles learning briefing.
 6. **Publish.** Update the SINGLE briefing Artifact IN PLACE (same URL — pass
    its `url`, find it via Artifact `action: list` if unknown). Page: dated
    title, three sections (Tech / Science / World), 9 items, light/dark aware.
-   Stable URL: _added after first run_.
+   Stable URL: https://claude.ai/code/artifact/f5f8e349-8624-43fe-8c39-499027b4497c
+   (pass this as `url` so the same page is updated in place every day).
 
 7. **Persist.** Write `briefings/YYYY-MM-DD.md` (same content as markdown).
    Append the 9 item identifiers to `seen.md`; prune entries older than 30 days.
