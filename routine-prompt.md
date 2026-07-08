@@ -35,25 +35,17 @@ You run once each morning. Produce a first-principles learning briefing.
    - **Why it matters**
    - Source link (the primary one).
 
-6. **Compose the page.** Build the briefing as a full HTML document: dated
-   title, three sections (Tech / Science / World), 9 items, light/dark aware,
-   source links. Keep the same visual design as the existing `index.html` —
-   replace only the content. Save it as `index.html` in the repo root.
+6. **Publish the live page (REQUIRED).** Overwrite `index.html` in the repo root
+   with the new briefing: dated title, three sections (Tech / Science / World),
+   9 items, light/dark aware, source links. Keep the existing `index.html`'s
+   visual design (tokens, layout, 本质/原理/意义 three-beat) — replace only the
+   content.
 
-7. **Deliver by email (PRIMARY — this is the deliverable).** Email the user
-   (mimi.ai.system@gmail.com) via the Gmail connector. Send the FULL briefing as
-   the HTML body (the email itself is the readable page), subject
-   `Daily Knowledge Briefing — YYYY-MM-DD`. This step is REQUIRED and must
-   succeed; the email is how the user actually receives the briefing.
+7. **Persist + push (REQUIRED).** Write `briefings/YYYY-MM-DD.md` (markdown),
+   append the 9 identifiers to `seen.md` (prune >30 days), then
+   `git add -A && git commit -m "Briefing YYYY-MM-DD" && git push`. The push is
+   what refreshes the live page at **https://monistdavid.github.io/knowledge/**
+   and the archive — it must succeed. (Requires the repo's GitHub write access to
+   be connected to the cloud environment.)
 
-8. **Persist to git (BEST-EFFORT — do not block on it).** Also write
-   `briefings/YYYY-MM-DD.md` (markdown), append the 9 identifiers to `seen.md`
-   (prune >30 days), then try `git add -A && git commit -m "Briefing YYYY-MM-DD"
-   && git push`. If the push fails (no write credential), log it and continue —
-   the email already delivered. When GitHub write access is connected, this also
-   updates the archive, dedup state, and the live page at
-   https://monistdavid.github.io/knowledge/.
-
-**Dedup note:** read `seen.md` if present. If the git push has not been working
-(seen.md looks stale), lean on the ~24h freshness window and your own judgment to
-avoid repeats, since persistent state may be unavailable until write access is set up.
+No email. The live page is the sole delivery channel.
