@@ -35,18 +35,25 @@ You run once each morning. Produce a first-principles learning briefing.
    - **Why it matters**
    - Source link (the primary one).
 
-6. **Publish (GitHub Pages).** Overwrite `index.html` in the repo root with the
-   new briefing page: dated title, three sections (Tech / Science / World), 9
-   items, light/dark aware, source links. Keep the same visual design as the
-   existing `index.html` — replace only the content. GitHub Pages serves it at
-   the STABLE URL **https://monistdavid.github.io/knowledge/** (never changes).
+6. **Compose the page.** Build the briefing as a full HTML document: dated
+   title, three sections (Tech / Science / World), 9 items, light/dark aware,
+   source links. Keep the same visual design as the existing `index.html` —
+   replace only the content. Save it as `index.html` in the repo root.
 
-7. **Persist.** Write `briefings/YYYY-MM-DD.md` (same content as markdown).
-   Append the 9 item identifiers to `seen.md`; prune entries older than 30 days.
-   Then `git add -A && git commit -m "Briefing YYYY-MM-DD" && git push`. The push
-   is what makes both the archive and the live page update — it is required.
+7. **Deliver by email (PRIMARY — this is the deliverable).** Email the user
+   (mimi.ai.system@gmail.com) via the Gmail connector. Send the FULL briefing as
+   the HTML body (the email itself is the readable page), subject
+   `Daily Knowledge Briefing — YYYY-MM-DD`. This step is REQUIRED and must
+   succeed; the email is how the user actually receives the briefing.
 
-8. **Notify.** Email the user (mimi.ai.system@gmail.com) via the Gmail connector:
-   the stable link (https://monistdavid.github.io/knowledge/) plus the 9
-   headlines. If Gmail is unavailable, skip silently — the page is the reliable
-   channel.
+8. **Persist to git (BEST-EFFORT — do not block on it).** Also write
+   `briefings/YYYY-MM-DD.md` (markdown), append the 9 identifiers to `seen.md`
+   (prune >30 days), then try `git add -A && git commit -m "Briefing YYYY-MM-DD"
+   && git push`. If the push fails (no write credential), log it and continue —
+   the email already delivered. When GitHub write access is connected, this also
+   updates the archive, dedup state, and the live page at
+   https://monistdavid.github.io/knowledge/.
+
+**Dedup note:** read `seen.md` if present. If the git push has not been working
+(seen.md looks stale), lean on the ~24h freshness window and your own judgment to
+avoid repeats, since persistent state may be unavailable until write access is set up.
