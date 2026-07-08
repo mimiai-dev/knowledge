@@ -4,8 +4,9 @@ You run once each morning. Produce a first-principles learning briefing.
 
 ## Procedure
 
-1. **Load state.** `cd` into the repo, `git pull`. Read `seen.md` — never
-   re-teach anything listed there.
+1. **Load state.** `cd` into the repo. Switch to the live branch that GitHub
+   Pages serves: `git fetch origin claude/live && git checkout claude/live`.
+   Read `seen.md` — never re-teach anything listed there.
 
 2. **Research.** For each bucket, WebSearch for the most significant
    developments of the last ~24h. **Only** use these sources:
@@ -43,9 +44,9 @@ You run once each morning. Produce a first-principles learning briefing.
 
 7. **Persist + push (REQUIRED).** Write `briefings/YYYY-MM-DD.md` (markdown),
    append the 9 identifiers to `seen.md` (prune >30 days), then
-   `git add -A && git commit -m "Briefing YYYY-MM-DD" && git push`. The push is
-   what refreshes the live page at **https://monistdavid.github.io/knowledge/**
-   and the archive — it must succeed. (Requires the repo's GitHub write access to
-   be connected to the cloud environment.)
+   `git add -A && git commit -m "Briefing YYYY-MM-DD" && git push origin claude/live`.
+   You are on the `claude/live` branch (routines may push to `claude/*` by
+   default). The push to `claude/live` is what refreshes the live page at
+   **https://monistdavid.github.io/knowledge/** — it must succeed.
 
 No email. The live page is the sole delivery channel.
