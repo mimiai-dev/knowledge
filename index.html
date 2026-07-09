@@ -3,108 +3,105 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
   :root{
-    /* Riso spot inks on warm paper */
-    --paper:#fbf7ef; --card:#ffffff; --ink:#1d1b18; --muted:#6b6459;
-    --hair:#e6dfd2; --faint:#f1ebdf;
-    --yellow:#ffe800;
-    --tech:#0078bf;      --tech-deep:#005e96;
-    --sci:#00a95c;       --sci-deep:#00733e;
-    --world:#ff48b0;     --world-deep:#c4006e;
+    --paper:#f5f8f7; --card:#ffffff; --ink:#22282a; --muted:#6f7a7d;
+    --hair:#e3e9e8; --faint:#eef2f1;
+    --tech:#2c6a88;   /* petrol  */
+    --sci:#3e7458;    /* moss    */
+    --world:#74559a;  /* violet  */
 
-    --display:"Futura","Century Gothic","URW Gothic",system-ui,sans-serif;
+    --display:"Helvetica Neue","Segoe UI",system-ui,sans-serif;
     --body:"Avenir Next","Avenir","Segoe UI",system-ui,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   }
-  /* ponytail: light only. This is ink printed on paper — paper is never dark.
-     A dark variant would silently override the one thing that was asked for. */
+  /* ponytail: light only. "Calm and airy" is the brief; a dark variant would
+     silently override the one thing that was asked for. */
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
-    line-height:1.62;-webkit-font-smoothing:antialiased;color-scheme:light}
-  .wrap{max-width:46rem;margin:0 auto;padding:clamp(2rem,5vw,4rem) 1.25rem 5rem}
+    line-height:1.7;-webkit-font-smoothing:antialiased;color-scheme:light}
 
-  /* ── Masthead: three inks, misregistered, printed in multiply ── */
-  .mast{margin-bottom:3.5rem}
-  .kick{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
-    margin-bottom:1.75rem}
+  /* Three sections become three columns. Header and footer span them.
+     ponytail: exactly 3 tracks, never auto-fit. auto-fit packs a phantom 4th
+     track on wide screens and degrades to 2+1 at middling widths — either way
+     the bucket-per-column mapping breaks. Collapse straight to one column. */
+  .wrap{
+    max-width:1720px;margin:0 auto;
+    padding:clamp(1.75rem,3vw,3.5rem) clamp(1.25rem,3vw,3rem) 5rem;
+    display:grid;gap:clamp(1.5rem,2.5vw,3rem);
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:start;
+  }
+  @media (max-width:62rem){ .wrap{grid-template-columns:1fr} }
+
+  /* ── Masthead ── */
+  .mast{grid-column:1/-1;display:flex;justify-content:space-between;align-items:flex-end;
+    flex-wrap:wrap;gap:1.5rem;margin-bottom:1rem}
+  h1{font-family:var(--display);font-weight:300;
+    font-size:clamp(2.1rem,4.4vw,3.6rem);line-height:1.02;letter-spacing:-.035em;
+    margin:0;max-width:14ch;text-wrap:balance}
+  .kick{order:-1;flex-basis:100%;font-family:var(--mono);font-size:.68rem;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+    display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
   .kick .sig{color:var(--ink)}
+  .sub{font-family:var(--mono);font-size:.75rem;color:var(--muted);
+    font-variant-numeric:tabular-nums;padding-bottom:.4rem}
 
-  h1{
-    font-family:var(--display);font-weight:600;
-    font-size:clamp(2.6rem,10vw,4.6rem);line-height:1.0;letter-spacing:-.02em;
-    text-transform:uppercase;max-width:10ch;
-    position:relative;isolation:isolate;
-    margin:0 0 1.5rem;color:var(--tech);
-  }
-  h1::before,h1::after{
-    content:"Daily Knowledge Briefing";
-    position:absolute;inset:0;mix-blend-mode:multiply;
-  }
-  /* The base ink is buried by both overprints, so it must be the one that can
-     afford to disappear. Pink and green sit on top and hang off the edges. */
-  h1::before{color:var(--world);transform:translate(-4px,0);animation:register-a 1s cubic-bezier(.2,.9,.25,1) both}
-  h1::after {color:var(--sci);  transform:translate(4px,0); animation:register-b 1s cubic-bezier(.2,.9,.25,1) both}
-  /* ponytail: 4px residual misregistration, horizontal only. Perfect register
-     multiplies three inks to mud; too much offset and the words stop reading.
-     Vertical offset collides with the next line. 4px sideways is the window. */
-  @keyframes register-a{from{transform:translate(-18px,-10px)}to{transform:translate(-4px,0)}}
-  @keyframes register-b{from{transform:translate(17px,11px)} to{transform:translate(4px,0)}}
+  /* ── Column ── */
+  .sec{display:flex;flex-direction:column;gap:clamp(1rem,1.4vw,1.5rem);min-width:0}
+  .sec[data-b="tech"] {--accent:var(--tech)}
+  .sec[data-b="sci"]  {--accent:var(--sci)}
+  .sec[data-b="world"]{--accent:var(--world)}
 
-  .sub{font-family:var(--mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
-
-  /* ── Section ── */
-  .sec{margin-top:4rem}
-  .sec[data-b="tech"] {--accent:var(--tech);  --accent-deep:var(--tech-deep)}
-  .sec[data-b="sci"]  {--accent:var(--sci);   --accent-deep:var(--sci-deep)}
-  .sec[data-b="world"]{--accent:var(--world); --accent-deep:var(--world-deep)}
-
-  .sec-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+  /* The three rules read across as one segmented bar labelling the columns.
+     Sticky, so it rides along and you always know which bucket you're in. */
+  .sec-head{position:sticky;top:0;z-index:2;background:var(--paper);
+    padding:.85rem 0 .7rem}
   .sec-head .no{display:none}          /* sections aren't a sequence — no numbering */
-  .sec-head h2{font-family:var(--display);font-size:1.5rem;letter-spacing:.02em;
-    text-transform:uppercase;margin:0;font-weight:600;color:var(--accent-deep);white-space:nowrap}
-  .sec-head .rule{flex:1;height:6px;background:var(--accent);border-radius:3px}
+  .sec-head h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.19em;
+    text-transform:uppercase;margin:0 0 .7rem;font-weight:600;color:var(--accent)}
+  .sec-head .rule{display:block;height:3px;border-radius:2px;background:var(--accent)}
 
-  /* ── Item ── */
-  .item{background:var(--card);border:1px solid var(--hair);border-radius:12px;
-    padding:0 1.6rem 1.5rem;margin-bottom:1.5rem;overflow:hidden;position:relative}
-  .item::before{content:"";position:absolute;inset:0 0 auto;height:6px;background:var(--accent)}
-  .item h3{font-size:1.35rem;line-height:1.22;margin:2.1rem 0 1.1rem;font-weight:600;
-    letter-spacing:-.01em;text-wrap:balance}
+  /* ── Card ── */
+  .item{background:var(--card);border:1px solid var(--hair);border-radius:16px;
+    padding:clamp(1.4rem,1.7vw,1.9rem);min-width:0;
+    animation:rise .5s cubic-bezier(.2,.8,.3,1) both}
+  .sec .item:nth-child(2){animation-delay:.06s}
+  .sec .item:nth-child(3){animation-delay:.12s}
+  .sec .item:nth-child(4){animation-delay:.18s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
-  .beat{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;padding:.7rem 0}
+  .item h3{font-family:var(--display);font-size:1.28rem;line-height:1.25;
+    letter-spacing:-.018em;margin:0 0 1.3rem;font-weight:500;text-wrap:balance}
+
+  .beat{padding:.9rem 0}
   .beat + .beat{border-top:1px solid var(--faint)}
-  .beat .lab{font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;color:var(--accent-deep);
-    text-transform:uppercase;padding-top:.3rem;font-weight:600}
-  .beat .lab small{display:block;color:var(--muted);letter-spacing:.09em;font-size:.6rem;
-    margin-top:.2rem;font-weight:400}
-  .beat p{margin:0;font-size:1.02rem}
-  .beat em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%);
-    padding:0 .1em}
+  .beat .lab{display:flex;align-items:baseline;gap:.55rem;margin-bottom:.4rem;
+    font-size:1.02rem;color:var(--accent);letter-spacing:.06em}
+  .beat .lab small{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--muted)}
+  .beat p{margin:0;font-size:.96rem;line-height:1.75;max-width:64ch}
+  .beat em{font-style:normal;font-weight:600;color:var(--accent)}
 
-  .src{margin-top:1.2rem;font-family:var(--mono);font-size:.74rem}
-  .src a{color:var(--muted);text-decoration:none;border-bottom:2px solid var(--faint)}
-  .src a:hover{color:var(--accent-deep);border-color:var(--accent)}
+  .src{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--faint);
+    font-family:var(--mono);font-size:.7rem}
+  .src a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--hair)}
+  .src a:hover{color:var(--accent);border-color:var(--accent)}
   .src a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 
-  @media (max-width:30rem){
-    .beat{grid-template-columns:1fr;gap:.3rem}
-    .beat .lab small{display:inline;margin-left:.45rem}
-    .item{padding:0 1.15rem 1.25rem}
-  }
-
-  footer{margin-top:4.5rem;padding-top:1.4rem;border-top:2px solid var(--hair);
-    font-family:var(--mono);font-size:.72rem;color:var(--muted);line-height:1.8}
+  footer{grid-column:1/-1;margin-top:2.5rem;padding-top:1.4rem;
+    border-top:1px solid var(--hair);
+    font-family:var(--mono);font-size:.68rem;color:var(--muted);line-height:1.9}
 
   @media (prefers-reduced-motion:reduce){
-    h1::before,h1::after{animation:none}
+    .item{animation:none}
+    .sec-head{position:static}
   }
 </style>
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">☀️ Nº 002</span><span>3 tech · 3 science · 3 world</span></div>
+    <div class="kick"><span class="sig">Nº 002</span><span>9 items · 3 per bucket · 第一性原理</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Thursday, 9 July 2026 · first-principles · 第一性原理</div>
+    <div class="sub">Thursday, 9 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
@@ -112,25 +109,25 @@
 
     <article class="item">
       <h3>SK Hynix lists $29B on Nasdaq — largest-ever US IPO by a foreign firm</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>SK Hynix, Nvidia's main HBM memory supplier and the world's #2 memory chipmaker, is listing ADRs on Nasdaq in a roughly $29 billion offering — the largest-ever US stock sale by a non-US company, trailing only SpaceX among all-time US raises.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>High-bandwidth memory (HBM) stacks DRAM dies vertically and wires them right next to the GPU die, cutting the distance data travels so thousands of cores can actually be fed fast enough to stay busy. SK Hynix supplies roughly 60% of the world's HBM. Listing where the capital and the customers both sit lets it raise fab-building money faster than retained earnings alone would allow.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>The AI boom's bottleneck has shifted from raw GPU compute to memory bandwidth and supply — whoever controls HBM capacity effectively controls how many AI racks the world can build each year.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>SK Hynix, Nvidia's main HBM memory supplier and the world's #2 memory chipmaker, is listing ADRs on Nasdaq in a roughly $29 billion offering — the largest-ever US stock sale by a non-US company, trailing only SpaceX among all-time US raises.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>High-bandwidth memory (HBM) stacks DRAM dies vertically and wires them right next to the GPU die, cutting the distance data travels so thousands of cores can actually be fed fast enough to stay busy. SK Hynix supplies roughly 60% of the world's HBM. Listing where <em>the capital and the customers both sit</em> lets it raise fab-building money faster than retained earnings alone would allow.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>The AI boom's bottleneck has shifted from raw GPU compute to memory bandwidth and supply — whoever controls HBM capacity effectively controls how many AI racks the world can build each year.</p></div>
       <div class="src"><a href="https://www.cnbc.com/2026/06/24/sk-hynix-nasdaq-adr-listing-south-korea.html">CNBC →</a></div>
     </article>
 
     <article class="item">
       <h3>GitHub Copilot adds its first open-weight model to the picker</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>GitHub made Kimi K2.7 Code — a trillion-parameter open-weight coding model from Moonshot AI — generally available in Copilot, the first time an open-weight model has sat in the picker alongside closed frontier models.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>"Open-weight" means the trained parameters are published for anyone to download and run, unlike closed models reachable only through a paid API. Because the weights are public, GitHub could host and serve the model on its own infrastructure rather than routing to another company's API — turning a Hugging Face release into an enterprise product in under three weeks. The bottleneck to production was <em>systems integration, not model access</em>.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A major dev tool defaulting some developers toward a cheaper open-weight option previews AI tooling commoditizing beneath the frontier labs.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>GitHub made Kimi K2.7 Code — a trillion-parameter open-weight coding model from Moonshot AI — generally available in Copilot, the first time an open-weight model has sat in the picker alongside closed frontier models.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>"Open-weight" means the trained parameters are published for anyone to download and run, unlike closed models reachable only through a paid API. Because the weights are public, GitHub could host and serve the model on its own infrastructure rather than routing to another company's API — turning a Hugging Face release into an enterprise product in under three weeks. The bottleneck to production was <em>systems integration, not model access</em>.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A major dev tool defaulting some developers toward a cheaper open-weight option previews AI tooling commoditizing beneath the frontier labs.</p></div>
       <div class="src"><a href="https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
       <h3>ELEANOR: a soft robotic arm architected like an elephant's trunk</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Researchers built a continuous, jointless soft robotic arm whose internal structure reproduces how an elephant trunk bends, twists and grips along its entire length rather than at discrete points.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Conventional robot arms move by rotating rigid links around a handful of joints. A real trunk gets its near-infinite degrees of freedom from continuously arranged muscle fibers, so the team instead architected the arm's internal material structure to mimic that fiber layout directly — making "bend anywhere" a property of <em>the material itself</em> rather than something software has to compute across joints.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Soft, whole-body-actuated manipulators open a path to robots that work safely and dexterously in cluttered human environments where rigid arms are clumsy.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>Researchers built a continuous, jointless soft robotic arm whose internal structure reproduces how an elephant trunk bends, twists and grips along its entire length rather than at discrete points.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Conventional robot arms move by rotating rigid links around a handful of joints. A real trunk gets its near-infinite degrees of freedom from continuously arranged muscle fibers, so the team instead architected the arm's internal material structure to mimic that fiber layout directly — making "bend anywhere" a property of <em>the material itself</em> rather than something software has to compute across joints.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>Soft, whole-body-actuated manipulators open a path to robots that work safely and dexterously in cluttered human environments where rigid arms are clumsy.</p></div>
       <div class="src"><a href="https://arxiv.org/abs/2607.07622">arXiv 2607.07622 →</a></div>
     </article>
   </section>
@@ -140,25 +137,25 @@
 
     <article class="item">
       <h3>Heidelberg physicists unify two rival theories of quantum impurities</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>For decades physicists had two incompatible theories for how a single "impurity" particle behaves inside a dense sea of fermions — one for when it moves, one for when it sits still. A Heidelberg team derived a single framework covering both.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>The unifying insight is that even a "static" heavy impurity makes tiny, non-zero motions as the surrounding particle sea relaxes around it, opening a small energy gap. That gap is what lets a well-defined quasiparticle — a stable, particle-like excitation — form. Once that residual motion is accounted for, the mobile and static pictures turn out to be <em>the same physics viewed at different limits</em>.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A coherent single theory matters for interpreting real experiments in ultracold atoms and semiconductors, where researchers routinely probe single dopant atoms or defects sitting inside a much larger particle bath.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>For decades physicists had two incompatible theories for how a single "impurity" particle behaves inside a dense sea of fermions — one for when it moves, one for when it sits still. A Heidelberg team derived a single framework covering both.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>The unifying insight is that even a "static" heavy impurity makes tiny, non-zero motions as the surrounding particle sea relaxes around it, opening a small energy gap. That gap is what lets a well-defined quasiparticle — a stable, particle-like excitation — form. Once that residual motion is accounted for, the mobile and static pictures turn out to be <em>the same physics viewed at different limits</em>.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A coherent single theory matters for interpreting real experiments in ultracold atoms and semiconductors, where researchers routinely probe single dopant atoms or defects sitting inside a much larger particle bath.</p></div>
       <div class="src"><a href="https://www.uni-heidelberg.de/en/newsroom/heidelberg-physicists-bridge-worlds-of-quantum-matter">Heidelberg University →</a></div>
     </article>
 
     <article class="item">
       <h3>First real-time observation of new oceanic crust being born</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>An undersea observatory of 20+ seismic and geodetic stations captured, in situ, a seafloor-spreading event on the Southeast Indian Ridge — 160 million cubic metres of lava erupting as two plates pulled apart by more than 2 metres in days.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Oceanic crust forms continuously at mid-ocean ridges as plates diverge and magma wells up to fill the gap — the mechanism behind seafloor spreading has explained plate tectonics since the 1960s, but always inferred from dating old rock, <em>never watched live</em>. Instruments sat over the ridge for two months before earthquakes signaled the rupture, recording the pressure buildup, fracture, and lava release as they actually happened.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Direct, real-time data on how ridges rupture and how much crust forms per event refines models of plate tectonics and the deep heat and carbon cycles tied to it.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>An undersea observatory of 20+ seismic and geodetic stations captured, in situ, a seafloor-spreading event on the Southeast Indian Ridge — 160 million cubic metres of lava erupting as two plates pulled apart by more than 2 metres in days.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Oceanic crust forms continuously at mid-ocean ridges as plates diverge and magma wells up to fill the gap — the mechanism behind seafloor spreading has explained plate tectonics since the 1960s, but always inferred from dating old rock, <em>never watched live</em>. Instruments sat over the ridge for two months before earthquakes signaled the rupture, recording the pressure buildup, fracture, and lava release as they actually happened.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>Direct, real-time data on how ridges rupture and how much crust forms per event refines models of plate tectonics and the deep heat and carbon cycles tied to it.</p></div>
       <div class="src"><a href="https://www.nature.com/articles/s41586-026-10785-0">Nature →</a></div>
     </article>
 
     <article class="item">
       <h3>A bacterial "docking domain" explains how one pathway builds a whole family of cancer drugs</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Researchers resolved the precise molecular connector bacteria use to fuse a fixed drug "core" to variable, swappable "caps" — explaining how a single biosynthetic pathway naturally produces multiple distinct anti-cancer drug variants in the romidepsin/FR-901375 family of HDAC inhibitors.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>These drugs are built assembly-line style by giant bacterial enzyme complexes, one chemical unit at a time — but two separate assembly lines have to physically dock and hand off the molecule mid-build, like two robot arms on a factory floor needing matched connectors. The newly resolved docking-domain shape is that connector; swapping which "cap" assembly line plugs in changes which drug variant comes out.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Understanding the connector means chemists can engineer new caps onto the same reliable core-building machinery — a template for designing new cancer drugs rather than discovering them by chance.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>Researchers resolved the precise molecular connector bacteria use to fuse a fixed drug "core" to variable, swappable "caps" — explaining how a single biosynthetic pathway naturally produces multiple distinct anti-cancer drug variants in the romidepsin/FR-901375 family of HDAC inhibitors.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>These drugs are built assembly-line style by giant bacterial enzyme complexes, one chemical unit at a time — but two separate assembly lines have to physically dock and hand off the molecule mid-build, like two robot arms on a factory floor needing <em>matched connectors</em>. The newly resolved docking-domain shape is that connector; swapping which "cap" assembly line plugs in changes which drug variant comes out.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>Understanding the connector means chemists can engineer new caps onto the same reliable core-building machinery — a template for designing new cancer drugs rather than discovering them by chance.</p></div>
       <div class="src"><a href="https://www.nature.com/articles/s41467-026-74383-4">Nature Communications →</a></div>
     </article>
   </section>
@@ -168,25 +165,25 @@
 
     <article class="item">
       <h3>US-Iran ceasefire fractures into a second night of strikes over the Strait of Hormuz</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>After Iranian forces attacked tankers in the Strait of Hormuz, the US struck roughly 90 Iranian military targets over two nights; Iran retaliated against US-linked sites in Bahrain, Kuwait and Qatar. Trump said the ceasefire is "over," though neither side has formally ended the interim deal.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>The dispute centers on control of a single chokepoint through which a large share of the world's seaborne oil moves. Iran claims the ceasefire lets it dictate which shipping route is "safe"; the tankers hit were using a route along Oman's shore rather than Iran's designated corridor. Because the strait has <em>no scale alternative</em>, whoever can credibly threaten it holds leverage disproportionate to its military size — which is how a shipping-lane dispute escalates into direct state-on-state strikes.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A chokepoint conflict this close to major oil-export routes threatens global energy prices and tests whether an interim ceasefire can survive without a durable enforcement mechanism.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>After Iranian forces attacked tankers in the Strait of Hormuz, the US struck roughly 90 Iranian military targets over two nights; Iran retaliated against US-linked sites in Bahrain, Kuwait and Qatar. Trump said the ceasefire is "over," though neither side has formally ended the interim deal.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>The dispute centers on control of a single chokepoint through which a large share of the world's seaborne oil moves. Iran claims the ceasefire lets it dictate which shipping route is "safe"; the tankers hit were using a route along Oman's shore rather than Iran's designated corridor. Because the strait has <em>no scale alternative</em>, whoever can credibly threaten it holds leverage disproportionate to its military size — which is how a shipping-lane dispute escalates into direct state-on-state strikes.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A chokepoint conflict this close to major oil-export routes threatens global energy prices and tests whether an interim ceasefire can survive without a durable enforcement mechanism.</p></div>
       <div class="src"><a href="https://www.npr.org/2026/07/09/g-s1-132670/us-iran-strikes">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/9/us-strikes-iran-for-second-night-is-the-peace-process-all-over-now">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
       <h3>Trump grants Ukraine a license to manufacture its own Patriot interceptors</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>At the NATO summit in Ankara, Trump told Zelenskyy the US will license Ukraine to manufacture Patriot air-defense interceptors domestically — though Lockheed Martin and RTX, which hold the underlying IP, haven't yet been informed.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Patriot PAC-3 interceptors are the only weapon in Ukraine's arsenal that reliably stops Russian ballistic missiles, but combined US and allied production has been outstripped by demand across Ukraine and the Middle East at once. A manufacturing license transfers the right to build the hardware domestically instead of just receiving finished units — turning a supply-constrained resource into one Ukraine can <em>scale on its own timeline</em>, provided it has the industrial base to use the license.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Localizing production of a scarce, war-critical weapon system marks a more durable shift in how the US backs Ukraine's air defense than finite shipments of existing stock.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>At the NATO summit in Ankara, Trump told Zelenskyy the US will license Ukraine to manufacture Patriot air-defense interceptors domestically — though Lockheed Martin and RTX, which hold the underlying IP, haven't yet been informed.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Patriot PAC-3 interceptors are the only weapon in Ukraine's arsenal that reliably stops Russian ballistic missiles, but combined US and allied production has been outstripped by demand across Ukraine and the Middle East at once. A manufacturing license transfers the right to build the hardware domestically instead of just receiving finished units — turning a supply-constrained resource into one Ukraine can <em>scale on its own timeline</em>, provided it has the industrial base to use the license.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>Localizing production of a scarce, war-critical weapon system marks a more durable shift in how the US backs Ukraine's air defense than finite shipments of existing stock.</p></div>
       <div class="src"><a href="https://www.cbsnews.com/news/trump-ukraine-license-patriot-missiles-zelenskyy/">CBS News →</a> · <a href="https://www.defensenews.com/global/europe/2026/07/08/ukraine-to-get-license-for-making-patriot-interceptors-trump-pledges/">Defense News →</a></div>
     </article>
 
     <article class="item">
       <h3>India's Gen Z turns a Chief Justice's insult into a protest brand</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>After India's Chief Justice dismissed young online critics as "parasites and cockroaches," Gen Z activists founded the satirical "Cockroach Janta Party," whose Instagram following — over 22 million — now exceeds either major national party's, demanding jobs and a minister's resignation over exam-system scandals.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Youth unemployment in India runs near 15% for ages 15–29, roughly triple the national rate, while repeated exam-scandal failures feed a sense that institutions don't work for the young. Reclaiming an insult as a movement's name is a standard protest technique — it converts an attempt at dismissal into <em>free publicity and shared identity</em>, which is why the account's following outpaced established parties within weeks.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A social-media-native protest identity outgrowing legacy political parties in reach signals how much political energy in India's largest demographic bloc sits outside formal party structures.</p></div>
+      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>After India's Chief Justice dismissed young online critics as "parasites and cockroaches," Gen Z activists founded the satirical "Cockroach Janta Party," whose Instagram following — over 22 million — now exceeds either major national party's, demanding jobs and a minister's resignation over exam-system scandals.</p></div>
+      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Youth unemployment in India runs near 15% for ages 15–29, roughly triple the national rate, while repeated exam-scandal failures feed a sense that institutions don't work for the young. Reclaiming an insult as a movement's name is a standard protest technique — it converts an attempt at dismissal into <em>free publicity and shared identity</em>, which is why the account's following outpaced established parties within weeks.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A social-media-native protest identity outgrowing legacy political parties in reach signals how much political energy in India's largest demographic bloc sits outside formal party structures.</p></div>
       <div class="src"><a href="https://www.npr.org/2026/07/07/nx-s1-5879389/gen-z-protesters-in-india-demand-political-reform-and-accountability">NPR →</a></div>
     </article>
   </section>

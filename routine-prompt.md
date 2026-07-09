@@ -37,26 +37,40 @@ You run once each morning. Produce a first-principles learning briefing.
    - Source link (the primary one).
 
 6. **Publish the live page (REQUIRED).** Overwrite `index.html` in the repo root
-   with the new briefing: three sections (Tech / Science / World), 9 items,
-   source links.
+   with the new briefing.
 
-   The page is a **risograph print**: bright, light-only, three spot inks
-   (blue = tech, green = science, fluorescent pink = world) on warm paper.
+   The page is **calm, airy, light-only, full-width**: a 3×3 grid where each
+   bucket is a column (tech / science / world), three cards per column, on a
+   soft off-white background. Color appears only in the column headers and the
+   本质/原理/意义 labels.
+
    **Change only these four things:**
    - the date in `<title>`
    - the date in `<div class="sub">`
    - the `Nº` counter in `<span class="sig">`
    - the nine `<article class="item">` blocks
 
-   Everything else in `index.html` is the design — copy it through byte for
-   byte. In particular do NOT touch: `<meta charset="utf-8">` (without it the
-   本质/原理/意义 labels turn to mojibake), the entire `<style>` block, or the
-   `h1` overprint (its colored layers are CSS `::before`/`::after` with the
-   title hardcoded, so `<h1>Daily Knowledge Briefing</h1>` must stay exactly
-   that text). Do not add a dark mode. Reuse the existing class names
-   (`item` / `beat` / `lab` / `src` / `sec[data-b]`) — the CSS keys off them.
-   Wrap the single most important phrase in each 原理 beat in `<em>` (it gets a
-   yellow highlighter).
+   Everything else is the design — copy it through byte for byte. Specifically:
+
+   - Keep `<meta charset="utf-8">` and `<meta name="viewport" ...>`. Without the
+     charset the 本质/原理/意义 labels turn to mojibake.
+   - Keep the entire `<style>` block untouched. Do not add a dark mode.
+   - Keep the DOM structure exactly: `.wrap` contains `header.mast`, then three
+     `section.sec` with `data-b="tech" | "sci" | "world"`, then `footer`. The
+     three sections ARE the three grid columns — do not merge, reorder, or add
+     one, and keep exactly three `article.item` per section.
+   - Each section opens with `<div class="sec-head"><h2>NAME</h2><span class="rule"></span></div>`.
+     The `span.rule` is the colored bar. Do not drop it.
+   - Each beat is
+     `<div class="beat"><div class="lab">本质<small>What it is</small></div><p>…</p></div>`,
+     with the three labels in order: 本质 / 原理 / 意义 and the small tags
+     "What it is" / "The principle" / "Why it matters".
+   - In each 原理 beat, wrap the single most important phrase in `<em>` — it
+     renders as the accent color, and it is the one thing the reader should
+     take away.
+
+   Card headlines run 6–12 words; the columns are narrow, so a long headline
+   wraps to three lines and looks cramped.
 
 7. **Persist + push (REQUIRED).** Write `briefings/YYYY-MM-DD.md` (markdown),
    append the 9 identifiers to `seen.md` (prune >30 days), then
