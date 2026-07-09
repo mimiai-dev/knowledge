@@ -20,3 +20,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-09 | world | US-Iran ceasefire fractures, Strait of Hormuz strikes
 2026-07-09 | world | Trump grants Ukraine Patriot interceptor manufacturing license
 2026-07-09 | world | India Gen Z "cockroach" protest movement
+2026-07-09 | tech | OpenAI GPT-5.6 Sol/Terra/Luna public launch
+2026-07-09 | tech | SpaceXAI Grok 4.5 launch
+2026-07-09 | tech | Sony PlayStation EU ToS digital game deletion after 3yr inactivity
+2026-07-09 | sci | Nature AI co-scientist/Robin drug discovery papers
+2026-07-09 | sci | Oak tree decoupled carbon assimilation from growth (Science Advances)
+2026-07-09 | sci | PNAS foveola cone-conversion mechanism for sharp vision
+2026-07-09 | world | Trump Greenland claim at NATO summit, Denmark pushback
+2026-07-09 | world | Marine Le Pen cleared to run 2027 French presidency
+2026-07-09 | world | US delists Syria as state sponsor of terrorism
