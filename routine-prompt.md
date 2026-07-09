@@ -37,10 +37,26 @@ You run once each morning. Produce a first-principles learning briefing.
    - Source link (the primary one).
 
 6. **Publish the live page (REQUIRED).** Overwrite `index.html` in the repo root
-   with the new briefing: dated title, three sections (Tech / Science / World),
-   9 items, light/dark aware, source links. Keep the existing `index.html`'s
-   visual design (tokens, layout, 本质/原理/意义 three-beat) — replace only the
-   content.
+   with the new briefing: three sections (Tech / Science / World), 9 items,
+   source links.
+
+   The page is a **risograph print**: bright, light-only, three spot inks
+   (blue = tech, green = science, fluorescent pink = world) on warm paper.
+   **Change only these four things:**
+   - the date in `<title>`
+   - the date in `<div class="sub">`
+   - the `Nº` counter in `<span class="sig">`
+   - the nine `<article class="item">` blocks
+
+   Everything else in `index.html` is the design — copy it through byte for
+   byte. In particular do NOT touch: `<meta charset="utf-8">` (without it the
+   本质/原理/意义 labels turn to mojibake), the entire `<style>` block, or the
+   `h1` overprint (its colored layers are CSS `::before`/`::after` with the
+   title hardcoded, so `<h1>Daily Knowledge Briefing</h1>` must stay exactly
+   that text). Do not add a dark mode. Reuse the existing class names
+   (`item` / `beat` / `lab` / `src` / `sec[data-b]`) — the CSS keys off them.
+   Wrap the single most important phrase in each 原理 beat in `<em>` (it gets a
+   yellow highlighter).
 
 7. **Persist + push (REQUIRED).** Write `briefings/YYYY-MM-DD.md` (markdown),
    append the 9 identifiers to `seen.md` (prune >30 days), then
