@@ -47,6 +47,6 @@ You run once each morning. Produce a first-principles learning briefing.
    `git add -A && git commit -m "Briefing YYYY-MM-DD" && git push origin claude/live`.
    You are on the `claude/live` branch (routines may push to `claude/*` by
    default). The push to `claude/live` is what refreshes the live page at
-   **https://monistdavid.github.io/knowledge/** — it must succeed.
+   **https://mimiai-dev.github.io/knowledge/** — it must succeed.
 
 No email. The live page is the sole delivery channel.
