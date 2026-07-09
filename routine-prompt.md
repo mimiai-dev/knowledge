@@ -44,11 +44,13 @@ You run once each morning. Produce a first-principles learning briefing.
 4. **Select** exactly 9 NEW items (not in seen.md): 3 tech / 3 science / 3 world.
    Significance over sensationalism.
 
-5. **Teach.** For each item write, from first principles (第一性原理):
+5. **Teach.** For each item write, from first principles:
    - **What it is** (plainly)
-   - **The underlying principle/mechanism** (the real learning)
+   - **The principle** — the underlying mechanism (the real learning)
    - **Why it matters**
    - Source link (the primary one).
+
+   The page is **English only**. No Chinese characters anywhere in the output.
 
 6. **Publish the live page (REQUIRED).** Overwrite `index.html` in the repo root
    with the new briefing.
@@ -56,7 +58,7 @@ You run once each morning. Produce a first-principles learning briefing.
    The page is **calm, airy, light-only, full-width**: a 3×3 grid where each
    bucket is a column (tech / science / world), three cards per column, on a
    soft off-white background. Color appears only in the column headers and the
-   本质/原理/意义 labels.
+   beat labels.
 
    **Change only these four things:**
    - the date in `<title>`
@@ -66,8 +68,9 @@ You run once each morning. Produce a first-principles learning briefing.
 
    Everything else is the design — copy it through byte for byte. Specifically:
 
-   - Keep `<meta charset="utf-8">` and `<meta name="viewport" ...>`. Without the
-     charset the 本质/原理/意义 labels turn to mojibake.
+   - Keep `<meta charset="utf-8">` and `<meta name="viewport" ...>`. The page is
+     still full of non-ASCII punctuation (— · → ≥ Nº); without the charset those
+     turn to mojibake wherever a UTF-8 header isn't sent.
    - Keep `<base target="_blank">`. It is what makes source links open in a new
      tab instead of navigating away from the briefing.
    - Keep the entire `<style>` block untouched. Do not add a dark mode.
@@ -80,13 +83,13 @@ You run once each morning. Produce a first-principles learning briefing.
      one, and keep exactly three `article.item` per section.
    - Each section opens with `<div class="sec-head"><h2>NAME</h2><span class="rule"></span></div>`.
      The `span.rule` is the colored bar. Do not drop it.
-   - Each beat is
-     `<div class="beat"><div class="lab">本质<small>What it is</small></div><p>…</p></div>`,
-     with the three labels in order: 本质 / 原理 / 意义 and the small tags
-     "What it is" / "The principle" / "Why it matters".
-   - In each 原理 beat, wrap the single most important phrase in `<em>` — it
-     renders as the accent color, and it is the one thing the reader should
-     take away.
+   - Each beat is exactly
+     `<div class="beat"><div class="lab">What it is</div><p>…</p></div>`,
+     with the three labels in order and verbatim: "What it is", "The principle",
+     "Why it matters". No `<small>` inside `.lab` — the label is the text itself.
+   - In each "The principle" beat, wrap the single most important phrase in
+     `<em>` — it renders as the accent color, and it is the one thing the reader
+     should take away.
 
    Card headlines run 6–12 words; the columns are narrow, so a long headline
    wraps to three lines and looks cramped.

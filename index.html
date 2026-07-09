@@ -77,10 +77,8 @@
 
   .beat{padding:.9rem 0}
   .beat + .beat{border-top:1px solid var(--faint)}
-  .beat .lab{display:flex;align-items:baseline;gap:.55rem;margin-bottom:.4rem;
-    font-size:1.02rem;color:var(--accent);letter-spacing:.06em}
-  .beat .lab small{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;
-    text-transform:uppercase;color:var(--muted)}
+  .beat .lab{font-family:var(--mono);font-size:.63rem;letter-spacing:.18em;
+    text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:.55rem}
   .beat p{margin:0;font-size:.96rem;line-height:1.75;max-width:64ch}
   .beat em{font-style:normal;font-weight:600;color:var(--accent)}
 
@@ -102,7 +100,7 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 003</span><span>9 items · 3 per bucket · 第一性原理</span></div>
+    <div class="kick"><span class="sig">Nº 003</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
     <div class="sub">Thursday, 9 July 2026</div>
   </header>
@@ -112,25 +110,25 @@
 
     <article class="item">
       <h3>OpenAI launches GPT-5.6's Sol, Terra and Luna</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>OpenAI publicly released three new model variants — Sol (frontier reasoning/agentic), Terra (balanced everyday model), and Luna (cheapest, fastest) — to all ChatGPT users and API developers, after a government-mandated preview period ended.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Rather than ship one model, OpenAI segments capability into cost/latency tiers because different tasks warrant different depth of computation — pricing tracks compute cost roughly linearly ($5/$30 per million tokens for Sol vs. $1/$6 for Luna). The real skill is <em>picking the cheapest model that clears the accuracy bar for a given task</em>, not always reaching for the frontier one.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>Frontier AI economics are moving toward tiered "compute per query" markets, where routing — choosing which model handles which request — becomes as competitively important as raw capability progress.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI publicly released three new model variants — Sol (frontier reasoning/agentic), Terra (balanced everyday model), and Luna (cheapest, fastest) — to all ChatGPT users and API developers, after a government-mandated preview period ended.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Rather than ship one model, OpenAI segments capability into cost/latency tiers because different tasks warrant different depth of computation — pricing tracks compute cost roughly linearly ($5/$30 per million tokens for Sol vs. $1/$6 for Luna). The real skill is <em>picking the cheapest model that clears the accuracy bar for a given task</em>, not always reaching for the frontier one.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Frontier AI economics are moving toward tiered "compute per query" markets, where routing — choosing which model handles which request — becomes as competitively important as raw capability progress.</p></div>
       <div class="src"><a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI →</a></div>
     </article>
 
     <article class="item">
       <h3>SpaceXAI launches Grok 4.5, an "Opus-class" model</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>SpaceXAI (xAI) publicly released Grok 4.5, trained on Nvidia's newest GB300 GPUs and tuned on real coding-agent trajectories after xAI's Cursor acquisition, with a 500K-token context window at $2/$6 per million tokens.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>The model's biggest jump over its predecessor is on agentic/tool-use benchmarks rather than general knowledge — training on real agent trajectories teaches the <em>propose-a-tool-call, observe, recover</em> loop directly, something raw next-token pretraining on text doesn't teach as efficiently.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>The AI frontier race is bifurcating into competition over agentic/tool-use ability — advantage increasingly comes from what a model does across many tool calls, not what it says in one shot.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>SpaceXAI (xAI) publicly released Grok 4.5, trained on Nvidia's newest GB300 GPUs and tuned on real coding-agent trajectories after xAI's Cursor acquisition, with a 500K-token context window at $2/$6 per million tokens.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The model's biggest jump over its predecessor is on agentic/tool-use benchmarks rather than general knowledge — training on real agent trajectories teaches the <em>propose-a-tool-call, observe, recover</em> loop directly, something raw next-token pretraining on text doesn't teach as efficiently.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The AI frontier race is bifurcating into competition over agentic/tool-use ability — advantage increasingly comes from what a model does across many tool calls, not what it says in one shot.</p></div>
       <div class="src"><a href="https://x.ai/news/grok-4-5">x.ai →</a></div>
     </article>
 
     <article class="item">
       <h3>Sony's PlayStation can delete your digital games after 3 years</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>A clause in Sony's European PlayStation Network Terms of Service — resurfacing in wide discussion this week — lets Sony close any account inactive for 36 months, permanently revoking access to every digital game tied to it.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Buying a "digital game" is legally a license to access it on the platform's terms, not ownership of a copy — the license persists only as long as the account and platform choose to honor it. EU privacy law actually pressures Sony to <em>eventually delete dormant accounts' data</em> rather than hold it indefinitely.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A stark reminder that the shift to all-digital game libraries trades ownership for continued access — a risk invisible until a policy nobody read gets enforced.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>A clause in Sony's European PlayStation Network Terms of Service — resurfacing in wide discussion this week — lets Sony close any account inactive for 36 months, permanently revoking access to every digital game tied to it.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Buying a "digital game" is legally a license to access it on the platform's terms, not ownership of a copy — the license persists only as long as the account and platform choose to honor it. EU privacy law actually pressures Sony to <em>eventually delete dormant accounts' data</em> rather than hold it indefinitely.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A stark reminder that the shift to all-digital game libraries trades ownership for continued access — a risk invisible until a policy nobody read gets enforced.</p></div>
       <div class="src"><a href="https://www.playstation.com/en-us/legal/terms-of-service/">PlayStation Terms of Service →</a></div>
     </article>
   </section>
@@ -140,25 +138,25 @@
 
     <article class="item">
       <h3>AI co-scientists publish real drug candidates in Nature</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>Two independent multi-agent AI systems — Google DeepMind's Co-Scientist (built on Gemini 2.0) and FutureHouse's Robin (built on OpenAI o4-mini + Claude 3.7) — appear in Nature's July 9 issue. Robin proposed and helped validate two drug candidates for dry age-related macular degeneration, a leading cause of blindness.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>The system runs as a closed loop, not a single query: literature-review agents generate a hypothesis, an experiment-design agent proposes an assay, real lab results come back, and an analysis agent revises the hypothesis. The reported 200x speedup comes from <em>the loop iterating far faster than a human research cycle</em>, not from any single smarter guess.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>This moves AI from a tool that answers questions about existing literature to one that participates in generating new experimental knowledge — with real drug-discovery output already produced.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>Two independent multi-agent AI systems — Google DeepMind's Co-Scientist (built on Gemini 2.0) and FutureHouse's Robin (built on OpenAI o4-mini + Claude 3.7) — appear in Nature's July 9 issue. Robin proposed and helped validate two drug candidates for dry age-related macular degeneration, a leading cause of blindness.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The system runs as a closed loop, not a single query: literature-review agents generate a hypothesis, an experiment-design agent proposes an assay, real lab results come back, and an analysis agent revises the hypothesis. The reported 200x speedup comes from <em>the loop iterating far faster than a human research cycle</em>, not from any single smarter guess.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This moves AI from a tool that answers questions about existing literature to one that participates in generating new experimental knowledge — with real drug-discovery output already produced.</p></div>
       <div class="src"><a href="https://www.nature.com/articles/s41586-026-10652-y">Nature →</a></div>
     </article>
 
     <article class="item">
       <h3>Oak trees keep absorbing carbon long after they stop growing</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>A multi-year field study across US oak forests found trees keep photosynthesizing and pulling in CO2 for months after their annual wood growth has already stopped — up to 36% of a tree's yearly carbon uptake happens after growth has ended.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Wood growth requires sustained internal water pressure in growing cells, which collapses almost immediately once conditions turn hot and dry — while photosynthesis, run by different cellular machinery, keeps operating under the same stress. Because the two processes are gated by <em>different physical constraints</em>, carbon absorbed doesn't automatically become carbon locked into wood.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>Climate models that treat "carbon absorbed" as a stand-in for "carbon stored in forest biomass" may be systematically overestimating how much carbon hotter, drier future forests can actually lock away.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>A multi-year field study across US oak forests found trees keep photosynthesizing and pulling in CO2 for months after their annual wood growth has already stopped — up to 36% of a tree's yearly carbon uptake happens after growth has ended.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Wood growth requires sustained internal water pressure in growing cells, which collapses almost immediately once conditions turn hot and dry — while photosynthesis, run by different cellular machinery, keeps operating under the same stress. Because the two processes are gated by <em>different physical constraints</em>, carbon absorbed doesn't automatically become carbon locked into wood.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Climate models that treat "carbon absorbed" as a stand-in for "carbon stored in forest biomass" may be systematically overestimating how much carbon hotter, drier future forests can actually lock away.</p></div>
       <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.ady7139">Science Advances →</a></div>
     </article>
 
     <article class="item">
       <h3>Sharp central vision forms by cone conversion, not migration</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>Using lab-grown human retinal tissue, researchers found that the eye's central high-acuity spot (the foveola) gets its sharp-vision cone layout not by cells migrating into place, but by existing blue-sensing cones converting into red- and green-sensing cones during fetal development.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Retinoic acid first suppresses blue-cone formation at the retina's center, then thyroid hormone pushes the remaining blue cones already sitting there to change identity. A cone's final sensory function isn't fixed at the cell's birth — it's <em>set later by its chemical surroundings</em>.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>This overturns a 30-year assumption about how sharp central vision forms and gives a chemical recipe that could let scientists grow patterned, human-like retinal tissue for transplant or disease modeling.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>Using lab-grown human retinal tissue, researchers found that the eye's central high-acuity spot (the foveola) gets its sharp-vision cone layout not by cells migrating into place, but by existing blue-sensing cones converting into red- and green-sensing cones during fetal development.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Retinoic acid first suppresses blue-cone formation at the retina's center, then thyroid hormone pushes the remaining blue cones already sitting there to change identity. A cone's final sensory function isn't fixed at the cell's birth — it's <em>set later by its chemical surroundings</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This overturns a 30-year assumption about how sharp central vision forms and gives a chemical recipe that could let scientists grow patterned, human-like retinal tissue for transplant or disease modeling.</p></div>
       <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2602950123">PNAS →</a></div>
     </article>
   </section>
@@ -168,25 +166,25 @@
 
     <article class="item">
       <h3>Trump renews Greenland claim, straining NATO further</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>At the NATO summit in Ankara, Trump repeated demands that the US should control Greenland "for the protection of the world," blamed Denmark's refusal for straining US-NATO relations, and floated withdrawing US troops from Europe. Danish PM Mette Frederiksen said Greenland "is of course not for sale."</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>Greenland sits astride Arctic shipping lanes opening as sea ice retreats and holds rare-earth reserves currently routed almost entirely through China. A NATO member publicly floating annexation of another member's territory tests the alliance's core premise — that members defend each other, <em>not annex each other</em>.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A treaty ally openly floating annexation of an ally's territory, even rhetorically, erodes the mutual-defense logic holding NATO together, with a live war in Ukraine testing that same logic in parallel.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>At the NATO summit in Ankara, Trump repeated demands that the US should control Greenland "for the protection of the world," blamed Denmark's refusal for straining US-NATO relations, and floated withdrawing US troops from Europe. Danish PM Mette Frederiksen said Greenland "is of course not for sale."</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Greenland sits astride Arctic shipping lanes opening as sea ice retreats and holds rare-earth reserves currently routed almost entirely through China. A NATO member publicly floating annexation of another member's territory tests the alliance's core premise — that members defend each other, <em>not annex each other</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A treaty ally openly floating annexation of an ally's territory, even rhetorically, erodes the mutual-defense logic holding NATO together, with a live war in Ukraine testing that same logic in parallel.</p></div>
       <div class="src"><a href="https://www.npr.org/">NPR →</a> · <a href="https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president">France 24 →</a></div>
     </article>
 
     <article class="item">
       <h3>Court clears Marine Le Pen to run for French president</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>A Paris appeals court upheld Marine Le Pen's conviction for embezzling roughly €2.8M in European Parliament funds, but cut her office ban from 5 years to 45 months and converted her sentence to a monitored house-arrest bracelet — clearing her, for now, to run in France's 2027 election.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>French law lets a candidate run while a conviction is still contested on final appeal, so a court's practical ability to bar a frontrunner from the ballot before that appeal resolves is <em>much narrower than the original sentence suggested</em>.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>This removes the single biggest legal obstacle to the frontrunner in current French polling, reshaping the 2027 race regardless of how the final appeal eventually lands.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>A Paris appeals court upheld Marine Le Pen's conviction for embezzling roughly €2.8M in European Parliament funds, but cut her office ban from 5 years to 45 months and converted her sentence to a monitored house-arrest bracelet — clearing her, for now, to run in France's 2027 election.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>French law lets a candidate run while a conviction is still contested on final appeal, so a court's practical ability to bar a frontrunner from the ballot before that appeal resolves is <em>much narrower than the original sentence suggested</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This removes the single biggest legal obstacle to the frontrunner in current French polling, reshaping the 2027 race regardless of how the final appeal eventually lands.</p></div>
       <div class="src"><a href="https://www.npr.org/2026/07/08/g-s1-132467/le-pen-court-ordered-monitor">NPR →</a> · <a href="https://www.france24.com/en/france/20260707-france-s-le-pen-says-still-running-for-president">France 24 →</a></div>
     </article>
 
     <article class="item">
       <h3>US moves to delist Syria as a state sponsor of terrorism</h3>
-      <div class="beat"><div class="lab">本质<small>What it is</small></div><p>The US State Department formally began removing Syria's "state sponsor of terrorism" designation — held since 1979 — after President Ahmed al-Sharaa gave "formal assurances" on terrorism. The change takes effect in 45 days unless Congress blocks it, leaving only Iran, North Korea and Cuba on the list.</p></div>
-      <div class="beat"><div class="lab">原理<small>The principle</small></div><p>The designation legally triggers sanctions blocking access to international banking, investment and arms sales. Removing it doesn't change anything on the ground directly, but it <em>unlocks the financial and legal plumbing</em> any real economic recovery requires.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why it matters</small></div><p>A 47-year-old US sanctions designation ending is a major, concrete bet by Washington on Syria's post-Assad government — reversible in 45 days, but otherwise a real opening for foreign investment.</p></div>
+      <div class="beat"><div class="lab">What it is</div><p>The US State Department formally began removing Syria's "state sponsor of terrorism" designation — held since 1979 — after President Ahmed al-Sharaa gave "formal assurances" on terrorism. The change takes effect in 45 days unless Congress blocks it, leaving only Iran, North Korea and Cuba on the list.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The designation legally triggers sanctions blocking access to international banking, investment and arms sales. Removing it doesn't change anything on the ground directly, but it <em>unlocks the financial and legal plumbing</em> any real economic recovery requires.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A 47-year-old US sanctions designation ending is a major, concrete bet by Washington on Syria's post-Assad government — reversible in 45 days, but otherwise a real opening for foreign investment.</p></div>
       <div class="src"><a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/07/initiating-rescission-process-of-syrias-designation-as-a-state-sponsor-of-terrorism/">US State Dept →</a> · <a href="https://www.aljazeera.com/news/2026/7/8/us-moves-to-delist-syria-as-a-state-sponsor-of-terrorism">Al Jazeera →</a></div>
     </article>
   </section>
