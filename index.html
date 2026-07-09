@@ -1,4 +1,4 @@
-<title>Daily Knowledge Briefing — 2026-07-07</title>
+<title>Daily Knowledge Briefing — 2026-07-09</title>
 <style>
   :root{
     --paper:#f5f6f8; --raise:#ffffff; --ink:#1b2230; --muted:#5b6472;
@@ -74,36 +74,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">📡 DISPATCH · Nº 001</span><span>3 TECH · 3 SCIENCE · 3 WORLD</span></div>
+    <div class="kick"><span class="sig">📡 DISPATCH · Nº 002</span><span>3 TECH · 3 SCIENCE · 3 WORLD</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Tuesday, 7 July 2026 · first-principles · 第一性原理</div>
+    <div class="sub">Thursday, 9 July 2026 · first-principles · 第一性原理</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><span class="no">01</span><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Nvidia's Vera Rubin NVL72 enters mass production</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Nvidia's next-generation rack-scale AI system — 72 Rubin GPUs lashed to Vera CPUs and run as a single machine — is now in production, claiming up to ~5× Blackwell on some workloads.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A modern AI "computer" is no longer one chip but a whole rack behaving as one accelerator. The real bottleneck is moving data <em>between</em> chips, so an NVLink fabric plus liquid cooling let 72 GPUs share memory at near-local speed. Useful compute scales with how tightly chips are coupled, not transistor count alone.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Frontier AI is now gated by rack-scale interconnect, power and cooling — not the individual GPU. Whoever integrates the rack best sets the pace.</p></div>
-      <div class="src"><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-ceo-confirms-vera-rubin-nvl72-is-now-in-production-jensen-huang-uses-ces-keynote-to-announce-the-milestone">Tom's Hardware →</a></div>
+      <h3>SK Hynix lists $29B on Nasdaq — largest-ever US IPO by a foreign firm</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>SK Hynix, Nvidia's main HBM memory supplier and the world's #2 memory chipmaker, is listing ADRs on Nasdaq in a roughly $29 billion offering — the largest-ever US stock sale by a non-US company, trailing only SpaceX among all-time US raises.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>High-bandwidth memory (HBM) stacks DRAM dies vertically and wires them right next to the GPU die, cutting the distance data travels so thousands of cores can actually be fed fast enough to stay busy. SK Hynix supplies roughly 60% of the world's HBM. Listing where the capital and the customers both sit lets it raise fab-building money faster than retained earnings alone would allow.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>The AI boom's bottleneck has shifted from raw GPU compute to memory bandwidth and supply — whoever controls HBM capacity effectively controls how many AI racks the world can build each year.</p></div>
+      <div class="src"><a href="https://www.cnbc.com/2026/06/24/sk-hynix-nasdaq-adr-listing-south-korea.html">CNBC →</a></div>
     </article>
 
     <article class="item">
-      <h3>Intel's Xeon 6+ ships on the 18A process node</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Intel's "Clearwater Forest" server CPU — up to 288 efficiency cores, ~30% claimed per-thread gains — is its first high-volume test of the 18A (1.8nm-class) manufacturing process.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A "process node" sets how small and dense transistors are. 18A introduces gate-all-around transistors (RibbonFET) and backside power delivery — routing power <em>beneath</em> the transistors so the signal wiring above is less congested. Smaller, better-fed transistors mean more cores within the same power budget.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>If 18A yields well, Intel re-enters the leading-edge fab race it lost to TSMC — a shift that ripples through the entire chip supply chain, not just one CPU line.</p></div>
-      <div class="src"><a href="https://www.tomshardware.com/tech-industry/computex-2026-day-zero-wrap-up-nvidia-launches-rtx-spark-superchip-assault-on-laptop-and-desktop-markets-intel-readies-xeon-6">Tom's Hardware →</a></div>
+      <h3>GitHub Copilot adds its first open-weight model to the picker</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>GitHub made Kimi K2.7 Code — a trillion-parameter open-weight coding model from Moonshot AI — generally available in Copilot, the first time an open-weight model has sat in the picker alongside closed frontier models.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>"Open-weight" means the trained parameters are published for anyone to download and run, unlike closed models reachable only through a paid API. Because the weights are public, GitHub could host and serve the model on its own infrastructure rather than routing to another company's API — turning a Hugging Face release into an enterprise product in under three weeks. The bottleneck to production was systems integration, not model access.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A major dev tool defaulting some developers toward a cheaper open-weight option previews AI tooling commoditizing beneath the frontier labs.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>AgentGym2 benchmarks AI agents in messy, real-world conditions</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>A new arXiv benchmark evaluates LLM "agents" in de-idealized environments — noisy, ambiguous, production-like tasks — instead of the clean toy problems that flatter leaderboard scores.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A high score on a tidy benchmark says little about deployment, because real environments bring <em>distribution shift</em> — inputs unlike anything seen in training. Agent progress is really measured by how gracefully a system handles the unexpected, so the benchmark itself is the scientific instrument: a bad ruler hides real failure.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>As companies push agents into production, honest reliability testing under realistic conditions matters more than peak numbers on a curated set.</p></div>
-      <div class="src"><a href="https://arxiv.org/html/2607.05174v1">arXiv 2607.05174 →</a></div>
+      <h3>ELEANOR: a soft robotic arm architected like an elephant's trunk</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Researchers built a continuous, jointless soft robotic arm whose internal structure reproduces how an elephant trunk bends, twists and grips along its entire length rather than at discrete points.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Conventional robot arms move by rotating rigid links around a handful of joints. A real trunk gets its near-infinite degrees of freedom from continuously arranged muscle fibers, so the team instead architected the arm's internal material structure to mimic that fiber layout directly — making "bend anywhere" a property of the material itself rather than something software has to compute across joints.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Soft, whole-body-actuated manipulators open a path to robots that work safely and dexterously in cluttered human environments where rigid arms are clumsy.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2607.07622">arXiv 2607.07622 →</a></div>
     </article>
   </section>
 
@@ -111,27 +111,27 @@
     <div class="sec-head"><span class="no">02</span><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Blue perovskite LEDs hit record efficiency via engineered hydrogen bonds</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Researchers reached 22% external quantum efficiency for stable, saturated blue perovskite LEDs by using isomeric molecules to build hydrogen-bond networks inside and around the crystal.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Perovskites are cheap crystals that emit a pure color set by their bandgap. Blue is the hard one: it needs a wide bandgap and defects easily quench the light, so blue devices stayed dim and short-lived. Hydrogen bonds — weak, directional attractions — pin the lattice and heal defects, so more injected electrons leave as photons rather than heat. (Efficiency = photons out ÷ electrons in.)</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Blue is the missing leg of RGB; a stable, efficient blue unlocks cheap, printable, ultra-saturated displays.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10723-0">Nature →</a></div>
+      <h3>Heidelberg physicists unify two rival theories of quantum impurities</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>For decades physicists had two incompatible theories for how a single "impurity" particle behaves inside a dense sea of fermions — one for when it moves, one for when it sits still. A Heidelberg team derived a single framework covering both.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>The unifying insight is that even a "static" heavy impurity makes tiny, non-zero motions as the surrounding particle sea relaxes around it, opening a small energy gap. That gap is what lets a well-defined quasiparticle — a stable, particle-like excitation — form. Once that residual motion is accounted for, the mobile and static pictures turn out to be the same physics viewed at different limits.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A coherent single theory matters for interpreting real experiments in ultracold atoms and semiconductors, where researchers routinely probe single dopant atoms or defects sitting inside a much larger particle bath.</p></div>
+      <div class="src"><a href="https://www.uni-heidelberg.de/en/newsroom/heidelberg-physicists-bridge-worlds-of-quantum-matter">Heidelberg University →</a></div>
     </article>
 
     <article class="item">
-      <h3>A cosmic neutrino traced to a galaxy 11 billion years ago</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Aided by a gravitational lens, astronomers identified the likely source of a high-energy neutrino as a compact star-forming galaxy from "cosmic noon," 11 billion years in the past.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Neutrinos barely interact with matter, so they travel straight across the universe without being absorbed or deflected — unlike light. That makes them ideal messengers but almost impossible to catch or locate. Here a foreground galaxy's gravity magnified the source (lensing), making the identification possible for the first time at such distance.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Neutrino astronomy at cosmological distances opens a fresh window on how galaxies assembled themselves in the young universe.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41550-026-02904-8">Nature Astronomy →</a></div>
+      <h3>First real-time observation of new oceanic crust being born</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>An undersea observatory of 20+ seismic and geodetic stations captured, in situ, a seafloor-spreading event on the Southeast Indian Ridge — 160 million cubic metres of lava erupting as two plates pulled apart by more than 2 metres in days.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Oceanic crust forms continuously at mid-ocean ridges as plates diverge and magma wells up to fill the gap — the mechanism behind seafloor spreading has explained plate tectonics since the 1960s, but always inferred from dating old rock, never watched live. Instruments sat over the ridge for two months before earthquakes signaled the rupture, recording the pressure buildup, fracture, and lava release as they actually happened.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Direct, real-time data on how ridges rupture and how much crust forms per event refines models of plate tectonics and the deep heat and carbon cycles tied to it.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10785-0">Nature →</a></div>
     </article>
 
     <article class="item">
-      <h3>A new histone mark ties metabolism directly to gene control</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Scientists found a new chemical tag on histone proteins — lysine pyruvylation — added by the enzymes HAT1/p300 and removed by SIRT3, linking the metabolite pyruvate to gene regulation.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>DNA wraps around histones, and chemical tags on those histones act as switches deciding which genes are readable — the "histone code." This tag is built from pyruvate, the end product of glycolysis (sugar breakdown). So the cell's metabolic state writes directly onto chromatin: what you burn for energy helps set which genes turn on.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A concrete molecular bridge between metabolism and epigenetics — with implications for cancer, aging, and how diet influences gene expression.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s42255-026-01561-5">Nature Metabolism →</a></div>
+      <h3>A bacterial "docking domain" explains how one pathway builds a whole family of cancer drugs</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>Researchers resolved the precise molecular connector bacteria use to fuse a fixed drug "core" to variable, swappable "caps" — explaining how a single biosynthetic pathway naturally produces multiple distinct anti-cancer drug variants in the romidepsin/FR-901375 family of HDAC inhibitors.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>These drugs are built assembly-line style by giant bacterial enzyme complexes, one chemical unit at a time — but two separate assembly lines have to physically dock and hand off the molecule mid-build, like two robot arms on a factory floor needing matched connectors. The newly resolved docking-domain shape is that connector; swapping which "cap" assembly line plugs in changes which drug variant comes out.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Understanding the connector means chemists can engineer new caps onto the same reliable core-building machinery — a template for designing new cancer drugs rather than discovering them by chance.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41467-026-74383-4">Nature Communications →</a></div>
     </article>
   </section>
 
@@ -139,32 +139,32 @@
     <div class="sec-head"><span class="no">03</span><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>NATO leaders convene in Ankara as defense-spending pressure builds</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>President Trump and NATO leaders are meeting in Ankara, Turkey, for the annual summit, with the agenda dominated by pressure on allies to raise military spending.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>NATO is a collective-defense pact: under Article 5, an attack on one member is an attack on all. That guarantee only deters if members actually fund their militaries, so burden-sharing (the ~2%+-of-GDP target) is the recurring fault line — deterrence is credible only when capabilities are real, not promised.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Alliance cohesion and Europe's security posture hinge on whether spending pledges convert into actual capability.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/liveblog/2026/7/7/natos-turkiye-summit-live-trump-leaders-to-meet-in-ankara">Al Jazeera →</a></div>
+      <h3>US-Iran ceasefire fractures into a second night of strikes over the Strait of Hormuz</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>After Iranian forces attacked tankers in the Strait of Hormuz, the US struck roughly 90 Iranian military targets over two nights; Iran retaliated against US-linked sites in Bahrain, Kuwait and Qatar. Trump said the ceasefire is "over," though neither side has formally ended the interim deal.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>The dispute centers on control of a single chokepoint through which a large share of the world's seaborne oil moves. Iran claims the ceasefire lets it dictate which shipping route is "safe"; the tankers hit were using a route along Oman's shore rather than Iran's designated corridor. Because the strait has no scale alternative, whoever can credibly threaten it holds leverage disproportionate to its military size — which is how a shipping-lane dispute escalates into direct state-on-state strikes.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A chokepoint conflict this close to major oil-export routes threatens global energy prices and tests whether an interim ceasefire can survive without a durable enforcement mechanism.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/09/g-s1-132670/us-iran-strikes">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/9/us-strikes-iran-for-second-night-is-the-peace-process-all-over-now">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Super Typhoon Bavi devastates Rota in the Northern Marianas</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Bavi's eye passed directly over Rota with winds near 180 mph, knocking out power, water and communications for its ~1,500 residents. Two non-fatal injuries; no deaths reported.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>A typhoon is a heat engine: warm ocean water evaporates, rises and condenses, releasing heat that lowers pressure and pulls in more air, which Earth's rotation spins into a vortex. Warmer seas mean more fuel, so storm intensity scales with ocean heat content — the mechanism behind climate-linked "super" typhoons.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Small island territories absorb outsized, slow-to-recover damage from intensifying storms — an infrastructure and climate-adaptation warning.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/05/g-s1-132052/guam-pacific-islands-brace-super-typhoon-bavi">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/6/super-typhoon-bavi-makes-landfall-on-us-pacific-islands">Al Jazeera →</a></div>
+      <h3>Trump grants Ukraine a license to manufacture its own Patriot interceptors</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>At the NATO summit in Ankara, Trump told Zelenskyy the US will license Ukraine to manufacture Patriot air-defense interceptors domestically — though Lockheed Martin and RTX, which hold the underlying IP, haven't yet been informed.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Patriot PAC-3 interceptors are the only weapon in Ukraine's arsenal that reliably stops Russian ballistic missiles, but combined US and allied production has been outstripped by demand across Ukraine and the Middle East at once. A manufacturing license transfers the right to build the hardware domestically instead of just receiving finished units — turning a supply-constrained resource into one Ukraine can scale on its own timeline, provided it has the industrial base to use the license.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Localizing production of a scarce, war-critical weapon system marks a more durable shift in how the US backs Ukraine's air defense than finite shipments of existing stock.</p></div>
+      <div class="src"><a href="https://www.cbsnews.com/news/trump-ukraine-license-patriot-missiles-zelenskyy/">CBS News →</a> · <a href="https://www.defensenews.com/global/europe/2026/07/08/ukraine-to-get-license-for-making-patriot-interceptors-trump-pledges/">Defense News →</a></div>
     </article>
 
     <article class="item">
-      <h3>Xi promotes two new PLA generals amid an anti-corruption purge</h3>
-      <div class="beat"><div class="lab">本质<small>What</small></div><p>Xi Jinping promoted generals Zhang Shuguang and Wang Gang as his long-running anti-graft campaign has thinned the Chinese military's top ranks.</p></div>
-      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>In a party-state, the military answers to the party, not the state. Promotions and purges are levers to guarantee loyalty: removing entrenched officers and elevating trusted ones concentrates control — though constant churn at the top can also dent readiness and signal internal insecurity.</p></div>
-      <div class="beat"><div class="lab">意义<small>Why</small></div><p>Turbulence in the PLA's leadership bears on China's military capability and how confidently it might act in the region.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/04/g-s1-131994/chinas-military-promotes-2-new-generals-after-anti-corruption-purge-thins-ranks">NPR →</a></div>
+      <h3>India's Gen Z turns a Chief Justice's insult into a protest brand</h3>
+      <div class="beat"><div class="lab">本质<small>What</small></div><p>After India's Chief Justice dismissed young online critics as "parasites and cockroaches," Gen Z activists founded the satirical "Cockroach Janta Party," whose Instagram following — over 22 million — now exceeds either major national party's, demanding jobs and a minister's resignation over exam-system scandals.</p></div>
+      <div class="beat"><div class="lab">原理<small>Principle</small></div><p>Youth unemployment in India runs near 15% for ages 15–29, roughly triple the national rate, while repeated exam-scandal failures feed a sense that institutions don't work for the young. Reclaiming an insult as a movement's name is a standard protest technique — it converts an attempt at dismissal into free publicity and shared identity, which is why the account's following outpaced established parties within weeks.</p></div>
+      <div class="beat"><div class="lab">意义<small>Why</small></div><p>A social-media-native protest identity outgrowing legacy political parties in reach signals how much political energy in India's largest demographic bloc sits outside formal party structures.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/07/nx-s1-5879389/gen-z-protesters-in-india-demand-political-reform-and-accountability">NPR →</a></div>
     </article>
   </section>
 
   <footer>
-    Sources vetted against an allowlist (arXiv · Nature · Tom's Hardware · NPR · Al Jazeera). Every claim links a primary or corroborated source.<br>
-    Assembled from the last ~24h · first-principles teaching, not headlines.
+    Sources vetted against an allowlist (arXiv · Nature · university press · CNBC · GitHub · CBS News · Defense News · NPR · Al Jazeera). Every claim links a primary or corroborated source.<br>
+    Assembled from the last ~24–48h · first-principles teaching, not headlines.
   </footer>
 </div>

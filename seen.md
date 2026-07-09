@@ -11,3 +11,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-07 | world | NATO Ankara summit, defense spending
 2026-07-07 | world | Super Typhoon Bavi devastates Rota, Northern Marianas
 2026-07-07 | world | Xi promotes two PLA generals amid purge
+2026-07-09 | tech | SK Hynix $29B Nasdaq ADR listing
+2026-07-09 | tech | GitHub Copilot adds Kimi K2.7 Code, first open-weight model
+2026-07-09 | tech | ELEANOR soft robotic arm (elephant trunk)
+2026-07-09 | sci | Heidelberg unified quantum impurity theory (Fermi sea)
+2026-07-09 | sci | First real-time observation of oceanic crust formation (Indian Ocean ridge)
+2026-07-09 | sci | Bacterial docking-domain mechanism for combinatorial anti-cancer drugs
+2026-07-09 | world | US-Iran ceasefire fractures, Strait of Hormuz strikes
+2026-07-09 | world | Trump grants Ukraine Patriot interceptor manufacturing license
+2026-07-09 | world | India Gen Z "cockroach" protest movement
