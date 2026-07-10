@@ -29,3 +29,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-09 | world | Trump Greenland claim at NATO summit, Denmark pushback
 2026-07-09 | world | Marine Le Pen cleared to run 2027 French presidency
 2026-07-09 | world | US delists Syria as state sponsor of terrorism
+2026-07-10 | tech | Claude Cowork expands to mobile and web
+2026-07-10 | tech | OpenAI merges ChatGPT and Codex, launches ChatGPT Work
+2026-07-10 | tech | GitHub Code Quality exits preview as paid product
+2026-07-10 | sci | Quantinuum Helios 98-qubit all-to-all trapped-ion computer
+2026-07-10 | sci | ML-guided discovery of kagome superconductors YRu3B2/LuRu3B2
+2026-07-10 | sci | Harvard silicon chip parallel enzymatic DNA synthesis
+2026-07-10 | world | DR Congo Ebola outbreak tops 600 deaths, workers strike
+2026-07-10 | world | Andy Burnham on track to become UK prime minister
+2026-07-10 | world | UN $300M appeal for Venezuela earthquake survivors

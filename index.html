@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-09</title>
+<title>Daily Knowledge Briefing — 2026-07-10</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 003</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 004</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Thursday, 9 July 2026</div>
+    <div class="sub">Friday, 10 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>OpenAI launches GPT-5.6's Sol, Terra and Luna</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI publicly released three new model variants — Sol (frontier reasoning/agentic), Terra (balanced everyday model), and Luna (cheapest, fastest) — to all ChatGPT users and API developers, after a government-mandated preview period ended.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Rather than ship one model, OpenAI segments capability into cost/latency tiers because different tasks warrant different depth of computation — pricing tracks compute cost roughly linearly ($5/$30 per million tokens for Sol vs. $1/$6 for Luna). The real skill is <em>picking the cheapest model that clears the accuracy bar for a given task</em>, not always reaching for the frontier one.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Frontier AI economics are moving toward tiered "compute per query" markets, where routing — choosing which model handles which request — becomes as competitively important as raw capability progress.</p></div>
-      <div class="src"><a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI →</a></div>
+      <h3>Claude Cowork expands from desktop to phone and web</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Anthropic expanded Claude Cowork — its autonomous agent for non-coding office work like spreadsheets, reports, and docs — from a desktop-only app to phone and web, so a task started at a desk can be checked and approved from a phone even after the laptop is closed.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Cowork's architecture already separated the agent doing the work from the interface watching it — the agent runs as a background process that checkpoints at any step needing human judgment and waits for approval. Because approval and execution were already decoupled, Anthropic could add new front-ends without touching the underlying agent loop: <em>the interface is a thin remote control over a persistent background process</em>, not the thing doing the work.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>With under 9% of Cowork sessions being software development, mobile-first "approve or reject" interaction is becoming the default control surface for agents that mostly run unsupervised business-process work, not code.</p></div>
+      <div class="src"><a href="https://claude.com/blog/cowork-web-mobile">Claude →</a></div>
     </article>
 
     <article class="item">
-      <h3>SpaceXAI launches Grok 4.5, an "Opus-class" model</h3>
-      <div class="beat"><div class="lab">What it is</div><p>SpaceXAI (xAI) publicly released Grok 4.5, trained on Nvidia's newest GB300 GPUs and tuned on real coding-agent trajectories after xAI's Cursor acquisition, with a 500K-token context window at $2/$6 per million tokens.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The model's biggest jump over its predecessor is on agentic/tool-use benchmarks rather than general knowledge — training on real agent trajectories teaches the <em>propose-a-tool-call, observe, recover</em> loop directly, something raw next-token pretraining on text doesn't teach as efficiently.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The AI frontier race is bifurcating into competition over agentic/tool-use ability — advantage increasingly comes from what a model does across many tool calls, not what it says in one shot.</p></div>
-      <div class="src"><a href="https://x.ai/news/grok-4-5">x.ai →</a></div>
+      <h3>OpenAI merges ChatGPT and Codex, launches ChatGPT Work</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI folded its separate Codex coding app into the main ChatGPT desktop app — now organized into Chat, Work, and Codex modes — and launched ChatGPT Work, an agent that takes a stated goal and independently produces finished documents, spreadsheets, and slides across a user's connected apps.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Keeping a coding agent and a general chat assistant as separate products only made sense while each did a narrowly different job; once both run on the same underlying capability — an LLM that plans multi-step tool calls and revises based on results — separate apps just duplicate infrastructure. <em>Merging the interface follows from convergence in the underlying capability</em>, not the other way around.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Consolidating chat, coding, and agentic "outcome" work into one app pushes ChatGPT toward a general work platform rather than a chatbot, intensifying direct competition with Anthropic's Cowork.</p></div>
+      <div class="src"><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>Sony's PlayStation can delete your digital games after 3 years</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A clause in Sony's European PlayStation Network Terms of Service — resurfacing in wide discussion this week — lets Sony close any account inactive for 36 months, permanently revoking access to every digital game tied to it.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Buying a "digital game" is legally a license to access it on the platform's terms, not ownership of a copy — the license persists only as long as the account and platform choose to honor it. EU privacy law actually pressures Sony to <em>eventually delete dormant accounts' data</em> rather than hold it indefinitely.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A stark reminder that the shift to all-digital game libraries trades ownership for continued access — a risk invisible until a policy nobody read gets enforced.</p></div>
-      <div class="src"><a href="https://www.playstation.com/en-us/legal/terms-of-service/">PlayStation Terms of Service →</a></div>
+      <h3>GitHub Code Quality exits preview as a paid product</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub's Code Quality tool — automated code review, quality scoring, and coverage enforcement — exits nearly two years of free public preview on July 20 and becomes a paid product at $10 per active committer per month, plus separate usage-based billing for its AI-powered checks.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Splitting the price into a flat per-seat fee plus metered AI consumption reflects two different costs underneath one product: deterministic static analysis costs GitHub a roughly fixed amount per run, while AI-review features consume variable model inference per repository. <em>Charging flat for the fixed-cost part and metering the variable-cost part</em> is how vendors are learning to price tools that blend traditional and AI-driven features.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>As free AI-code-review previews graduate to paid tiers industry-wide, teams that adopted these tools during preview now face real per-seat costs — an early look at how "free during the AI land-grab" economics settle once vendors need revenue.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026/">GitHub Changelog →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>AI co-scientists publish real drug candidates in Nature</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Two independent multi-agent AI systems — Google DeepMind's Co-Scientist (built on Gemini 2.0) and FutureHouse's Robin (built on OpenAI o4-mini + Claude 3.7) — appear in Nature's July 9 issue. Robin proposed and helped validate two drug candidates for dry age-related macular degeneration, a leading cause of blindness.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The system runs as a closed loop, not a single query: literature-review agents generate a hypothesis, an experiment-design agent proposes an assay, real lab results come back, and an analysis agent revises the hypothesis. The reported 200x speedup comes from <em>the loop iterating far faster than a human research cycle</em>, not from any single smarter guess.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This moves AI from a tool that answers questions about existing literature to one that participates in generating new experimental knowledge — with real drug-discovery output already produced.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10652-y">Nature →</a></div>
+      <h3>98-qubit trapped-ion computer gets full qubit connectivity</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Quantinuum's Helios, a 98-qubit trapped-ion quantum computer, achieves genuine all-to-all connectivity — any two of its 98 qubits can interact directly — via a rotating ion-storage ring that physically shuttles ions between two processing zones.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Most quantum computers only let neighboring qubits interact directly, so an operation between distant qubits needs a chain of intermediate swap steps that each add error. Trapped-ion systems sidestep this by physically moving the ions through a shared channel rather than wiring every qubit to every other one — <em>connectivity comes from moving the physical qubit, not from adding more wires between fixed ones</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>All-to-all connectivity removes one of the biggest sources of accumulated error in near-term quantum computers, letting algorithms that need long-range qubit interactions run with far fewer error-prone swap steps.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10676-4">Nature →</a></div>
     </article>
 
     <article class="item">
-      <h3>Oak trees keep absorbing carbon long after they stop growing</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A multi-year field study across US oak forests found trees keep photosynthesizing and pulling in CO2 for months after their annual wood growth has already stopped — up to 36% of a tree's yearly carbon uptake happens after growth has ended.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Wood growth requires sustained internal water pressure in growing cells, which collapses almost immediately once conditions turn hot and dry — while photosynthesis, run by different cellular machinery, keeps operating under the same stress. Because the two processes are gated by <em>different physical constraints</em>, carbon absorbed doesn't automatically become carbon locked into wood.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Climate models that treat "carbon absorbed" as a stand-in for "carbon stored in forest biomass" may be systematically overestimating how much carbon hotter, drier future forests can actually lock away.</p></div>
-      <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.ady7139">Science Advances →</a></div>
+      <h3>Machine learning predicts two superconductors before synthesis</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A five-institution team led by Aalto University used a machine-learning model to screen an enormous space of candidate crystal structures, predicted two new superconducting compounds — YRu₃B₂ and LuRu₃B₂ — before ever making them, then synthesized and confirmed both as superconductors below 1 Kelvin.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Both compounds share a "kagome lattice" atomic geometry — a repeating pattern of corner-sharing triangles — known to force electrons into unusually flat energy bands that favor superconductivity. Instead of synthesizing thousands of candidates to see which happen to qualify, the model learned to <em>recognize the structural signature that produces flat electronic bands</em> and only flagged compounds worth actually making.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This is a working prediction-to-lab pipeline, not just a simulation — proof that ML screening can shrink an intractably large materials search down to a short list worth the cost of real synthesis, the actual bottleneck on the way to room-temperature superconductors.</p></div>
+      <div class="src"><a href="https://journals.aps.org/prresearch/abstract/10.1103/lpqj-7hyg">Physical Review Research →</a></div>
     </article>
 
     <article class="item">
-      <h3>Sharp central vision forms by cone conversion, not migration</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Using lab-grown human retinal tissue, researchers found that the eye's central high-acuity spot (the foveola) gets its sharp-vision cone layout not by cells migrating into place, but by existing blue-sensing cones converting into red- and green-sensing cones during fetal development.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Retinoic acid first suppresses blue-cone formation at the retina's center, then thyroid hormone pushes the remaining blue cones already sitting there to change identity. A cone's final sensory function isn't fixed at the cell's birth — it's <em>set later by its chemical surroundings</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This overturns a 30-year assumption about how sharp central vision forms and gives a chemical recipe that could let scientists grow patterned, human-like retinal tissue for transplant or disease modeling.</p></div>
-      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2602950123">PNAS →</a></div>
+      <h3>Silicon chip writes DNA using electricity and water</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Harvard engineers built a silicon chip that synthesizes 64 different DNA sequences at once, directly on the chip's surface, using precisely controlled electrical currents to trigger enzyme reactions in a water-based solution instead of the toxic solvents conventional DNA synthesis requires.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Standard DNA synthesis builds one chemical letter at a time using harsh reagents washed away between steps; this chip instead activates naturally occurring DNA-building enzymes only at specific electrodes by locally changing the electrochemical environment with current. <em>The chip controls where a reaction happens by controlling voltage, not by controlling which chemical reaches which spot</em>, letting many sequences build in parallel in one shared water bath.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A solvent-free, chip-based, massively parallel way to write DNA points toward portable DNA synthesizers and cheaper large-scale DNA data storage, both currently bottlenecked by the cost and hazard of conventional chemical synthesis.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41928-026-01662-9">Nature Electronics →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Trump renews Greenland claim, straining NATO further</h3>
-      <div class="beat"><div class="lab">What it is</div><p>At the NATO summit in Ankara, Trump repeated demands that the US should control Greenland "for the protection of the world," blamed Denmark's refusal for straining US-NATO relations, and floated withdrawing US troops from Europe. Danish PM Mette Frederiksen said Greenland "is of course not for sale."</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Greenland sits astride Arctic shipping lanes opening as sea ice retreats and holds rare-earth reserves currently routed almost entirely through China. A NATO member publicly floating annexation of another member's territory tests the alliance's core premise — that members defend each other, <em>not annex each other</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A treaty ally openly floating annexation of an ally's territory, even rhetorically, erodes the mutual-defense logic holding NATO together, with a live war in Ukraine testing that same logic in parallel.</p></div>
-      <div class="src"><a href="https://www.npr.org/">NPR →</a> · <a href="https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president">France 24 →</a></div>
+      <h3>Congo's Ebola outbreak tops 600 deaths as workers strike</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Confirmed Ebola deaths in the Democratic Republic of Congo passed 600 this week, making the outbreak — caused by the less-studied Bundibugyo strain, for which there is no approved vaccine — the worst on record for the country, while frontline health workers in the hardest-hit Ituri province have gone on strike over wages unpaid since the outbreak was declared in mid-May.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Outbreak response depends on a chain of paid, protected frontline workers willing to take on high-risk contact-tracing and treatment roles; when wages stop, that chain breaks at exactly the point the outbreak most needs it intact. <em>An epidemic can outrun its own response for logistical reasons that have nothing to do with the virus's biology</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A response losing capacity to strikes precisely as case counts accelerate is a warning sign that outside funding and logistics, not medical knowledge, may be the real limiting factor in containing this outbreak.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/9/confirmed-ebola-deaths-in-dr-congo-hit-600">Al Jazeera →</a> · <a href="https://www.npr.org/2026/06/30/nx-s1-5873364/drc-congo-ebola-health-workers-doctors">NPR →</a></div>
     </article>
 
     <article class="item">
-      <h3>Court clears Marine Le Pen to run for French president</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A Paris appeals court upheld Marine Le Pen's conviction for embezzling roughly €2.8M in European Parliament funds, but cut her office ban from 5 years to 45 months and converted her sentence to a monitored house-arrest bracelet — clearing her, for now, to run in France's 2027 election.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>French law lets a candidate run while a conviction is still contested on final appeal, so a court's practical ability to bar a frontrunner from the ballot before that appeal resolves is <em>much narrower than the original sentence suggested</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This removes the single biggest legal obstacle to the frontrunner in current French polling, reshaping the 2027 race regardless of how the final appeal eventually lands.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/08/g-s1-132467/le-pen-court-ordered-monitor">NPR →</a> · <a href="https://www.france24.com/en/france/20260707-france-s-le-pen-says-still-running-for-president">France 24 →</a></div>
+      <h3>Andy Burnham on track to become UK prime minister</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Nominations opened this week in the contest to replace UK Prime Minister Keir Starmer after his June resignation, and Andy Burnham — Labour's former Greater Manchester mayor — immediately secured backing from 322 of 403 Labour MPs, far more than the 81 needed, putting him on track to become party leader and prime minister automatically if he remains the only nominee.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>In the UK's parliamentary system, the head of government is decided by whichever party commands a parliamentary majority choosing its own leader internally — no national vote is required to install a new prime minister mid-term. <em>A change of national leadership can happen entirely through an internal party process</em>, provided the winning candidate already sits in, or can quickly enter, Parliament.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A contest with one dominant candidate is likely to move fast — Burnham could be sworn in within roughly two weeks — handing the UK a new prime minister without a general election, at a moment of open party crisis.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/9/uk-labour-leadership-nominations-begin-whos-running-and-how-it-works">Al Jazeera →</a> · <a href="https://www.france24.com/en/live-news/20260709-labour-leadership-contest-takes-burnham-closer-to-uk-pm-s-office">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>US moves to delist Syria as a state sponsor of terrorism</h3>
-      <div class="beat"><div class="lab">What it is</div><p>The US State Department formally began removing Syria's "state sponsor of terrorism" designation — held since 1979 — after President Ahmed al-Sharaa gave "formal assurances" on terrorism. The change takes effect in 45 days unless Congress blocks it, leaving only Iran, North Korea and Cuba on the list.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The designation legally triggers sanctions blocking access to international banking, investment and arms sales. Removing it doesn't change anything on the ground directly, but it <em>unlocks the financial and legal plumbing</em> any real economic recovery requires.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A 47-year-old US sanctions designation ending is a major, concrete bet by Washington on Syria's post-Assad government — reversible in 45 days, but otherwise a real opening for foreign investment.</p></div>
-      <div class="src"><a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/07/initiating-rescission-process-of-syrias-designation-as-a-state-sponsor-of-terrorism/">US State Dept →</a> · <a href="https://www.aljazeera.com/news/2026/7/8/us-moves-to-delist-syria-as-a-state-sponsor-of-terrorism">Al Jazeera →</a></div>
+      <h3>UN seeks $300 million for Venezuela earthquake survivors</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Two weeks after twin 7.2 and 7.5 magnitude earthquakes devastated Venezuela's La Guaira coast, the death toll has risen past 3,800 and the United Nations has launched an appeal for close to $300 million to fund six months of aid to 1.3 million affected people, as search-and-rescue winds down and officials warn of a second wave of harm from disrupted water and sanitation.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>In major disasters, the earthquake itself causes a first wave of deaths, while a second wave — from contaminated water, overcrowded shelters, and disrupted medical care — follows in the weeks after, once emergency teams have moved on. <em>The appeal is priced against that slower second wave of harm, not the earthquake's initial damage</em>, which is why it funds six months rather than immediate emergency relief.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The shift from rescue operations to a sustained aid appeal signals the disaster has entered a phase where sanitation and health infrastructure, not additional search-and-rescue, will determine the ultimate death toll.</p></div>
+      <div class="src"><a href="https://www.france24.com/en/live-news/20260708-un-launches-appeal-for-nearly-300-mn-in-venezuela-quake-relief">France 24 →</a> · <a href="https://www.aljazeera.com/news/2026/7/9/venezuela-earthquakes-toll-rises-to-3889-as-risk-of-disease-grows">Al Jazeera →</a></div>
     </article>
   </section>
 
