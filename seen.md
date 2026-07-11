@@ -38,3 +38,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-10 | world | DR Congo Ebola outbreak tops 600 deaths, workers strike
 2026-07-10 | world | Andy Burnham on track to become UK prime minister
 2026-07-10 | world | UN $300M appeal for Venezuela earthquake survivors
+2026-07-11 | tech | Claude for Government beta (FedRAMP High)
+2026-07-11 | tech | GitHub Copilot adds Codex as agent provider (JetBrains)
+2026-07-11 | tech | Mistral Robostral Navigate single-camera robot navigation
+2026-07-11 | sci | TOI-791 b/c super-puff planets in 5:3 resonance
+2026-07-11 | sci | Dyson sphere candidates: background galaxy contamination diagnostics
+2026-07-11 | sci | Fibre-optic analogue Hawking radiation backreaction measured
+2026-07-11 | world | Iran power shift to IRGC post-Khamenei funeral
+2026-07-11 | world | Spain Almeria wildfire kills 12+, deadliest in 20 years
+2026-07-11 | world | US housing affordability bill becomes law without Trump signature
