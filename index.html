@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-11</title>
+<title>Daily Knowledge Briefing — 2026-07-12</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 005</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 006</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Saturday, 11 July 2026</div>
+    <div class="sub">Sunday, 12 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Anthropic launches Claude for Government beta</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Anthropic brought Claude Code and Claude Cowork to Claude for Government Desktop in public beta, delivered through a FedRAMP High authorized environment with department-level spending controls, local conversation history on agency-managed devices, and hash-chained audit logs.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Government AI adoption is gated less by what a model can do than by whether its use can be proven compliant after the fact — authorizing officials need tamper-evident logs and documentation to support an agency's formal authority-to-operate, not just a working chatbot. <em>The bottleneck for shipping AI into government is the paperwork trail proving oversight, not the model itself</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Building a compliance-first product line — audit logs, spend controls, ATO documentation — as a separate track from the consumer product shows AI vendors treating regulated markets as an infrastructure problem to solve once, not a feature to bolt on.</p></div>
-      <div class="src"><a href="https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government">Claude →</a></div>
+      <h3>CodeQL adds static detection for AI prompt injection</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub's CodeQL 2.26.0 ships a new JavaScript/TypeScript query that flags untrusted data flowing into an LLM's system prompt, with sinks covering OpenAI, Anthropic, and Google GenAI SDK calls, alongside Kotlin 2.4.0 support and accuracy fixes across several languages.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>CodeQL finds bugs by tracing dataflow from untrusted sources to sensitive sinks without safe handling in between — the exact technique that catches SQL and command injection. <em>This release just adds a new sink category: a prompt-construction call is now treated the same way a raw SQL query has always been treated</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Prompt injection has mostly been caught by manual review or after the fact; folding it into standard static analysis means it gets checked automatically on every commit, the same way a SQL injection bug would be.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>GitHub Copilot adds Codex as agent provider</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub Copilot's JetBrains IDE integration now lets developers select OpenAI's Codex as an alternate "agent provider" from within the same chat panel, alongside new hooks, MCP server management, and configurable approval settings for agent sessions.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Copilot's chat panel now exposes an agent-provider abstraction — a picker that can point at any properly registered agent backend, not just GitHub's own. <em>The IDE integration point has become a slot that competing agent vendors can plug into</em>, rather than a single hard-wired assistant owning the interface.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Turning the IDE into neutral routing infrastructure between competing agent vendors — rather than one vendor owning the whole developer experience — matches the direction most coding tools took this year as multi-model support became the default expectation.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-07-07-codex-as-agent-provider-and-agentic-enhancements-in-jetbrains-ides/">GitHub Changelog →</a></div>
+      <h3>OpenAI retracts its own SWE-Bench Pro endorsement</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI audited SWE-Bench Pro — a coding benchmark it previously urged the field to adopt — using independent engineers who scored each task blind to the submitted solution, and found roughly 30% of tasks broken: bad ground truth, contradictory instructions, or overly strict tests. It is now retracting its recommendation.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A benchmark used to rank models attracts exactly the pressure that erodes it — contamination, sloppy ground truth, tasks nobody re-checks once they're widely cited. <em>An eval only stays trustworthy if someone keeps auditing its ground truth independently of the scores it produces</em>, and that auditing has to happen on a schedule, not just once at launch.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A leading lab publicly walking back its own benchmark advice is unusually self-critical, and the blind, human-graded audit method it used is a reusable template for checking whether any widely cited eval still means what it claims to measure.</p></div>
+      <div class="src"><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>Mistral's single-camera model beats multi-sensor navigation</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Mistral released Robostral Navigate, an 8-billion-parameter model that lets robots navigate unfamiliar environments using only a single ordinary camera, beating the best systems that use depth sensors or multiple cameras by 4.5 points on the R2R-CE benchmark.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Prior navigation systems assumed richer input — depth sensing, multiple viewpoints — was necessary for reliable spatial reasoning; Robostral instead trained a single-camera model on simulated trajectories, refined with reinforcement learning. <em>A model that reasons well about space can substitute for sensors that measure space directly</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Matching or beating multi-sensor navigation with one cheap camera would substantially lower the hardware cost of deploying mobile robots, decoupling navigation performance from how much sensor hardware a robot carries.</p></div>
-      <div class="src"><a href="https://mistral.ai/news/robostral-navigate/">Mistral AI →</a></div>
+      <h3>Meta opens its first paid developer model API</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Meta released Muse Spark 1.1, a reasoning model built for coding and agentic tool use, and for the first time opened one of its in-house models to outside developers through a metered Meta Model API compatible with both the OpenAI and Anthropic request formats.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Meta's AI distribution until now has been almost entirely open-weights (Llama): download the model, run it yourself, pay nothing per token. <em>A priced, hosted API for a model you cannot download marks a shift from giving away weights to selling inference directly</em>, the business model the closed labs have run on all along.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Speaking the same request format as OpenAI and Anthropic means switching to Muse Spark is a base-URL change, not a rewrite — Meta is competing on switching cost as much as on model quality.</p></div>
+      <div class="src"><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">Meta AI →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Twin super-puff planets found in orbital resonance</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Astronomers confirmed two Jupiter-sized planets, TOI-791 b and c, orbiting the same star with densities more than 20 times lower than Jupiter's — less dense than cotton candy — locked together in a 5:3 orbital resonance.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Standard core-accretion theory says a gas giant needs a large solid core to trigger runaway capture of a thick hydrogen/helium envelope, yet these "super-puffs" appear to carry voluminous envelopes without matching cores. Because the two planets share a resonance, they must have formed together from the same disc of gas and dust — <em>a shared orbital oddity between siblings constrains a formation theory far more tightly than either planet alone could</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A system with two independently confirmed super-puffs in resonance gives theorists a rare paired data point for testing whether core-accretion theory needs revision or these planets form by a genuinely different pathway.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2606.30016">arXiv →</a></div>
+      <h3>Lab ring mimics a black hole's energy-stealing spin</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Physicists built a ring network of resonators modulated in both space and time so it behaves as if spinning at effective faster-than-light angular speed, and in this "Floquet" regime observed rotational super-radiance — waves coming out carrying more energy than they went in with.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>In 1971 Zel'dovich predicted a wave scattering off a fast enough spinning absorber can leave amplified, draining rotational energy from the object it bounced off — the same mechanism, classically, that lets the Penrose process pull energy out of a spinning black hole's ergosphere. <em>Modulating a medium in time can substitute for physically spinning it fast enough to test that prediction</em>, which was never mechanically achievable before.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A black-hole energy-extraction mechanism that could only ever be theorized about astrophysically is now something a tabletop optics experiment can measure directly.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10725-y">Nature →</a></div>
     </article>
 
     <article class="item">
-      <h3>Background galaxies may fake three Dyson sphere signals</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A new analysis develops archival diagnostics to test whether the infrared "waste heat" signatures behind seven previously flagged Dyson-sphere candidate stars are instead caused by ordinary background galaxies sitting along the same line of sight, finding clear contamination evidence for three of them.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A candidate technosignature and an unrelated background object can produce an identical measurement — infrared excess around a star — so ruling out mundane explanations isn't optional confirmation, it's the entire test. <em>A signal only counts as evidence for something extraordinary once every ordinary cause has been actively excluded</em>, not merely left unconsidered.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Watching a promising hypothesis get systematically pruned by dedicated follow-up observation is what rigorous technosignature research actually looks like, as opposed to a headline candidate list that never gets re-examined.</p></div>
-      <div class="src"><a href="https://arxiv.org/html/2607.03619v1">arXiv →</a></div>
+      <h3>Chip steers light beams in 74 femtoseconds</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Caltech engineers built a silicon metasurface chip where one pulse of light redirects a second beam by up to 13 degrees in 74 femtoseconds — roughly a thousand times faster than prior beam-steering technology, and about how long light takes to cross a human hair.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Conventional beam steering is limited by how fast a mirror can physically move or a material's refractive index can be electronically retuned. This chip instead uses the optical Kerr effect in a resonant nanostructure, so <em>the steering speed is set only by how short the pump pulse is, not by any mechanical or thermal response time</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Steering at femtosecond speed opens a path to LiDAR and free-space optical links that can track targets or switch channels far faster than any mechanical or slower electro-optic system allows.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41565-026-02199-w">Nature Nanotechnology →</a></div>
     </article>
 
     <article class="item">
-      <h3>Optical fibre captures Hawking radiation's backreaction directly</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers built a fibre-optic "analogue black hole" — a fast pulse of light that mimics an event horizon's effect on other light in the fibre — and directly measured both the analogue Hawking radiation it emits and how emitting that radiation weakens the original pulse.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A real black hole's Hawking radiation is far too faint to ever measure, but the same horizon physics governs light pulses moving through a medium whose refractive index the pulse itself distorts. <em>Backreaction — radiation draining energy from the very horizon that produced it — had only been a theoretical prediction until this pulse-on-pulse measurement made it directly observable</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Directly measuring backreaction in an accessible analogue system tests a key theoretical prediction about black hole evaporation that is otherwise completely unobservable in any real astrophysical black hole.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10720-3">Nature →</a></div>
+      <h3>CAR-T cells target both a brain tumor and its shield</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers found GPNMB, a protein present on both glioblastoma tumor cells and the tumor-associated macrophages that protect them, and engineered CAR-T cells to attack it — producing durable tumor control in patient-derived and mouse glioma models.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Brain tumors resist immunotherapy partly because they recruit their own immune cells to actively suppress attack, shielding the tumor underneath. <em>Targeting a marker shared by the tumor and its protective cells lets one therapy dismantle the shield and the target in the same strike</em>, instead of attacking a tumor the shield is still covering.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Many immunotherapy failures trace to a hostile microenvironment rather than the therapy failing to recognize the tumor itself, so a shared target like this could generalize to other solid tumors that hide behind the same kind of defense.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10641-1">Nature →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Iran's power shifts toward military over clergy</h3>
-      <div class="beat"><div class="lab">What it is</div><p>As week-long funeral ceremonies for assassinated Supreme Leader Ali Khamenei concluded in Mashhad, his son and successor Mojtaba Khamenei was again absent from public events — a continued absence analysts say signals Iran's real power is consolidating around the Revolutionary Guard Corps rather than the new Supreme Leader personally.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Iran's constitution vests supreme authority in the Supreme Leader's office, but that office's actual power has always depended on the loyalty of the security forces that enforce it. <em>When the office-holder is too weakened to exercise power directly, the institution that keeps enforcing his authority becomes the institution that actually holds it</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A supreme leader dependent on the IRGC rather than commanding it pushes Iran toward a more militarized, less clerical form of government, at a moment when the region is still absorbing the aftermath of the war that killed his predecessor.</p></div>
-      <div class="src"><a href="https://www.france24.com/en/as-iran-buries-khamenei-it-shifts-from-a-theocracy-to-a-nationalistic-military-leadership">France 24 →</a> · <a href="https://www.aljazeera.com/news/2026/7/6/iran-reappoints-a-familiar-face-to-powerful-post-during-khamenei-funeral">Al Jazeera →</a></div>
+      <h3>DOJ subpoenas NYT reporters over Air Force One story</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Four New York Times reporters were subpoenaed by a US Attorney recently nominated as national intelligence director, after the paper reported the Secret Service had urged Trump to avoid flying on the Qatari-donated Air Force One at the NATO summit over security concerns; some subpoenas were delivered to reporters' homes.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A subpoena compelling a journalist to testify about sourcing works as pressure whether or not it ever leads to a charge — <em>the demand for compliance is the mechanism, not a conviction</em> — because a reporter who must either reveal a source or risk contempt has already lost the protection anonymity was supposed to provide.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This follows a pattern of US government pressure on other outlets this year, and tests whether the source-protection norms that have shielded journalists for decades still hold when the story embarrasses the administration.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/11/trump-administration-subpoenas-new-york-times-reporters-over-coverage">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Spain's deadliest wildfire in decades kills twelve</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A wildfire that broke out in Spain's Almeria province has killed at least 12 people and left 23 missing, making it the country's deadliest blaze in two decades; most victims died after leaving shelter to flee on foot or by car through a dry riverbed that became a trap.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Shelter-in-place guidance during a fast-moving wildfire exists because a fire's path, however fast, is usually more survivable to wait out than to outrun on unfamiliar ground; when panic drives people to self-evacuate anyway, routes with no fire history, like a dry riverbed, can funnel flame just as readily as they once funneled water. <em>The instruction to stay put exists precisely because moving through a wildfire's path is deadlier than waiting it out</em>, which this fire's toll illustrates starkly.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>As Mediterranean heatwaves lengthen, how officials communicate evacuation guidance is becoming as much a life-or-death variable as the fire's own behavior.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/10/wildfires-in-southern-spain-kill-at-least-12">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/10/nx-s1-5888160/southern-spain-wildfire-almeria">NPR →</a></div>
+      <h3>Israel's Gaza footprint grows nine months into ceasefire</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Nine months after the October ceasefire, Israeli forces have steadily expanded control beyond the agreed "Yellow Line," with NPR estimating close to 70% of Gaza under Israeli control and Gaza's Government Media Office citing 80%; an Al Jazeera investigation counted 40 Israeli military outposts inside the strip, eight built since the truce began.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A ceasefire line only holds as well as the cost of crossing it. <em>Without an enforcement mechanism beyond the agreement's own text, incremental territorial expansion can keep outpacing the diplomatic timeline while the occupying force still formally denies the truce has broken</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The pace of on-the-ground expansion suggests the ceasefire's promised second phase — withdrawal, disarmament, new governance — has stalled, and the facts being established now will shape whatever follows regardless of the original agreement's terms.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/10/nx-s1-5887357/israel-gaza-war-trump-ceasefire-military-control">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/2/gaza-wars-1000-days-90-of-strip-destroyed-80-seized-by-israel">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Housing bill becomes law without Trump's signature</h3>
-      <div class="beat"><div class="lab">What it is</div><p>The largest US housing affordability bill in decades became law at midnight without President Trump's signature, after he let a 10-day review window expire rather than sign or veto it, in a standoff over his unrelated demand for voter-ID legislation.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The US Constitution gives a president exactly three options once a bill reaches the desk while Congress is in session: sign it, veto it, or do nothing. <em>Refusing to act is not a fourth option that blocks a bill — under this procedural rule, ten days of inaction produces the same legal outcome as signing it</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A president managing to neither endorse nor kill his own party's bipartisan legislation, yet see it enacted regardless, shows the limits of withholding a signature as leverage once a bill has already cleared both chambers by a veto-proof margin.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/economy/2026/7/10/trump-refuses-to-sign-us-housing-bill-over-voting-act-standoff">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/10/nx-s1-5885027/housing-bill-without-trump-signature">NPR →</a></div>
+      <h3>UN finds genocide in Sudan as a second city is besieged</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A new UN investigation concluded that the Rapid Support Forces' mass killings, gang rapes, and deliberate starvation in el-Fasher amount to genocide. Attention has since shifted to el-Obeid, where roughly half a million people are under RSF siege and intensifying drone attack, and on July 11 the EU called for the RSF to be designated a terrorist organization.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A siege applies the same coercive logic as a direct assault, just slower — cutting off food, water, and movement compels surrender or death without storming the city. <em>That is why international law treats deliberate starvation of a besieged population as a war crime in its own right, not a side effect of the surrounding conflict</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>El-Obeid sits on the corridor between RSF-held Darfur and army-held central Sudan, so its fall could tip a three-year civil war decisively, while the genocide finding raises pressure for an accountability mechanism that has so far been absent.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/9/un-probe-finds-mass-killings-gang-rapes-by-sudans-rsf-amount-to-genocide">Al Jazeera →</a> · <a href="https://www.france24.com/en/video/20260711-sudan-eu-calls-for-terrorist-listing-of-rsf">France 24 →</a></div>
     </article>
   </section>
 

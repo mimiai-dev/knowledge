@@ -47,3 +47,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-11 | world | Iran power shift to IRGC post-Khamenei funeral
 2026-07-11 | world | Spain Almeria wildfire kills 12+, deadliest in 20 years
 2026-07-11 | world | US housing affordability bill becomes law without Trump signature
+2026-07-12 | tech | CodeQL 2.26.0 AI prompt-injection static detection
+2026-07-12 | tech | OpenAI retracts SWE-Bench Pro recommendation
+2026-07-12 | tech | Meta Muse Spark 1.1 + paid Meta Model API
+2026-07-12 | sci | Floquet rotational super-radiance (black-hole analog)
+2026-07-12 | sci | Caltech 74-femtosecond metasurface beam steering
+2026-07-12 | sci | GPNMB CAR-T dual tumor/myeloid glioblastoma targeting
+2026-07-12 | world | DOJ subpoenas NYT reporters over Air Force One story
+2026-07-12 | world | Israel controls ~70-80% of Gaza, 9mo into ceasefire
+2026-07-12 | world | UN finds Sudan genocide in el-Fasher, el-Obeid siege
