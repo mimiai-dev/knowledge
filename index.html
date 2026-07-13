@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-12</title>
+<title>Daily Knowledge Briefing — 2026-07-13</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 006</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 007</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Sunday, 12 July 2026</div>
+    <div class="sub">Monday, 13 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>CodeQL adds static detection for AI prompt injection</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub's CodeQL 2.26.0 ships a new JavaScript/TypeScript query that flags untrusted data flowing into an LLM's system prompt, with sinks covering OpenAI, Anthropic, and Google GenAI SDK calls, alongside Kotlin 2.4.0 support and accuracy fixes across several languages.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>CodeQL finds bugs by tracing dataflow from untrusted sources to sensitive sinks without safe handling in between — the exact technique that catches SQL and command injection. <em>This release just adds a new sink category: a prompt-construction call is now treated the same way a raw SQL query has always been treated</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Prompt injection has mostly been caught by manual review or after the fact; folding it into standard static analysis means it gets checked automatically on every commit, the same way a SQL injection bug would be.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection/">GitHub Changelog →</a></div>
+      <h3>OpenAI ships a full-duplex real-time voice model</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI has rolled out GPT-Live (and a smaller GPT-Live mini) to ChatGPT worldwide — a voice model that listens and speaks on the same continuous audio stream, rather than waiting for you to finish talking before it responds.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Conventional voice assistants are turn-based: record the utterance, transcribe it, generate a reply, speak it back — a strict request-then-response loop. <em>GPT-Live instead runs full-duplex, processing incoming audio and producing outgoing audio on the same stream</em>, deciding many times a second whether to keep listening, speak, pause, or call a tool, and can hand a hard sub-question to a larger background model and splice the answer back mid-conversation.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It closes much of the gap between talking to a machine and talking to a person — interruptions, backchanneling, mid-sentence correction all become possible — and marks an industry-wide move from batch turn-taking toward streaming, continuous listening.</p></div>
+      <div class="src"><a href="https://openai.com/index/introducing-gpt-live/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>OpenAI retracts its own SWE-Bench Pro endorsement</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI audited SWE-Bench Pro — a coding benchmark it previously urged the field to adopt — using independent engineers who scored each task blind to the submitted solution, and found roughly 30% of tasks broken: bad ground truth, contradictory instructions, or overly strict tests. It is now retracting its recommendation.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A benchmark used to rank models attracts exactly the pressure that erodes it — contamination, sloppy ground truth, tasks nobody re-checks once they're widely cited. <em>An eval only stays trustworthy if someone keeps auditing its ground truth independently of the scores it produces</em>, and that auditing has to happen on a schedule, not just once at launch.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A leading lab publicly walking back its own benchmark advice is unusually self-critical, and the blind, human-graded audit method it used is a reusable template for checking whether any widely cited eval still means what it claims to measure.</p></div>
-      <div class="src"><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/">OpenAI →</a></div>
+      <h3>GitHub Copilot browser tools reach general availability</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub has made "browser tools" for Copilot in VS Code generally available and on by default, letting the coding agent drive a real Chromium browser from inside the editor — navigating, clicking, reading console output, and taking screenshots.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Coding agents have mostly worked blind to how their code actually behaves once rendered, limited to editing text and running static checks. <em>Giving the agent a real browser closes that loop, so it can build, run, and observe the result in the same session</em> — the same test-and-fix cycle a human developer uses, folded directly into the agent.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Correctness checks move from guessing at the DOM to direct observation of a running app, while tabs stay private by default and sensitive permissions like camera or microphone are never auto-granted.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-07-01-browser-tools-for-github-copilot-in-vs-code-are-generally-available/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>Meta opens its first paid developer model API</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Meta released Muse Spark 1.1, a reasoning model built for coding and agentic tool use, and for the first time opened one of its in-house models to outside developers through a metered Meta Model API compatible with both the OpenAI and Anthropic request formats.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Meta's AI distribution until now has been almost entirely open-weights (Llama): download the model, run it yourself, pay nothing per token. <em>A priced, hosted API for a model you cannot download marks a shift from giving away weights to selling inference directly</em>, the business model the closed labs have run on all along.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Speaking the same request format as OpenAI and Anthropic means switching to Muse Spark is a base-URL change, not a rewrite — Meta is competing on switching cost as much as on model quality.</p></div>
-      <div class="src"><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">Meta AI →</a></div>
+      <h3>Video generation models moonlight as vision learners</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A new paper shows that a pretrained text-to-video diffusion model, without any task-specific redesign, can be steered by plain text instructions to perform depth estimation, surface-normal prediction, pose estimation, segmentation, and 3D keypoint prediction.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Learning to generate realistic video forces a model to implicitly encode a scene's physical structure — depth, geometry, motion — since it cannot render a plausible clip without some internal model of those things. <em>The paper shows that implicit physical knowledge can be pulled out directly through text prompts</em>, instead of fine-tuning a separate specialist model for each perception task.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It extends the "one foundation model, many downstream tasks" pattern already proven for language and images into video, suggesting the field is converging on generative pretraining as the default route to general-purpose perception.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2607.09024">arXiv →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Lab ring mimics a black hole's energy-stealing spin</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Physicists built a ring network of resonators modulated in both space and time so it behaves as if spinning at effective faster-than-light angular speed, and in this "Floquet" regime observed rotational super-radiance — waves coming out carrying more energy than they went in with.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>In 1971 Zel'dovich predicted a wave scattering off a fast enough spinning absorber can leave amplified, draining rotational energy from the object it bounced off — the same mechanism, classically, that lets the Penrose process pull energy out of a spinning black hole's ergosphere. <em>Modulating a medium in time can substitute for physically spinning it fast enough to test that prediction</em>, which was never mechanically achievable before.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A black-hole energy-extraction mechanism that could only ever be theorized about astrophysically is now something a tabletop optics experiment can measure directly.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10725-y">Nature →</a></div>
+      <h3>Google's Willow chip recalibrates itself mid-computation</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Google Quantum AI reports that its Willow quantum processor can now continuously recalibrate itself during a computation, instead of pausing between runs to be manually retuned, achieving record logical error rates in the process.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Qubits drift out of tune from environmental noise, and error-correcting codes work by repeatedly measuring "syndrome" data that reveals when and where an error occurred, without directly measuring — and collapsing — the fragile quantum state itself. <em>Willow feeds that syndrome data live into a reinforcement-learning agent that adjusts the chip's control parameters between computations</em>, folding calibration into the run instead of treating it as offline maintenance.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Recalibration downtime is one of the biggest practical bottlenecks to running large quantum algorithms, so fixing it structurally — rather than tuning it incrementally — is a real step toward machines that stay usable for longer stretches.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10759-2">Nature →</a></div>
     </article>
 
     <article class="item">
-      <h3>Chip steers light beams in 74 femtoseconds</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Caltech engineers built a silicon metasurface chip where one pulse of light redirects a second beam by up to 13 degrees in 74 femtoseconds — roughly a thousand times faster than prior beam-steering technology, and about how long light takes to cross a human hair.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Conventional beam steering is limited by how fast a mirror can physically move or a material's refractive index can be electronically retuned. This chip instead uses the optical Kerr effect in a resonant nanostructure, so <em>the steering speed is set only by how short the pump pulse is, not by any mechanical or thermal response time</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Steering at femtosecond speed opens a path to LiDAR and free-space optical links that can track targets or switch channels far faster than any mechanical or slower electro-optic system allows.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41565-026-02199-w">Nature Nanotechnology →</a></div>
+      <h3>Euclid telescope finds record-breaking early quasars</h3>
+      <div class="beat"><div class="lab">What it is</div><p>ESA's Euclid space telescope has discovered 31 new quasars at redshift 6.6–7.8, including one at redshift ≈7.77 — light that left its source when the universe was only about 670 million years old, a new record.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Quasars are supermassive black holes actively feeding on infalling matter, and finding fully grown ones this early is a puzzle, since standard theory has black holes growing gradually through accretion. <em>Euclid's wide, deep infrared imaging can catch quasars ten to a hundred times fainter than earlier all-sky surveys</em>, revealing the ordinary population behind the rare bright outliers previous surveys were limited to.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A faint, complete census of the earliest quasars is what lets astronomers actually test competing theories of how supermassive black holes formed so fast, and how their light re-ionized the early universe.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2607.03432">arXiv →</a></div>
     </article>
 
     <article class="item">
-      <h3>CAR-T cells target both a brain tumor and its shield</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers found GPNMB, a protein present on both glioblastoma tumor cells and the tumor-associated macrophages that protect them, and engineered CAR-T cells to attack it — producing durable tumor control in patient-derived and mouse glioma models.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Brain tumors resist immunotherapy partly because they recruit their own immune cells to actively suppress attack, shielding the tumor underneath. <em>Targeting a marker shared by the tumor and its protective cells lets one therapy dismantle the shield and the target in the same strike</em>, instead of attacking a tumor the shield is still covering.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Many immunotherapy failures trace to a hostile microenvironment rather than the therapy failing to recognize the tumor itself, so a shared target like this could generalize to other solid tumors that hide behind the same kind of defense.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10641-1">Nature →</a></div>
+      <h3>Lab-grown neurons implanted in Parkinson's patients</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A phase 1/2 trial transplanted a cryopreserved, ready-to-use batch of lab-grown dopamine-neuron precursors into the brains of eight people with moderate Parkinson's disease, reporting a clean safety record at 12 months.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Parkinson's symptoms come from the specific, progressive death of dopamine-producing neurons in one brain region, and existing drugs like levodopa only replace the missing chemical, not the cells that made it. <em>This trial instead replaces the cells themselves — growing the missing neuron type from stem cells, freezing it into an off-the-shelf product, and implanting it where the originals died</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>No graft-related tumors, dyskinesias, or serious adverse events were reported at 12 months — a real safety milestone that, if it holds up in larger trials, opens the door to restorative rather than purely symptomatic Parkinson's treatment.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41591-026-04525-0">Nature Medicine →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>DOJ subpoenas NYT reporters over Air Force One story</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Four New York Times reporters were subpoenaed by a US Attorney recently nominated as national intelligence director, after the paper reported the Secret Service had urged Trump to avoid flying on the Qatari-donated Air Force One at the NATO summit over security concerns; some subpoenas were delivered to reporters' homes.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A subpoena compelling a journalist to testify about sourcing works as pressure whether or not it ever leads to a charge — <em>the demand for compliance is the mechanism, not a conviction</em> — because a reporter who must either reveal a source or risk contempt has already lost the protection anonymity was supposed to provide.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This follows a pattern of US government pressure on other outlets this year, and tests whether the source-protection norms that have shielded journalists for decades still hold when the story embarrasses the administration.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/11/g-s1-133160/justice-department-subpoenas-new-york-times-reporters-over-air-force-one-reporting">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/11/trump-administration-subpoenas-new-york-times-reporters-over-coverage">Al Jazeera →</a></div>
+      <h3>Senator Lindsey Graham dies suddenly at 71</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Senate Budget Committee chairman and close Trump ally Lindsey Graham (R-SC) died Saturday night after a brief, sudden illness; the DC medical examiner's preliminary finding points to an aortic dissection.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>An aortic dissection is a tear in the inner wall of the body's largest artery that lets blood surge between the vessel's layers, and it is dangerous precisely because <em>it can go from no warning to fatal within minutes</em>, unlike a heart attack's often hours-long buildup — which is why apparently healthy public figures can die from it so abruptly.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Beyond the personal loss, it removes a pivotal Senate foreign-policy hawk and Budget Committee chair from a closely divided chamber, forcing South Carolina's governor to name a replacement and reshuffling the GOP's Ukraine- and Israel-aid coalition.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/12/nx-s1-5890790/us-sen-lindsey-graham-dies">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/12/us-senator-lindsey-graham-passes-away">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Israel's Gaza footprint grows nine months into ceasefire</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Nine months after the October ceasefire, Israeli forces have steadily expanded control beyond the agreed "Yellow Line," with NPR estimating close to 70% of Gaza under Israeli control and Gaza's Government Media Office citing 80%; an Al Jazeera investigation counted 40 Israeli military outposts inside the strip, eight built since the truce began.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A ceasefire line only holds as well as the cost of crossing it. <em>Without an enforcement mechanism beyond the agreement's own text, incremental territorial expansion can keep outpacing the diplomatic timeline while the occupying force still formally denies the truce has broken</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The pace of on-the-ground expansion suggests the ceasefire's promised second phase — withdrawal, disarmament, new governance — has stalled, and the facts being established now will shape whatever follows regardless of the original agreement's terms.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/10/nx-s1-5887357/israel-gaza-war-trump-ceasefire-military-control">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/2/gaza-wars-1000-days-90-of-strip-destroyed-80-seized-by-israel">Al Jazeera →</a></div>
+      <h3>Zelenskyy proposes wartime cabinet reshuffle in Ukraine</h3>
+      <div class="beat"><div class="lab">What it is</div><p>President Zelenskyy announced plans to replace Prime Minister Yulia Svyrydenko and several law-enforcement agency heads, with parliament still needing to approve the change; Svyrydenko is floated as a possible next ambassador to the US.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Ukraine's government runs on the parliamentary principle that <em>the cabinet resigns as a single bloc whenever the prime minister is replaced</em>, rather than ministers being swapped individually the way a purely presidential system would — so one resignation triggers a wholesale reset of the executive branch, not just one vacancy.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It is a major wartime governance shake-up, arriving alongside intensified Russian drone and missile strikes, that will reshape Ukraine's diplomatic posture toward Washington at a pivotal point in the war.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/12/ukraines-zelenskyy-announces-cabinet-reshuffle-replaces-pm-svyrydenko">Al Jazeera →</a> · <a href="https://www.france24.com/en/europe/20260712-ukraine-s-zelensky-proposes-new-pm-in-ukraine-government-reshuffle">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>UN finds genocide in Sudan as a second city is besieged</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A new UN investigation concluded that the Rapid Support Forces' mass killings, gang rapes, and deliberate starvation in el-Fasher amount to genocide. Attention has since shifted to el-Obeid, where roughly half a million people are under RSF siege and intensifying drone attack, and on July 11 the EU called for the RSF to be designated a terrorist organization.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A siege applies the same coercive logic as a direct assault, just slower — cutting off food, water, and movement compels surrender or death without storming the city. <em>That is why international law treats deliberate starvation of a besieged population as a war crime in its own right, not a side effect of the surrounding conflict</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>El-Obeid sits on the corridor between RSF-held Darfur and army-held central Sudan, so its fall could tip a three-year civil war decisively, while the genocide finding raises pressure for an accountability mechanism that has so far been absent.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/9/un-probe-finds-mass-killings-gang-rapes-by-sudans-rsf-amount-to-genocide">Al Jazeera →</a> · <a href="https://www.france24.com/en/video/20260711-sudan-eu-calls-for-terrorist-listing-of-rsf">France 24 →</a></div>
+      <h3>Bangkok pub fire kills at least 27</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A fire tore through a crowded pub near Bangkok's Chatuchak market late Sunday night; at least 27 people died and dozens more were injured, with witnesses describing an electrical fault near the stage followed by an explosion.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>In enclosed nightlife venues, <em>most fire deaths come from smoke inhalation and blocked escape routes, not the flame itself</em> — several victims here were found near a rear exit that may have been obstructed, echoing the same failure mode behind Thailand's 2009 Santika nightclub disaster, which is why fire codes focus so heavily on clear, unlocked egress paths rather than fire-resistant materials alone.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It is one of Thailand's deadliest nightlife fires in years, and is reviving scrutiny of fire-safety enforcement across the country's hospitality industry.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/12/g-s1-133238/fire-breaks-out-at-a-pub-in-bangkok-killing-at-least-27-people-officials-say">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/12/fire-engulfs-popular-bangkok-pub-killing-27-people-and-injuring-63">Al Jazeera →</a></div>
     </article>
   </section>
 

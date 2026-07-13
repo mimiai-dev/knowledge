@@ -56,3 +56,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-12 | world | DOJ subpoenas NYT reporters over Air Force One story
 2026-07-12 | world | Israel controls ~70-80% of Gaza, 9mo into ceasefire
 2026-07-12 | world | UN finds Sudan genocide in el-Fasher, el-Obeid siege
+2026-07-13 | tech | OpenAI GPT-Live full-duplex real-time voice model
+2026-07-13 | tech | GitHub Copilot browser tools GA in VS Code
+2026-07-13 | tech | Video generation models as general-purpose vision learners (arxiv)
+2026-07-13 | sci | Google Willow chip self-recalibrates mid-computation
+2026-07-13 | sci | Euclid telescope finds 31 quasars, redshift 7.77 record
+2026-07-13 | sci | STEM-PD off-the-shelf dopamine neuron implant for Parkinson's
+2026-07-13 | world | Senator Lindsey Graham dies suddenly at 71
+2026-07-13 | world | Zelenskyy wartime cabinet reshuffle, replaces PM Svyrydenko
+2026-07-13 | world | Bangkok pub fire kills 27+
