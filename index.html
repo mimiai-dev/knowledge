@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-13</title>
+<title>Daily Knowledge Briefing — 2026-07-14</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 007</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 008</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Monday, 13 July 2026</div>
+    <div class="sub">Tuesday, 14 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>OpenAI ships a full-duplex real-time voice model</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI has rolled out GPT-Live (and a smaller GPT-Live mini) to ChatGPT worldwide — a voice model that listens and speaks on the same continuous audio stream, rather than waiting for you to finish talking before it responds.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Conventional voice assistants are turn-based: record the utterance, transcribe it, generate a reply, speak it back — a strict request-then-response loop. <em>GPT-Live instead runs full-duplex, processing incoming audio and producing outgoing audio on the same stream</em>, deciding many times a second whether to keep listening, speak, pause, or call a tool, and can hand a hard sub-question to a larger background model and splice the answer back mid-conversation.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It closes much of the gap between talking to a machine and talking to a person — interruptions, backchanneling, mid-sentence correction all become possible — and marks an industry-wide move from batch turn-taking toward streaming, continuous listening.</p></div>
-      <div class="src"><a href="https://openai.com/index/introducing-gpt-live/">OpenAI →</a></div>
+      <h3>GitHub Models is shutting down entirely on July 30</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub confirmed that GitHub Models — the playground, model catalog, inference API, and bring-your-own-key endpoints — will be fully retired on July 30, 2026, for every customer including existing paid users; short "brownout" rehearsals are scheduled for July 16 and July 23.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>GitHub Models was a catalog-plus-inference-proxy: a single API letting any repo try many vendors' LLMs without hosting infrastructure. <em>Retiring it outright, rather than scaling it back, shows that running a free multi-model inference layer as a developer amenity didn't pencil out economically</em> — the capability doesn't vanish, it just moves behind paid product boundaries like Copilot or Microsoft Foundry.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Anything depending on the Models catalog or inference API breaks after July 30, and it's a telling data point on how "free AI experimentation" surfaces get folded into monetized products once the novelty period ends.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>GitHub Copilot browser tools reach general availability</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub has made "browser tools" for Copilot in VS Code generally available and on by default, letting the coding agent drive a real Chromium browser from inside the editor — navigating, clicking, reading console output, and taking screenshots.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Coding agents have mostly worked blind to how their code actually behaves once rendered, limited to editing text and running static checks. <em>Giving the agent a real browser closes that loop, so it can build, run, and observe the result in the same session</em> — the same test-and-fix cycle a human developer uses, folded directly into the agent.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Correctness checks move from guessing at the DOM to direct observation of a running app, while tabs stay private by default and sensitive permissions like camera or microphone are never auto-granted.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-07-01-browser-tools-for-github-copilot-in-vs-code-are-generally-available/">GitHub Changelog →</a></div>
+      <h3>Gemini 3.5 Live Translate collapses speech translation into one model</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Google DeepMind shipped Gemini 3.5 Live Translate, an audio-to-audio model doing near-real-time speech-to-speech translation across 70+ languages inside Google Translate, Google Meet, and the Gemini Live API — preserving the original speaker's tone and pacing.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Conventional speech translation is a three-stage relay — speech-to-text, text-to-text, text-to-speech — where every handoff discards prosody and adds delay. <em>Live Translate instead works directly on the audio stream as one model, generating translated speech continuously rather than waiting for a full sentence to finish</em>, trading a few seconds of latency for natural flow instead of stop-and-go turns.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It makes real-time cross-language conversation genuinely usable in meetings and calls rather than stilted and turn-based, and it's the same architectural move — collapsing a cascaded pipeline into one end-to-end audio model — now showing up across the industry's voice products.</p></div>
+      <div class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/">Google →</a></div>
     </article>
 
     <article class="item">
-      <h3>Video generation models moonlight as vision learners</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A new paper shows that a pretrained text-to-video diffusion model, without any task-specific redesign, can be steered by plain text instructions to perform depth estimation, surface-normal prediction, pose estimation, segmentation, and 3D keypoint prediction.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Learning to generate realistic video forces a model to implicitly encode a scene's physical structure — depth, geometry, motion — since it cannot render a plausible clip without some internal model of those things. <em>The paper shows that implicit physical knowledge can be pulled out directly through text prompts</em>, instead of fine-tuning a separate specialist model for each perception task.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It extends the "one foundation model, many downstream tasks" pattern already proven for language and images into video, suggesting the field is converging on generative pretraining as the default route to general-purpose perception.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2607.09024">arXiv →</a></div>
+      <h3>Physicists ask whether AI-found discoveries can be trusted</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A review from the VERaiPHY initiative lays out frameworks for rigorously verifying machine-learning systems before their outputs — a candidate particle, an anomaly, a signal — are accepted as genuine physics discoveries.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Every ML model carries unavoidable inductive bias and learns from a finite, imperfect sample, so <em>a pattern the model flags as "new physics" is only as trustworthy as the process built to check whether it's real or an artifact of the model's own blind spots</em>. Verification needs to be planned up front as part of the discovery pipeline, not bolted on after a result is already public.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>As particle physics, astrophysics, and cosmology increasingly let ML models do the first pass over the data, whether the next fundamental discovery holds up will depend on whether fields adopt standards like this before the headlines, not after them.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2607.10039">arXiv →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Google's Willow chip recalibrates itself mid-computation</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Google Quantum AI reports that its Willow quantum processor can now continuously recalibrate itself during a computation, instead of pausing between runs to be manually retuned, achieving record logical error rates in the process.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Qubits drift out of tune from environmental noise, and error-correcting codes work by repeatedly measuring "syndrome" data that reveals when and where an error occurred, without directly measuring — and collapsing — the fragile quantum state itself. <em>Willow feeds that syndrome data live into a reinforcement-learning agent that adjusts the chip's control parameters between computations</em>, folding calibration into the run instead of treating it as offline maintenance.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Recalibration downtime is one of the biggest practical bottlenecks to running large quantum algorithms, so fixing it structurally — rather than tuning it incrementally — is a real step toward machines that stay usable for longer stretches.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10759-2">Nature →</a></div>
+      <h3>First "true" sugar molecule detected in interstellar space</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Radio astronomers detected erythrulose, a four-carbon sugar, in a molecular cloud near the galactic center — the most chemically complex sugar ever found floating freely in space, roughly eight times more abundant there than simpler three-carbon sugars.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Complex prebiotic chemistry like sugar formation was assumed to need a planet, liquid water, or a forming star system. <em>Chemical modeling shows erythrulose instead forms efficiently on the icy surface of ordinary interstellar dust grains</em>, in the cold and vacuum of a molecular cloud, with no star or water required at all.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Sugars have already turned up in meteorites and asteroid samples; finding one built directly in the interstellar medium suggests the raw chemistry that seeded life's building blocks is a routine byproduct of space itself, delivered to young planets pre-made.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41550-026-02905-7">Nature Astronomy →</a></div>
     </article>
 
     <article class="item">
-      <h3>Euclid telescope finds record-breaking early quasars</h3>
-      <div class="beat"><div class="lab">What it is</div><p>ESA's Euclid space telescope has discovered 31 new quasars at redshift 6.6–7.8, including one at redshift ≈7.77 — light that left its source when the universe was only about 670 million years old, a new record.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Quasars are supermassive black holes actively feeding on infalling matter, and finding fully grown ones this early is a puzzle, since standard theory has black holes growing gradually through accretion. <em>Euclid's wide, deep infrared imaging can catch quasars ten to a hundred times fainter than earlier all-sky surveys</em>, revealing the ordinary population behind the rare bright outliers previous surveys were limited to.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A faint, complete census of the earliest quasars is what lets astronomers actually test competing theories of how supermassive black holes formed so fast, and how their light re-ionized the early universe.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2607.03432">arXiv →</a></div>
+      <h3>Earth's tallest tropical trees never run out of hydraulic headroom</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A study of Southeast Asia's dipterocarps — the tallest angiosperm trees on Earth — finds their water-transport system suffers no loss of function as the trees grow taller, even though gravity makes it steadily harder to pull water from root to crown.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Trees move water upward via negative pressure from leaf evaporation, pulling it through xylem tubes against gravity; taller trees need more extreme pressure, risking the water column snapping. <em>The trees fully compensate by structurally widening their xylem conduits and adjusting leaf traits as they grow</em>, rather than approaching a hard physical ceiling on height.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It overturns the assumption that gravity alone caps how tall a tree can get, and matters directly for predicting how the world's tallest, most carbon-dense forests will fare as climate change alters water availability.</p></div>
+      <div class="src"><a href="https://www.science.org/doi/10.1126/science.aea9013">Science →</a></div>
     </article>
 
     <article class="item">
-      <h3>Lab-grown neurons implanted in Parkinson's patients</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A phase 1/2 trial transplanted a cryopreserved, ready-to-use batch of lab-grown dopamine-neuron precursors into the brains of eight people with moderate Parkinson's disease, reporting a clean safety record at 12 months.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Parkinson's symptoms come from the specific, progressive death of dopamine-producing neurons in one brain region, and existing drugs like levodopa only replace the missing chemical, not the cells that made it. <em>This trial instead replaces the cells themselves — growing the missing neuron type from stem cells, freezing it into an off-the-shelf product, and implanting it where the originals died</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>No graft-related tumors, dyskinesias, or serious adverse events were reported at 12 months — a real safety milestone that, if it holds up in larger trials, opens the door to restorative rather than purely symptomatic Parkinson's treatment.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41591-026-04525-0">Nature Medicine →</a></div>
+      <h3>Healthy Tau protein turns out to guard, not just damage, brain cells</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Tau protein is best known for misfolding and clumping in Alzheimer's disease, but a new study finds its normal, healthy form actively protects neurons — removing Tau in mice and roundworms pushed mitochondria toward more fusion and made cells markedly more stress-resilient.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Mitochondria constantly cycle between fusing together and splitting apart, a balance cells use to dilute localized damage or excise it. <em>Normal Tau acts as a brake on that fusion process through a mitofusin-dependent pathway</em>, so removing it tips the balance toward more fusion and better stress tolerance.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It reframes Tau from a pathological aggregate to simply be cleared into an active regulator of mitochondrial health, opening a route for neurodegeneration therapies to target Tau's normal regulatory function rather than only its disease-state clumping.</p></div>
+      <div class="src"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2521642123">PNAS →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Senator Lindsey Graham dies suddenly at 71</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Senate Budget Committee chairman and close Trump ally Lindsey Graham (R-SC) died Saturday night after a brief, sudden illness; the DC medical examiner's preliminary finding points to an aortic dissection.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>An aortic dissection is a tear in the inner wall of the body's largest artery that lets blood surge between the vessel's layers, and it is dangerous precisely because <em>it can go from no warning to fatal within minutes</em>, unlike a heart attack's often hours-long buildup — which is why apparently healthy public figures can die from it so abruptly.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Beyond the personal loss, it removes a pivotal Senate foreign-policy hawk and Budget Committee chair from a closely divided chamber, forcing South Carolina's governor to name a replacement and reshuffling the GOP's Ukraine- and Israel-aid coalition.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/12/nx-s1-5890790/us-sen-lindsey-graham-dies">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/12/us-senator-lindsey-graham-passes-away">Al Jazeera →</a></div>
+      <h3>US reinstates a Hormuz blockade and adds a 20% cargo toll</h3>
+      <div class="beat"><div class="lab">What it is</div><p>The US said it is reinstating its naval blockade of the Strait of Hormuz and will charge a 20% toll on cargo shipped through it, as fighting with Iran continued — Iranian media reported fresh US strikes near Kish, Qeshm, and Bandar Abbas, and a vessel was hit in the strait.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The Strait of Hormuz is a roughly 33-kilometer-wide chokepoint carrying about a fifth of the world's oil and LNG, so whoever can enforce passage through it holds outsized leverage. <em>A blockade and a transit toll are two distinct tools for exploiting the same chokepoint</em>, and deploying both together turns a security operation into a revenue mechanism.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It risks reigniting global oil-price shocks and puts the US in the position of directly taxing international shipping through waters it does not own — a move Gulf states and other shipping nations are actively contesting.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/14/nx-s1-5893257/us-iran-updates">NPR →</a> · <a href="https://www.aljazeera.com/news/liveblog/2026/7/14/iran-war-live-us-launches-more-attacks-trump-orders-blockade-in-hormuz">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Zelenskyy proposes wartime cabinet reshuffle in Ukraine</h3>
-      <div class="beat"><div class="lab">What it is</div><p>President Zelenskyy announced plans to replace Prime Minister Yulia Svyrydenko and several law-enforcement agency heads, with parliament still needing to approve the change; Svyrydenko is floated as a possible next ambassador to the US.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Ukraine's government runs on the parliamentary principle that <em>the cabinet resigns as a single bloc whenever the prime minister is replaced</em>, rather than ministers being swapped individually the way a purely presidential system would — so one resignation triggers a wholesale reset of the executive branch, not just one vacancy.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It is a major wartime governance shake-up, arriving alongside intensified Russian drone and missile strikes, that will reshape Ukraine's diplomatic posture toward Washington at a pivotal point in the war.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/12/ukraines-zelenskyy-announces-cabinet-reshuffle-replaces-pm-svyrydenko">Al Jazeera →</a> · <a href="https://www.france24.com/en/europe/20260712-ukraine-s-zelensky-proposes-new-pm-in-ukraine-government-reshuffle">France 24 →</a></div>
+      <h3>France's Bastille Day parade puts Ukraine center stage, under a heatwave</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Macron presided over a deliberately "massive" Bastille Day parade — about 6,700 troops, 98 aircraft, and contingents from 35 countries in the "coalition of the willing" — with Ukrainian troops and a visiting Zelenskyy drawing the loudest applause, while the event unfolded during France's third major heatwave of the year and wildfires burning near Paris.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A national military parade is costly, deliberate political theater — spending real resources to publicly perform unity and resolve. <em>It is aimed as much at foreign audiences, here Russia and the US, as at domestic ones, precisely because private diplomatic assurances can't be verified by a rival the way an internationally televised parade can</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It shows Europe explicitly choosing public displays of Ukraine solidarity even as tensions with Washington rise, on a day that also put the practical cost of climate change on display inside one of France's most symbolic civic rituals.</p></div>
+      <div class="src"><a href="https://www.france24.com/en/france/20260714-france-bastille-day-parade-showcase-european-support-ukraine">France 24 →</a> · <a href="https://www.npr.org/2026/07/14/nx-s1-5891696/frances-bastille-day-celebrations-dampened-by-heatwave-and-raging-wildfires">NPR →</a></div>
     </article>
 
     <article class="item">
-      <h3>Bangkok pub fire kills at least 27</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A fire tore through a crowded pub near Bangkok's Chatuchak market late Sunday night; at least 27 people died and dozens more were injured, with witnesses describing an electrical fault near the stage followed by an explosion.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>In enclosed nightlife venues, <em>most fire deaths come from smoke inhalation and blocked escape routes, not the flame itself</em> — several victims here were found near a rear exit that may have been obstructed, echoing the same failure mode behind Thailand's 2009 Santika nightclub disaster, which is why fire codes focus so heavily on clear, unlocked egress paths rather than fire-resistant materials alone.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It is one of Thailand's deadliest nightlife fires in years, and is reviving scrutiny of fire-safety enforcement across the country's hospitality industry.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/12/g-s1-133238/fire-breaks-out-at-a-pub-in-bangkok-killing-at-least-27-people-officials-say">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/12/fire-engulfs-popular-bangkok-pub-killing-27-people-and-injuring-63">Al Jazeera →</a></div>
+      <h3>States sue to block the $110bn Paramount-Warner Bros Discovery merger</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Twelve US states led by California sued to stop Paramount's shareholder-approved, Justice-Department-cleared $110 billion acquisition of Warner Bros Discovery, arguing the combined company would control 27% of basic cable licensing and 75% of wide-release theatrical film distribution.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>US antitrust enforcement runs on two tracks that don't have to agree — <em>federal clearance is a judgment under national antitrust law, while state attorneys general can separately sue under their own state antitrust statutes</em>, so a merger can pass federal review and still be blocked or delayed in court by the states.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A federal judge has already issued a temporary restraining order pausing the deal, meaning one of the largest media mergers in Hollywood history — despite full federal and shareholder approval — is now hostage to a state-level court fight over media concentration.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/13/nx-s1-5879286/paramount-warner-bros-discovery-lawsuit">NPR →</a> · <a href="https://www.aljazeera.com/economy/2026/7/13/twelve-us-states-sue-paramount-to-block-warner-bros-merger">Al Jazeera →</a></div>
     </article>
   </section>
 

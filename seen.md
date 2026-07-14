@@ -65,3 +65,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-13 | world | Senator Lindsey Graham dies suddenly at 71
 2026-07-13 | world | Zelenskyy wartime cabinet reshuffle, replaces PM Svyrydenko
 2026-07-13 | world | Bangkok pub fire kills 27+
+2026-07-14 | tech | GitHub Models fully retired July 30
+2026-07-14 | tech | Gemini 3.5 Live Translate speech-to-speech
+2026-07-14 | tech | VERaiPHY AI verification framework for physics discovery
+2026-07-14 | sci | Erythrulose first true sugar detected in interstellar space
+2026-07-14 | sci | Dipterocarp trees hydraulic compensation for height/gravity
+2026-07-14 | sci | Wild-type Tau protects mitochondrial dynamics (PNAS)
+2026-07-14 | world | US reinstates Hormuz blockade, 20% cargo toll
+2026-07-14 | world | Bastille Day parade spotlights Ukraine amid heatwave
+2026-07-14 | world | 12 states sue to block Paramount-Warner Bros merger
