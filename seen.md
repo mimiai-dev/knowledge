@@ -74,3 +74,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-14 | world | US reinstates Hormuz blockade, 20% cargo toll
 2026-07-14 | world | Bastille Day parade spotlights Ukraine amid heatwave
 2026-07-14 | world | 12 states sue to block Paramount-Warner Bros merger
+2026-07-15 | tech | GitHub Copilot Visual Studio MCP server trust validation (fingerprinting)
+2026-07-15 | tech | Anthropic launches Claude for Teachers (free US K-12 access)
+2026-07-15 | tech | Stanford Mnemosyne agentic transaction processing for AI workflow repair
+2026-07-15 | sci | Grid-state (GKP) bosonic qubit sub-10^-3 SPAM error record
+2026-07-15 | sci | Simple non-elastic fluid found to fracture like a solid
+2026-07-15 | sci | AT2 lung stem cells reprogram fibroblast niche (PNAS)
+2026-07-15 | world | US strikes Iran's coast for 7 hours, Iran hits Bahrain/Kuwait/Jordan
+2026-07-15 | world | DRC Ebola outbreak outruns contact tracing, 700+ deaths, 5 provinces
+2026-07-15 | world | Fontainebleau forest fire near Paris, south-France water bombers deployed
