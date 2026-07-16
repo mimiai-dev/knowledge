@@ -83,3 +83,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-15 | world | US strikes Iran's coast for 7 hours, Iran hits Bahrain/Kuwait/Jordan
 2026-07-15 | world | DRC Ebola outbreak outruns contact tracing, 700+ deaths, 5 provinces
 2026-07-15 | world | Fontainebleau forest fire near Paris, south-France water bombers deployed
+2026-07-16 | tech | Thinking Machines releases Inkling, 975B MoE open-weights model
+2026-07-16 | tech | GitHub Copilot CLI plan-mode runtime-layer file-edit lockdown
+2026-07-16 | tech | OpenAI Codex Micro keyboard with physical reasoning-effort dial
+2026-07-16 | sci | PNAS physically intelligent capsule robots (hydrogel logic, no chips)
+2026-07-16 | sci | Deep-sea fiber-optic cables repurposed as seismic sensor network
+2026-07-16 | sci | Quanta thermodynamic computers harness noise as computation
+2026-07-16 | world | Zelenskyy fires Defense Minister Fedorov, Kyiv protests erupt
+2026-07-16 | world | Lebanon-Israel Rome talks agree on pilot-zone withdrawal structure
+2026-07-16 | world | US disables Iran tanker near Kharg Island, Iran threatens Bab el-Mandeb

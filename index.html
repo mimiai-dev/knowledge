@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-15</title>
+<title>Daily Knowledge Briefing — 2026-07-16</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 009</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 010</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Wednesday, 15 July 2026</div>
+    <div class="sub">Thursday, 16 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Visual Studio now fingerprints MCP servers before trusting them</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub added a trust-validation layer for Model Context Protocol servers in Visual Studio: at startup it compares an MCP server's configuration and code fingerprint against a previously trusted baseline, and warns before letting Copilot run tools from a server that has changed.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>An MCP server is just another dependency an AI agent calls into, but unlike a pinned package its tool definitions can be silently rewritten by the server operator after you've already trusted it, letting a benign server turn malicious mid-session. <em>Fingerprinting the server's config and code at every startup and diffing it against the trusted baseline turns "trust once" into "verify every time,"</em> catching the swap before the agent ever calls a compromised tool.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>As agentic coding tools reach into filesystems, terminals, and credentials through MCP, this is one of the first mainstream defenses against a supply-chain attack class — persistent MCP tool poisoning — that security researchers have been flagging all year.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-07-14-github-copilot-in-visual-studio-june-update/">GitHub Changelog →</a></div>
+      <h3>Thinking Machines releases Inkling, a giant open-weight model</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Mira Murati's Thinking Machines Lab released Inkling, its first in-house model: a mixture-of-experts transformer with 975 billion total parameters but only 41 billion active per token, trained on 45 trillion tokens of text, images, audio, and video, with weights open for anyone to download and fine-tune.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A dense model of Inkling's stated size would need to load and compute through nearly a trillion parameters for every token. <em>Mixture-of-experts routes each token to only a small subset of specialized sub-networks, so the model behaves like a much larger system while only paying the compute cost of a much smaller one</em> — that's the trick that lets a 975B-parameter model run at roughly 41B-parameter cost.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Open weights mean any company can download, inspect, and fine-tune Inkling directly, rather than renting access to a closed API — intensifying the split between labs racing on frontier closed models and those competing to give enterprises full control of the weights.</p></div>
+      <div class="src"><a href="https://thinkingmachines.ai/news/introducing-inkling/">Thinking Machines Lab →</a></div>
     </article>
 
     <article class="item">
-      <h3>Anthropic gives every US K-12 teacher a free year of Claude</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Anthropic launched Claude for Teachers, giving verified US K-12 educators free access to premium Claude, a library of teaching skills, and direct connectors into classroom tools like Canva Education, MagicSchool, and Brisk Teaching, mapped to academic standards in all 50 states.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Landing an AI product with a specific profession takes more than switching on free access. <em>It means building the domain-specific scaffolding — standards-aligned skills, curriculum connectors, an FERPA-compliant data addendum that keeps student data out of model training — that makes the tool usable inside an existing regulated workflow</em>, not just capable in the abstract.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a leading indicator of how AI labs will compete for institutional footholds: free distribution to a captive, high-trust professional population, in a race with OpenAI and Google to shape how a generation of students first meets AI in the classroom.</p></div>
-      <div class="src"><a href="https://www.anthropic.com/news/claude-for-teachers">Anthropic →</a></div>
+      <h3>GitHub closes a loophole where 'plan mode' could edit files</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub hardened Copilot CLI so that its read-only "plan mode" now hard-blocks any workspace-mutating tool call at the runtime layer, closing a gap where the underlying model could still trigger a file edit mid-planning session despite the mode's label.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Labeling a mode "plan-only" is a promise about what the model is instructed to do, not a guarantee about what it can do. <em>The fix moves the boundary from the model's instructions into the runtime itself, so an edit attempt is refused mechanically, whether or not the model "meant" to make it.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>As coding agents run with less supervision, this is a small but concrete example of a general safety principle: don't rely on a model to police its own permissions when the enforcement can happen a layer below it instead.</p></div>
+      <div class="src"><a href="https://github.com/github/copilot-cli/releases/tag/v1.0.71-2">GitHub Copilot CLI →</a></div>
     </article>
 
     <article class="item">
-      <h3>A database-style transaction model for AI agents that repair themselves</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Stanford researchers built Mnemosyne, a runtime that applies database-style transaction processing to actions an AI agent proposes for itself — treating every generated action as an untrusted proposal until it passes a deterministic admission check against declared rules.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>An LLM-generated repair can be syntactically perfect and still be wrong — stale, conflicting with a concurrent change, or destroying the evidence that triggered it. <em>Mnemosyne borrows the classic database guarantee that only the runtime commits state changes, never the proposer directly</em>: it logs every transition and only admits an agent's action if it's provably safe and reversible, at under 6% overhead.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>As agents increasingly patch their own workflows without a human in the loop, this is a concrete answer to "how do you stop an AI from confidently making things worse" — borrow fifty years of transaction-processing theory instead of trusting the model's judgment.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2607.00269">arXiv →</a></div>
+      <h3>OpenAI ships a keyboard with a physical reasoning-effort dial</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI's first hardware product, the $230 Codex Micro keyboard built with Work Louder, gives ChatGPT's Codex coding agents a physical control surface: light-up "Agent Keys" showing live status per running agent, a joystick for common workflows, and a dial that sets how much reasoning effort — time and compute — an agent spends on a task.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Modern reasoning models already let a caller trade latency for accuracy by allocating more "thinking" tokens at inference time — normally a hidden parameter in an API call. <em>Turning that trade-off into a twistable physical dial doesn't change the underlying mechanism, it just makes an invisible software knob something a user can feel and set by hand.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a small but telling sign that "how much should the model think" is becoming a routine, user-facing control across agentic products, not just a backend setting developers tune once.</p></div>
+      <div class="src"><a href="https://openai.com/supply/co-lab/work-louder/">OpenAI →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>A qubit built from one oscillator reaches transmon-grade accuracy</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers demonstrated a "grid-state" qubit — encoded not in a single two-level system but across the many energy states of one harmonic oscillator — with combined state-preparation-and-measurement error below 1 in 1,000, a hundredfold improvement over prior grid-state qubits.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Standard qubit designs wire together many physical two-level systems for error correction, adding cross-talk and complexity. <em>A grid-state qubit instead exploits the huge, evenly spaced ladder of energy states already inside one oscillator</em>, encoding logical 0s and 1s across a periodic grid of those states so the redundancy needed for error correction lives inside a single physical object.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Matching the error rates of mature transmon qubits is the threshold that decides whether a qubit design is a lab curiosity or a real contender for scaling up fault-tolerant quantum computers.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2607.06718">arXiv →</a></div>
+      <h3>Swallowable robots compute with hydrogels, not chips</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers built capsule-sized medical robots for the gastrointestinal tract that sense, decide, and act using mechanical metamaterial memory and hydrogel logic gates — with no batteries, motors, or electronic chips — and validated them in ex vivo and in vivo large-animal trials.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A conventional sensor-response system needs a chip to read a sensor, decide, and command an actuator. <em>Here the "decision" is made by the physical structure itself — a metamaterial that mechanically remembers a state and a hydrogel that performs logic through its own swelling and chemistry</em> — so sensing, computation, and actuation are the same physical event, not three components wired together.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Removing electronics from an ingestible device sidesteps battery safety, MRI incompatibility, and the biofouling that plagues implanted electronics — a path toward diagnostic and therapeutic robots simple enough to pass through the body safely.</p></div>
+      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2605060123">PNAS →</a></div>
     </article>
 
     <article class="item">
-      <h3>A fluid with almost no elasticity still snapped like a solid</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Physicists studying a simple, nearly non-elastic fluid found that under enough stress it fractures cleanly, like a solid, rather than just flowing — upending the working assumption that fracture in a fluid requires elasticity.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The textbook account of how a fluid "breaks" like a solid says it must store elastic energy and then release it suddenly as a crack. Viscosity is supposed to only rearrange molecules and dissipate energy, not store it. <em>This fluid had almost no elasticity to store energy in, yet it cracked anyway</em> — meaning some other, still-unidentified mechanism is doing the work fracture theory assigned to elasticity.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Fracture in "simple" fluids shows up in 3D-printing inks, biological gels, and industrial coatings; not knowing the real mechanism means engineers have been predicting failure in these materials using the wrong physics.</p></div>
-      <div class="src"><a href="https://www.quantamagazine.org/we-know-simple-fluids-can-flow-turns-out-some-can-fracture-20260710/">Quanta Magazine →</a></div>
+      <h3>Old internet cables become a planet-sized earthquake sensor</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Scientists are repurposing deep-sea fiber-optic cables — built for data traffic, not seismology — alongside drilling ships and seafloor sensors to study the ocean crust, a region so unexplored that less than 0.001% of the sea floor has ever been visually surveyed.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A fiber-optic cable already carries pulses of laser light for communication; any physical disturbance to the cable — like the tiny strain from a passing seismic wave — measurably distorts how that light scatters as it travels. <em>Reading that distortion turns thousands of kilometers of cable already lying on the seafloor into one continuous seismic sensor, at zero marginal hardware cost</em>, without ever tapping a byte of the data running through it.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The seafloor generates the earthquakes and tsunamis that matter most for coastal warning systems, and this converts already-buried infrastructure into monitoring coverage that would otherwise cost billions of dollars in dedicated ocean sensors.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/d41586-026-01988-6">Nature →</a></div>
     </article>
 
     <article class="item">
-      <h3>Lung stem cells don't just sense their environment — they redesign it</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A large genetic screen found that AT2 cells, the lung's alveolar stem cells, don't just respond to signals from neighboring fibroblasts — they actively reprogram those fibroblasts' gene expression in return, reshaping the fibrosis, immune-trafficking, and metabolic behavior of the tissue around them.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The stem-cell niche is usually described as a one-way relationship, where the niche instructs the stem cell. <em>Systematically screening the receptors and pathways on both sides showed the arrow runs both ways</em> — the stem cell is also an active author of its niche's signaling environment, not just a reader of it.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Lung fibrosis and tumor microenvironments are both niche-remodeling diseases; if stem cells actively drive that remodeling rather than only reacting to it, therapies aimed solely at the fibroblast side are targeting half the loop.</p></div>
-      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2606113123">PNAS →</a></div>
+      <h3>Computers that compute by letting noise do the work</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Quanta Magazine profiles thermodynamic computing, an emerging hardware approach that builds physical devices tuned so close to the thermal energy scale that random thermal fluctuations — the noise every classical chip is engineered to suppress — become the mechanism that drives the computation itself.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A conventional chip spends huge amounts of energy holding transistors in a definite 0-or-1 state against thermal noise trying to flip them. <em>Thermodynamic computing instead lets a system relax naturally toward whichever state minimizes its energy — the same physics by which a protein folds into its lowest-energy shape</em> — so the "answer" emerges from letting the system settle, rather than from forcing it through each step.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>If it scales, it inverts computing's biggest cost driver: instead of paying energy to fight noise, these machines would pay almost nothing and run near room temperature, offering a third paradigm alongside classical and quantum computing for hard optimization problems.</p></div>
+      <div class="src"><a href="https://www.quantamagazine.org/thermodynamic-computers-go-with-the-energy-flow-20260715/">Quanta Magazine →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>US strikes Iran's coast for seven hours, Tehran hits three Gulf states back</h3>
-      <div class="beat"><div class="lab">What it is</div><p>US Central Command carried out a seven-hour operation against dozens of military targets near the Strait of Hormuz and Iran's coast; Iranian officials say more than 30 civilians were killed and 260 wounded, and Iran's Revolutionary Guard retaliated with drone and missile strikes on US assets in Bahrain, Kuwait, and Jordan. Washington also resumed its naval blockade of Iranian ports.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A chokepoint blockade and open strikes are two different levers on the same goal — controlling Hormuz. <em>Running both at once converts a shipping-lane dispute into a multi-front war</em>: the blockade cuts revenue and supply at the strait itself, while the strikes and Iran's retaliation now radiate outward to bases in three countries that had no direct stake in the strait.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Brent crude jumped from near $70 to over $86 a barrel on the news, and a peace framework signed less than a month ago has now fully collapsed into an active, expanding regional war.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/15/us-attacks-iran-as-irgc-claims-strikes-on-us-military-sites-in-gulf">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes">France 24 →</a></div>
+      <h3>Zelenskyy fires his most popular minister, sparks protests</h3>
+      <div class="beat"><div class="lab">What it is</div><p>President Zelenskyy dismissed Defense Minister Mykhailo Fedorov — the 35-year-old architect of Ukraine's drone program — as part of a cabinet reshuffle that also installed Serhii Koretskyi as prime minister; hundreds protested in Kyiv, Lviv, Odesa, and Dnipro, and the air force's deputy commander resigned over the decision.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Fedorov's removal followed reported friction with Commander-in-Chief Oleksandr Syrskyi over conscription and force-modernization reforms. <em>When a wartime government fires the official credited with a battlefield advantage rather than the one he was clashing with, the move reveals whose institutional position was actually stronger</em> — not whose reforms were working.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The reshuffle lands in the middle of an active war effort, and the public backlash — including a resignation inside the military itself — signals real friction over whether Ukraine's modernization drive survives the change.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/16/hundreds-protest-in-kyiv-over-zelenskyys-dismissal-of-defence-minister">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired">NPR →</a></div>
     </article>
 
     <article class="item">
-      <h3>Congo's Ebola outbreak is now spreading faster than it can be traced</h3>
-      <div class="beat"><div class="lab">What it is</div><p>The WHO says 80% of new Ebola cases in eastern DR Congo are emerging from unknown chains of transmission. The outbreak has passed 700 deaths among nearly 1,930 cases and now reaches five provinces, after spreading into previously unaffected Tshopo and Haut-Uele.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Contact tracing only works if a new case can be linked back to a known infected person. <em>Once most new cases can't be traced to a known chain, tracing has stopped being a containment tool and become a lagging indicator</em> — the outbreak's true spread is now running ahead of the system meant to measure it.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The rare Bundibugyo strain driving this outbreak has no approved vaccine or treatment, so containment depends entirely on tracing and safe burials — both now failing at the same time armed conflict and funding gaps are hampering the response.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/15/g-s1-133630/ebola-congo-deaths">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/13/staff-at-congo-ebola-centre-strike-as-virus-continues-spreading">Al Jazeera →</a></div>
+      <h3>Lebanon and Israel agree on the shape of a withdrawal</h3>
+      <div class="beat"><div class="lab">What it is</div><p>After a sixth round of US-brokered talks in Rome, Lebanon and Israel agreed on the structure and guidelines for a "pilot zone" process — an initial, verifiable Israeli withdrawal from two designated areas of southern Lebanon, to be followed by Lebanese army deployment and, if it holds, the return of displaced residents.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Neither side trusts the other to honor a single, all-at-once withdrawal after a war and an unresolved disarmament question over Hezbollah. <em>Splitting the exit into small, verifiable pilot zones turns an all-or-nothing trust problem into a repeatable, checkable one</em> — each zone becomes a test case that either builds enough confidence to expand the process or stalls it before further withdrawals are risked.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>No timetable or exact boundaries were set, so the agreement is a structure for de-escalation, not de-escalation itself — whether "the coming days" produces an actual withdrawal is the real test of whether the framework holds.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/14/lebanon-israel-hold-talks-in-rome-on-implementing-framework-deal">Al Jazeera →</a> · <a href="https://www.france24.com/en/live-news/20260714-israel-says-ready-to-move-on-pilot-zones-amid-new-lebanon-talks">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Paris fights forest fires with water bombers flown in from the south</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Wildfires have burned more than 2,000 hectares of the historic Fontainebleau forest near Paris since Sunday, forcing roughly 1,000 evacuations; France had to fly in Canadair water-bombing planes from the hotter, drier south of the country — the first time that's been necessary for a fire in the Paris region.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Firefighting aircraft are normally stationed where fire risk is already highest, on the assumption the temperate north stays wet enough not to need them. <em>Needing to redeploy south-based water bombers to Paris means the region's fire risk has crossed a threshold the south already crosses routinely</em> — the infrastructure gap that exposes is a direct readout of how far north that threshold has moved.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a concrete, resource-allocation-level signal — not just a temperature record — that repeated heatwaves are pushing fire risk into parts of Europe whose firefighting infrastructure was never built for it.</p></div>
-      <div class="src"><a href="https://www.france24.com/en/environment/20260714-my-heart-is-on-fire-fontainebleau-forest-blaze-leaves-community-reeling">France 24 →</a> · <a href="https://www.aljazeera.com/news/2026/7/13/wildfires-near-paris-force-evacuations-disrupt-train-lines-and-motorway">Al Jazeera →</a></div>
+      <h3>US disables a tanker as Iran threatens a second strait</h3>
+      <div class="beat"><div class="lab">What it is</div><p>US Central Command fired Hellfire missiles to disable an oil tanker bound for Iran's Kharg Island terminal, enforcing a reimposed naval blockade, while Iran's Revolutionary Guard threatened to close the Bab el-Mandeb Strait — a second major oil route, this one leading to the Red Sea — in retaliation.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The Strait of Hormuz and the Bab el-Mandeb are two separate chokepoints serving two different sets of oil exporters. <em>Threatening the second strait converts a bilateral US-Iran shipping dispute into a lever against every country that depends on Red Sea shipping</em> — mainly Saudi Arabia — spreading the cost of the conflict onto parties that were not combatants in it.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Analysts warn that a simultaneous disruption of both straits could meaningfully damage global oil supply and shipping, which is why the threat alone — without Iran acting on it — is enough to move markets and pressure allies not directly involved in the fight.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/16/us-strikes-iran-tanker-as-tehran-hits-kuwait-jordan-whats-the-latest">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260715-iran-threatens-to-cut-off-major-vital-seaways-in-response-to-trump-s-renewed-blockade">France 24 →</a></div>
     </article>
   </section>
 
