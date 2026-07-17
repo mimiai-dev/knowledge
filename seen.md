@@ -92,3 +92,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-16 | world | Zelenskyy fires Defense Minister Fedorov, Kyiv protests erupt
 2026-07-16 | world | Lebanon-Israel Rome talks agree on pilot-zone withdrawal structure
 2026-07-16 | world | US disables Iran tanker near Kharg Island, Iran threatens Bab el-Mandeb
+2026-07-17 | tech | Moonshot Kimi K3, 2.8T-parameter open-weight MoE model
+2026-07-17 | tech | GitHub Projects advanced search (boolean AND/OR) GA
+2026-07-17 | tech | GitHub secret scanning adds APIclub/Resend, VolcEngine push protection
+2026-07-17 | sci | Saxiphilin frog toxin-sponge protein neutralizes saxitoxin in mice
+2026-07-17 | sci | Spliceosome-independent yeast (SYNE27) with all introns removed
+2026-07-17 | sci | Dual-STING-agonist mRNA lipid nanoparticle cancer vaccine
+2026-07-17 | world | Iran retaliation strikes hit Bahrain, Kuwait, Jordan, Oman, Qatar
+2026-07-17 | world | US convenes 60-nation DC summit on left-wing political violence
+2026-07-17 | world | Hong Kong third round of independent bookstore arrests

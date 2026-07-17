@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-16</title>
+<title>Daily Knowledge Briefing — 2026-07-17</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 010</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 011</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Thursday, 16 July 2026</div>
+    <div class="sub">Friday, 17 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Thinking Machines releases Inkling, a giant open-weight model</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Mira Murati's Thinking Machines Lab released Inkling, its first in-house model: a mixture-of-experts transformer with 975 billion total parameters but only 41 billion active per token, trained on 45 trillion tokens of text, images, audio, and video, with weights open for anyone to download and fine-tune.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A dense model of Inkling's stated size would need to load and compute through nearly a trillion parameters for every token. <em>Mixture-of-experts routes each token to only a small subset of specialized sub-networks, so the model behaves like a much larger system while only paying the compute cost of a much smaller one</em> — that's the trick that lets a 975B-parameter model run at roughly 41B-parameter cost.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Open weights mean any company can download, inspect, and fine-tune Inkling directly, rather than renting access to a closed API — intensifying the split between labs racing on frontier closed models and those competing to give enterprises full control of the weights.</p></div>
-      <div class="src"><a href="https://thinkingmachines.ai/news/introducing-inkling/">Thinking Machines Lab →</a></div>
+      <h3>Moonshot's Kimi K3 becomes the largest open-weight model</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Chinese lab Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight mixture-of-experts model with a 1-million-token context window, built on two new architecture pieces — Kimi Delta Attention and Attention Residuals — and live now on Kimi.com, Kimi Code, and the Kimi API, with full downloadable weights following on July 27.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>K3's mixture-of-experts routing activates only 16 of its 896 experts per token, but sparsity alone isn't new. <em>Moonshot paired it with a redesigned attention mechanism and residual connections that together claim roughly 2.5× better scaling efficiency than its predecessor</em> — meaning each added unit of compute buys more capability than before, not just a bigger parameter count.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>An open-weight model Moonshot claims is competitive with Anthropic's Fable 5 on some benchmarks narrows the gap between closed frontier labs and freely downloadable models, arriving just ahead of Shanghai's World Artificial Intelligence Conference.</p></div>
+      <div class="src"><a href="https://www.kimi.com/blog/kimi-k3">Kimi (Moonshot AI) →</a></div>
     </article>
 
     <article class="item">
-      <h3>GitHub closes a loophole where 'plan mode' could edit files</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub hardened Copilot CLI so that its read-only "plan mode" now hard-blocks any workspace-mutating tool call at the runtime layer, closing a gap where the underlying model could still trigger a file edit mid-planning session despite the mode's label.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Labeling a mode "plan-only" is a promise about what the model is instructed to do, not a guarantee about what it can do. <em>The fix moves the boundary from the model's instructions into the runtime itself, so an edit attempt is refused mechanically, whether or not the model "meant" to make it.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>As coding agents run with less supervision, this is a small but concrete example of a general safety principle: don't rely on a model to police its own permissions when the enforcement can happen a layer below it instead.</p></div>
-      <div class="src"><a href="https://github.com/github/copilot-cli/releases/tag/v1.0.71-2">GitHub Copilot CLI →</a></div>
+      <h3>GitHub Projects gets boolean AND/OR advanced search</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub moved the filter bar in Projects views out of preview into general availability, letting teams build views using logical AND and OR across fields instead of the flat, all-must-match filter list Projects shipped with before.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A flat filter list can only narrow a view by stacking conditions that must all hold at once. <em>Boolean grouping lets a query express "match any of these, or match all of those" — a genuinely different query shape, not just a faster way to build the filters the old bar already supported</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Large engineering orgs triage thousands of issues through Projects; a saved view can now encode real triage logic — "urgent and unassigned, or blocking a release" — instead of approximating it with several separate views.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>OpenAI ships a keyboard with a physical reasoning-effort dial</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI's first hardware product, the $230 Codex Micro keyboard built with Work Louder, gives ChatGPT's Codex coding agents a physical control surface: light-up "Agent Keys" showing live status per running agent, a joystick for common workflows, and a dial that sets how much reasoning effort — time and compute — an agent spends on a task.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Modern reasoning models already let a caller trade latency for accuracy by allocating more "thinking" tokens at inference time — normally a hidden parameter in an API call. <em>Turning that trade-off into a twistable physical dial doesn't change the underlying mechanism, it just makes an invisible software knob something a user can feel and set by hand.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a small but telling sign that "how much should the model think" is becoming a routine, user-facing control across agentic products, not just a backend setting developers tune once.</p></div>
-      <div class="src"><a href="https://openai.com/supply/co-lab/work-louder/">OpenAI →</a></div>
+      <h3>GitHub expands secret scanning to two more services</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub's secret scanning added detection for new secret types from partners APIclub and Resend, and started blocking secrets for VolcEngine — ByteDance's cloud platform — from being pushed by default, the latest in a steady stream of push-protection partner additions.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Push protection isn't just text pattern-matching for things that look like keys. <em>Each partner supplies the exact token format its platform issues, so GitHub can match with near-zero false positives and then call the partner's own revocation API to confirm a leaked credential is real before it ever blocks a push</em>, rather than relying on generic heuristics.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Every partner added closes a specific blind spot — a credential for that one service that would previously slip through a scan unnoticed until it was already exploited.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring/">GitHub Changelog →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Swallowable robots compute with hydrogels, not chips</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers built capsule-sized medical robots for the gastrointestinal tract that sense, decide, and act using mechanical metamaterial memory and hydrogel logic gates — with no batteries, motors, or electronic chips — and validated them in ex vivo and in vivo large-animal trials.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A conventional sensor-response system needs a chip to read a sensor, decide, and command an actuator. <em>Here the "decision" is made by the physical structure itself — a metamaterial that mechanically remembers a state and a hydrogel that performs logic through its own swelling and chemistry</em> — so sensing, computation, and actuation are the same physical event, not three components wired together.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Removing electronics from an ingestible device sidesteps battery safety, MRI incompatibility, and the biofouling that plagues implanted electronics — a path toward diagnostic and therapeutic robots simple enough to pass through the body safely.</p></div>
-      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2605060123">PNAS →</a></div>
+      <h3>Frog protein neutralizes a red tide neurotoxin in mice</h3>
+      <div class="beat"><div class="lab">What it is</div><p>UCSF researchers led by Daniel Minor showed that saxiphilin, a protein naturally made by bullfrogs and other frogs, can prevent and even reverse lethal saxitoxin poisoning in mice — saxitoxin being a potent neurotoxin from red-tide algal blooms that currently has no approved antidote and was once stockpiled as a chemical weapon.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Saxitoxin kills by jamming the voltage-gated sodium channels nerve and muscle cells use to fire. <em>Saxiphilin doesn't unblock those channels — it intercepts the toxin in the bloodstream first, binding it tightly enough that it never reaches a channel at all, acting as a molecular sponge rather than a repair mechanism</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Saxitoxin accumulates in shellfish during red-tide blooms and has zero approved antidote; a sponge protein that still works after exposure, not just before it, is the first plausible starting point for one.</p></div>
+      <div class="src"><a href="https://www.ucsf.edu/news/2026/07/432196/ribbit-do-frogs-have-first-antidote-deadly-red-tide-toxin">UCSF →</a></div>
     </article>
 
     <article class="item">
-      <h3>Old internet cables become a planet-sized earthquake sensor</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Scientists are repurposing deep-sea fiber-optic cables — built for data traffic, not seismology — alongside drilling ships and seafloor sensors to study the ocean crust, a region so unexplored that less than 0.001% of the sea floor has ever been visually surveyed.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A fiber-optic cable already carries pulses of laser light for communication; any physical disturbance to the cable — like the tiny strain from a passing seismic wave — measurably distorts how that light scatters as it travels. <em>Reading that distortion turns thousands of kilometers of cable already lying on the seafloor into one continuous seismic sensor, at zero marginal hardware cost</em>, without ever tapping a byte of the data running through it.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The seafloor generates the earthquakes and tsunamis that matter most for coastal warning systems, and this converts already-buried infrastructure into monitoring coverage that would otherwise cost billions of dollars in dedicated ocean sensors.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/d41586-026-01988-6">Nature →</a></div>
+      <h3>Scientists build a yeast cell with no introns at all</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers built a synthetic strain of brewer's yeast with every one of its roughly 300 spliceosomal introns deleted, then showed the cell still grows and divides without any of the core spliceosome components — five small nuclear RNAs and several proteins — that every other known eukaryotic cell needs to survive.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The spliceosome is treated as a defining, essential feature of eukaryotic life because genes are interrupted by introns that must be cut out before their message can be read. <em>Delete every intron in the genome and the job the spliceosome exists to do disappears with it — at which point the machinery itself turns out to be dispensable, not fundamental to survival on its own</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It resolves a long-open question about why the spliceosome is universally essential, and hands biologists a clean, intron-free genome as a minimal baseline for studying how introns shaped the evolution of complex genomes.</p></div>
+      <div class="src"><a href="https://www.cell.com/cell/abstract/S0092-8674(26)00624-0">Cell →</a></div>
     </article>
 
     <article class="item">
-      <h3>Computers that compute by letting noise do the work</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Quanta Magazine profiles thermodynamic computing, an emerging hardware approach that builds physical devices tuned so close to the thermal energy scale that random thermal fluctuations — the noise every classical chip is engineered to suppress — become the mechanism that drives the computation itself.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A conventional chip spends huge amounts of energy holding transistors in a definite 0-or-1 state against thermal noise trying to flip them. <em>Thermodynamic computing instead lets a system relax naturally toward whichever state minimizes its energy — the same physics by which a protein folds into its lowest-energy shape</em> — so the "answer" emerges from letting the system settle, rather than from forcing it through each step.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>If it scales, it inverts computing's biggest cost driver: instead of paying energy to fight noise, these machines would pay almost nothing and run near room temperature, offering a third paradigm alongside classical and quantum computing for hard optimization problems.</p></div>
-      <div class="src"><a href="https://www.quantamagazine.org/thermodynamic-computers-go-with-the-energy-flow-20260715/">Quanta Magazine →</a></div>
+      <h3>A cancer vaccine platform that arms 'cold' tumors</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers engineered a lipid nanoparticle mRNA cancer vaccine that co-delivers tumor-antigen mRNA together with two STING immune-pathway agonists — c-di-AMP and manganese ions — packed into the same particle, rather than delivering the antigen alone.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>mRNA cancer vaccines often fail against "cold" tumors because presenting an antigen isn't enough — dendritic cells also need a danger signal before they'll mount a T-cell response. <em>Packing two STING agonists into the same particle as the antigen guarantees every cell that takes up the vaccine gets the immune-activating signal and the target at once</em>, instead of hoping antigen and adjuvant separately reach the same cell by chance.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Codelivery produced stronger, more durable tumor-specific T-cell responses than antigen-only delivery, offering a more general route to convert immunologically "cold" tumors into ones the immune system can actually attack.</p></div>
+      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2525718123">PNAS →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Zelenskyy fires his most popular minister, sparks protests</h3>
-      <div class="beat"><div class="lab">What it is</div><p>President Zelenskyy dismissed Defense Minister Mykhailo Fedorov — the 35-year-old architect of Ukraine's drone program — as part of a cabinet reshuffle that also installed Serhii Koretskyi as prime minister; hundreds protested in Kyiv, Lviv, Odesa, and Dnipro, and the air force's deputy commander resigned over the decision.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Fedorov's removal followed reported friction with Commander-in-Chief Oleksandr Syrskyi over conscription and force-modernization reforms. <em>When a wartime government fires the official credited with a battlefield advantage rather than the one he was clashing with, the move reveals whose institutional position was actually stronger</em> — not whose reforms were working.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The reshuffle lands in the middle of an active war effort, and the public backlash — including a resignation inside the military itself — signals real friction over whether Ukraine's modernization drive survives the change.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/16/hundreds-protest-in-kyiv-over-zelenskyys-dismissal-of-defence-minister">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired">NPR →</a></div>
+      <h3>Iran's retaliation strikes spread to five Gulf states</h3>
+      <div class="beat"><div class="lab">What it is</div><p>As the US intensified its strikes on Iran for a sixth straight night, Iran launched missiles and drones at Bahrain, Kuwait, Jordan, Oman, and Qatar, damaging a power and desalination plant in Kuwait; Jordan said it shot down three incoming missiles with no casualties reported.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The US and Iran are the direct combatants, but neighboring Gulf states hosting no strikes of their own became targets anyway. <em>Once a combatant starts hitting a neighbor's territory and infrastructure rather than only its direct adversary, a bilateral conflict mechanically becomes a regional one — every neighbor now has a reason to intervene, arm up, or seek cover, regardless of its own role in the original dispute</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Gulf states depend heavily on desalination for fresh water, so a strike on that plant marks an escalation from military to civilian-infrastructure targeting, raising the humanitarian and diplomatic stakes far beyond the original US-Iran confrontation.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/gulf-states-come-under-iranian-fire-as-us-strikes-intensify">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260716-middle-east-live-us-strikes-in-iran-hit-airport-bridges-and-railway-station">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Lebanon and Israel agree on the shape of a withdrawal</h3>
-      <div class="beat"><div class="lab">What it is</div><p>After a sixth round of US-brokered talks in Rome, Lebanon and Israel agreed on the structure and guidelines for a "pilot zone" process — an initial, verifiable Israeli withdrawal from two designated areas of southern Lebanon, to be followed by Lebanese army deployment and, if it holds, the return of displaced residents.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Neither side trusts the other to honor a single, all-at-once withdrawal after a war and an unresolved disarmament question over Hezbollah. <em>Splitting the exit into small, verifiable pilot zones turns an all-or-nothing trust problem into a repeatable, checkable one</em> — each zone becomes a test case that either builds enough confidence to expand the process or stalls it before further withdrawals are risked.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>No timetable or exact boundaries were set, so the agreement is a structure for de-escalation, not de-escalation itself — whether "the coming days" produces an actual withdrawal is the real test of whether the framework holds.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/14/lebanon-israel-hold-talks-in-rome-on-implementing-framework-deal">Al Jazeera →</a> · <a href="https://www.france24.com/en/live-news/20260714-israel-says-ready-to-move-on-pilot-zones-amid-new-lebanon-talks">France 24 →</a></div>
+      <h3>US convenes 60 nations on 'left-wing' political violence</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Secretary of State Marco Rubio convened leaders and officials from more than 60 countries in Washington to coordinate a response to what the Trump administration's 2026 counterterrorism strategy names as a primary threat: violent left-wing extremism, alongside Islamist and narco-terrorism.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A counterterrorism strategy is not a neutral tally of violent incidents — it's a ranked list of what a government has chosen to prioritize. <em>Naming left-wing extremism a primary threat category while leaving right-wing violence out of that top tier makes the strategy itself a political statement about which violence earns a global summit and new visa tools</em>, independent of what the underlying incident data shows.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The classification carries real teeth — the State Department has already designated several European antifa-linked groups as foreign terrorist organizations and gained authority to restrict visas — while critics note the focus excludes a category of violence that has historically been more frequent in the US.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/17/g-s1-134148/rubio-convene-countries-on-left-wing-political-violence">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/16/us-hosts-global-meet-on-far-left-terror-whos-attending-why-it-matters">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>US disables a tanker as Iran threatens a second strait</h3>
-      <div class="beat"><div class="lab">What it is</div><p>US Central Command fired Hellfire missiles to disable an oil tanker bound for Iran's Kharg Island terminal, enforcing a reimposed naval blockade, while Iran's Revolutionary Guard threatened to close the Bab el-Mandeb Strait — a second major oil route, this one leading to the Red Sea — in retaliation.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The Strait of Hormuz and the Bab el-Mandeb are two separate chokepoints serving two different sets of oil exporters. <em>Threatening the second strait converts a bilateral US-Iran shipping dispute into a lever against every country that depends on Red Sea shipping</em> — mainly Saudi Arabia — spreading the cost of the conflict onto parties that were not combatants in it.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Analysts warn that a simultaneous disruption of both straits could meaningfully damage global oil supply and shipping, which is why the threat alone — without Iran acting on it — is enough to move markets and pressure allies not directly involved in the fight.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/16/us-strikes-iran-tanker-as-tehran-hits-kuwait-jordan-whats-the-latest">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260715-iran-threatens-to-cut-off-major-vital-seaways-in-response-to-trump-s-renewed-blockade">France 24 →</a></div>
+      <h3>Hong Kong arrests booksellers for the third time in months</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Hong Kong police arrested five people linked to two independent bookstores this week for allegedly selling books with "seditious intention" — the third round of bookstore arrests in four months — while a top security official publicly warned booksellers to vet their own stock.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Sedition law has traditionally required proving intent to incite unrest through some direct act. <em>Charging booksellers over books simply present in inventory shifts the point of legal risk from what a person does to what a person merely stocks or sells, making the seller strictly responsible for policing every title on the shelf</em> — collapsing the line between distributing and authoring.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Independent bookstores had functioned as one of the last channels for material — like a biography of jailed publisher Jimmy Lai — that state-aligned retailers wouldn't carry; repeated raids under the national security law push that channel toward self-censorship or closure without any single title ever being formally banned.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/07/16/g-s1-133931/hong-kong-official-warns-booksellers-on-security-risks-after-raids">NPR →</a> · <a href="https://www.france24.com/en/live-news/20260715-hong-kong-police-raid-independent-bookstore-run-by-former-journalists">France 24 →</a></div>
     </article>
   </section>
 
