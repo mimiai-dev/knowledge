@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-17</title>
+<title>Daily Knowledge Briefing — 2026-07-18</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 011</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 012</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Friday, 17 July 2026</div>
+    <div class="sub">Saturday, 18 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Moonshot's Kimi K3 becomes the largest open-weight model</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Chinese lab Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight mixture-of-experts model with a 1-million-token context window, built on two new architecture pieces — Kimi Delta Attention and Attention Residuals — and live now on Kimi.com, Kimi Code, and the Kimi API, with full downloadable weights following on July 27.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>K3's mixture-of-experts routing activates only 16 of its 896 experts per token, but sparsity alone isn't new. <em>Moonshot paired it with a redesigned attention mechanism and residual connections that together claim roughly 2.5× better scaling efficiency than its predecessor</em> — meaning each added unit of compute buys more capability than before, not just a bigger parameter count.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>An open-weight model Moonshot claims is competitive with Anthropic's Fable 5 on some benchmarks narrows the gap between closed frontier labs and freely downloadable models, arriving just ahead of Shanghai's World Artificial Intelligence Conference.</p></div>
-      <div class="src"><a href="https://www.kimi.com/blog/kimi-k3">Kimi (Moonshot AI) →</a></div>
+      <h3>DeepMind and Isomorphic Labs launch a bioresilience program</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Google DeepMind and its drug-discovery affiliate Isomorphic Labs announced a joint bioresilience program: screening frontier models so they can't be misdirected toward designing biological threats, plus a dedicated Isomorphic Labs unit that governments and biosecurity researchers can call on to design countermeasures during a live outbreak, built through partnerships including Lawrence Livermore National Laboratory, the UK AI Security Institute, and CEPI.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>AlphaFold-style protein-structure prediction already collapses months of lab guesswork about a molecule's shape into a single inference call. <em>Wiring that same prediction engine into an on-call countermeasure-design unit turns it from a research convenience into response infrastructure that can be invoked the moment an outbreak is identified</em>, instead of only after slower conventional discovery has caught up.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a rare instance of a frontier AI lab building deployable biosecurity response capability rather than just publishing a usage policy, pairing defensive misuse-screening with an offensive countermeasure-design arm in one program.</p></div>
+      <div class="src"><a href="https://deepmind.google/blog/our-approach-to-bioresilience/">Google DeepMind →</a></div>
     </article>
 
     <article class="item">
-      <h3>GitHub Projects gets boolean AND/OR advanced search</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub moved the filter bar in Projects views out of preview into general availability, letting teams build views using logical AND and OR across fields instead of the flat, all-must-match filter list Projects shipped with before.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A flat filter list can only narrow a view by stacking conditions that must all hold at once. <em>Boolean grouping lets a query express "match any of these, or match all of those" — a genuinely different query shape, not just a faster way to build the filters the old bar already supported</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Large engineering orgs triage thousands of issues through Projects; a saved view can now encode real triage logic — "urgent and unassigned, or blocking a release" — instead of approximating it with several separate views.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-07-16-advanced-search-for-projects-is-generally-available/">GitHub Changelog →</a></div>
+      <h3>OpenAI trains an AI model to attack its own models</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI built an internal model, GPT-Red, whose sole job is finding exploitable weaknesses in OpenAI's other models before release — reportedly reaching an 84% attack success rate on novel safety scenarios versus 13% for human red-teamers, and cutting a previously reliable "fake chain-of-thought" jailbreak from over 95% success on GPT-5.1 to under 10% on GPT-5.6 Sol.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A static red-team benchmark goes stale the moment a model is patched against the exact attacks already in the test set. <em>Training an attacker model and a defender model together through self-play reinforcement learning means each side keeps adapting to the other's latest move, so hardening never stops chasing a fixed, memorizable list of known exploits.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The reported six-fold drop in jailbreak success without a matching rise in refusals on legitimate requests suggests automated adversarial training can close real safety gaps without the usual cost of models becoming needlessly more restrictive.</p></div>
+      <div class="src"><a href="https://openai.com/index/unlocking-self-improvement-gpt-red/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>GitHub expands secret scanning to two more services</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub's secret scanning added detection for new secret types from partners APIclub and Resend, and started blocking secrets for VolcEngine — ByteDance's cloud platform — from being pushed by default, the latest in a steady stream of push-protection partner additions.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Push protection isn't just text pattern-matching for things that look like keys. <em>Each partner supplies the exact token format its platform issues, so GitHub can match with near-zero false positives and then call the partner's own revocation API to confirm a leaked credential is real before it ever blocks a push</em>, rather than relying on generic heuristics.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Every partner added closes a specific blind spot — a credential for that one service that would previously slip through a scan unnoticed until it was already exploited.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-07-15-improvements-to-secret-scanning-and-public-monitoring/">GitHub Changelog →</a></div>
+      <h3>Google renames NotebookLM to Gemini Notebook, adds code execution</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Google renamed NotebookLM — its source-grounded research tool used by more than 30 million people — to Gemini Notebook, and added a sandboxed "secure cloud computer" that can execute code directly against a user's uploaded sources, rather than only summarizing and citing them.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A tool that only summarizes or quotes source material is limited to restating what's already written in the documents. <em>Giving that same tool a code-execution sandbox lets it derive new numbers, tables, or transformations from the source data instead</em> — the difference between reporting what a spreadsheet says and actually running a calculation on it.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It folds a code-interpreter-style analysis capability into a product built around trustworthy citations, testing whether execution and grounded summarization can coexist without the tool hallucinating results the way general-purpose code interpreters sometimes do.</p></div>
+      <div class="src"><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/">Google Blog →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Frog protein neutralizes a red tide neurotoxin in mice</h3>
-      <div class="beat"><div class="lab">What it is</div><p>UCSF researchers led by Daniel Minor showed that saxiphilin, a protein naturally made by bullfrogs and other frogs, can prevent and even reverse lethal saxitoxin poisoning in mice — saxitoxin being a potent neurotoxin from red-tide algal blooms that currently has no approved antidote and was once stockpiled as a chemical weapon.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Saxitoxin kills by jamming the voltage-gated sodium channels nerve and muscle cells use to fire. <em>Saxiphilin doesn't unblock those channels — it intercepts the toxin in the bloodstream first, binding it tightly enough that it never reaches a channel at all, acting as a molecular sponge rather than a repair mechanism</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Saxitoxin accumulates in shellfish during red-tide blooms and has zero approved antidote; a sponge protein that still works after exposure, not just before it, is the first plausible starting point for one.</p></div>
-      <div class="src"><a href="https://www.ucsf.edu/news/2026/07/432196/ribbit-do-frogs-have-first-antidote-deadly-red-tide-toxin">UCSF →</a></div>
+      <h3>First atmosphere detected around a temperate rocky exoplanet</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Astronomers used the WINERED spectrograph on the Magellan Clay telescope to watch LHS 1140 b — a rocky, potentially habitable-zone planet orbiting a nearby red dwarf — transit its star, and detected helium being stripped from its upper atmosphere during 2024 observations; the same signal was absent in 2025.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Helium is light enough that stellar radiation should blow it off a planet's atmosphere and disperse it quickly unless it's constantly replenished from below. <em>Detecting escaping helium in one year and not the next implies a layered atmosphere — a helium-rich upper layer sitting above heavier gases like water vapor closer to the surface — with the escape rate itself tracking the star's own activity cycle.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's the first direct evidence that a temperate rocky planet around a red dwarf — the most common star type in the galaxy, and notoriously hostile to atmospheres — can actually hold onto one, at least in part.</p></div>
+      <div class="src"><a href="https://www.science.org/doi/10.1126/science.aea9708">Science →</a></div>
     </article>
 
     <article class="item">
-      <h3>Scientists build a yeast cell with no introns at all</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers built a synthetic strain of brewer's yeast with every one of its roughly 300 spliceosomal introns deleted, then showed the cell still grows and divides without any of the core spliceosome components — five small nuclear RNAs and several proteins — that every other known eukaryotic cell needs to survive.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The spliceosome is treated as a defining, essential feature of eukaryotic life because genes are interrupted by introns that must be cut out before their message can be read. <em>Delete every intron in the genome and the job the spliceosome exists to do disappears with it — at which point the machinery itself turns out to be dispensable, not fundamental to survival on its own</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It resolves a long-open question about why the spliceosome is universally essential, and hands biologists a clean, intron-free genome as a minimal baseline for studying how introns shaped the evolution of complex genomes.</p></div>
-      <div class="src"><a href="https://www.cell.com/cell/abstract/S0092-8674(26)00624-0">Cell →</a></div>
+      <h3>AI designs a gene-editing enzyme that beats natural evolution</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Jennifer Doudna's lab at the Innovative Genomics Institute used an AI protein-design pipeline to generate new gene-editing enzymes modeled on the compact TnpB/Cas12 family, then tested them in bacterial, human, and plant cells; two AI-designed variants edited human genes at 46% and 50% efficiency, versus 28% for the natural enzyme.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A natural gene-editing enzyme is shaped by whatever mutations happened to survive billions of years of evolution, not by what edits DNA most efficiently. <em>An inverse protein-folding model can instead generate a wholly new amino acid sequence engineered to fold into the same functional scaffold, and cryo-EM shows the AI-made versions form new stabilizing contacts at the RNA-DNA interface that the natural enzyme never evolved</em>.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's direct evidence that AI protein design can outperform evolution's solution for a specific engineering target, pointing toward custom-built gene-editing tools rather than ones limited to whatever variants nature happens to supply.</p></div>
+      <div class="src"><a href="https://www.science.org/doi/10.1126/science.aed6123">Science →</a></div>
     </article>
 
     <article class="item">
-      <h3>A cancer vaccine platform that arms 'cold' tumors</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers engineered a lipid nanoparticle mRNA cancer vaccine that co-delivers tumor-antigen mRNA together with two STING immune-pathway agonists — c-di-AMP and manganese ions — packed into the same particle, rather than delivering the antigen alone.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>mRNA cancer vaccines often fail against "cold" tumors because presenting an antigen isn't enough — dendritic cells also need a danger signal before they'll mount a T-cell response. <em>Packing two STING agonists into the same particle as the antigen guarantees every cell that takes up the vaccine gets the immune-activating signal and the target at once</em>, instead of hoping antigen and adjuvant separately reach the same cell by chance.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Codelivery produced stronger, more durable tumor-specific T-cell responses than antigen-only delivery, offering a more general route to convert immunologically "cold" tumors into ones the immune system can actually attack.</p></div>
-      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2525718123">PNAS →</a></div>
+      <h3>On-skin sensors invisible to sight yet beat gel electrodes</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A University of Tokyo-led team built ultrathin, roughly 200-nanometer on-skin electrodes for recording brain, eye-movement, and muscle activity that are effectively invisible and untouchable on the skin, yet register lower skin-electrode impedance — meaning cleaner signal — than standard gel electrodes.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Conventional electrodes are visible mainly because their glossy surface reflects light differently than skin does, not because of their electrical properties. <em>Matching a conductive nanowire film's roughness and reflectance to real skin removes that visual artifact entirely, decoupling how detectable a sensor looks from how well it conducts</em> — the two properties turn out not to trade off against each other at all.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Visible sensors are known to make wearers self-conscious, which can itself distort the brain, muscle, and eye signals being measured; a sensor nobody can see or feel removes that confound for long-duration monitoring.</p></div>
+      <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.aee6417">Science Advances →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Iran's retaliation strikes spread to five Gulf states</h3>
-      <div class="beat"><div class="lab">What it is</div><p>As the US intensified its strikes on Iran for a sixth straight night, Iran launched missiles and drones at Bahrain, Kuwait, Jordan, Oman, and Qatar, damaging a power and desalination plant in Kuwait; Jordan said it shot down three incoming missiles with no casualties reported.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The US and Iran are the direct combatants, but neighboring Gulf states hosting no strikes of their own became targets anyway. <em>Once a combatant starts hitting a neighbor's territory and infrastructure rather than only its direct adversary, a bilateral conflict mechanically becomes a regional one — every neighbor now has a reason to intervene, arm up, or seek cover, regardless of its own role in the original dispute</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Gulf states depend heavily on desalination for fresh water, so a strike on that plant marks an escalation from military to civilian-infrastructure targeting, raising the humanitarian and diplomatic stakes far beyond the original US-Iran confrontation.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/gulf-states-come-under-iranian-fire-as-us-strikes-intensify">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260716-middle-east-live-us-strikes-in-iran-hit-airport-bridges-and-railway-station">France 24 →</a></div>
+      <h3>Andy Burnham confirmed as Labour leader, set to become UK PM</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Andy Burnham was confirmed as leader of Britain's governing Labour Party, the final step before he is sworn in as prime minister on Monday, replacing Keir Starmer, who resigned in June after losing the support of his own MPs. Burnham, previously mayor of Greater Manchester, only became eligible for the job after winning a by-election for a House of Commons seat in June.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A sitting prime minister is normally replaced only through a leadership challenge inside Parliament or a general election. <em>Burnham instead had to win an ordinary parliamentary by-election just to qualify for the job, showing how a governing party can engineer a leadership change entirely within a fixed-term Parliament without ever calling a national vote.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A mid-term change of prime minister shifts a G7 government's policy posture — on the cost of living, devolution, and Ukraine — at a moment when Starmer's authority had already collapsed under a welfare-reform revolt and a scandal involving the UK-US ambassador.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/burnham-confirmed-as-leader-of-uks-governing-labour-party-headed-for-pm">Al Jazeera →</a> · <a href="https://www.france24.com/en/europe/20260717-uk-s-andy-burnham-named-labour-leader-ahead-of-taking-over-as-pm">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>US convenes 60 nations on 'left-wing' political violence</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Secretary of State Marco Rubio convened leaders and officials from more than 60 countries in Washington to coordinate a response to what the Trump administration's 2026 counterterrorism strategy names as a primary threat: violent left-wing extremism, alongside Islamist and narco-terrorism.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A counterterrorism strategy is not a neutral tally of violent incidents — it's a ranked list of what a government has chosen to prioritize. <em>Naming left-wing extremism a primary threat category while leaving right-wing violence out of that top tier makes the strategy itself a political statement about which violence earns a global summit and new visa tools</em>, independent of what the underlying incident data shows.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The classification carries real teeth — the State Department has already designated several European antifa-linked groups as foreign terrorist organizations and gained authority to restrict visas — while critics note the focus excludes a category of violence that has historically been more frequent in the US.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/17/g-s1-134148/rubio-convene-countries-on-left-wing-political-violence">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/7/16/us-hosts-global-meet-on-far-left-terror-whos-attending-why-it-matters">Al Jazeera →</a></div>
+      <h3>China launches a 29-nation alliance to govern AI</h3>
+      <div class="beat"><div class="lab">What it is</div><p>At the World AI Conference in Shanghai, Xi Jinping launched the World Artificial Intelligence Cooperation Organisation, a new intergovernmental body with 29 founding members including Russia, Pakistan, Indonesia, Brazil, and South Africa, attended by UN Secretary-General António Guterres; Xi said AI governance "should not be a solo performance by a single country."</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Standards and governance frameworks tend to be set by whoever builds the institution first, not by whoever has the best technology. <em>Facing tightening US semiconductor export controls that limit its access to leading-edge chips, China is responding by building a parallel rule-setting body among Global South nations rather than seeking entry into an already US-aligned governance framework</em> — competing on institutions, not only on hardware.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It signals global AI governance splitting into separate US- and China-led blocs, with Beijing positioning itself as the standard-setter for a large group of developing nations rather than a rule-taker in a system it doesn't control.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/17/nx-s1-5897285/chinas-xi-calls-for-step-up-of-global-effort-in-ai-as-us-curbs-squeeze-chinas-tech-access">NPR →</a></div>
     </article>
 
     <article class="item">
-      <h3>Hong Kong arrests booksellers for the third time in months</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Hong Kong police arrested five people linked to two independent bookstores this week for allegedly selling books with "seditious intention" — the third round of bookstore arrests in four months — while a top security official publicly warned booksellers to vet their own stock.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Sedition law has traditionally required proving intent to incite unrest through some direct act. <em>Charging booksellers over books simply present in inventory shifts the point of legal risk from what a person does to what a person merely stocks or sells, making the seller strictly responsible for policing every title on the shelf</em> — collapsing the line between distributing and authoring.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Independent bookstores had functioned as one of the last channels for material — like a biography of jailed publisher Jimmy Lai — that state-aligned retailers wouldn't carry; repeated raids under the national security law push that channel toward self-censorship or closure without any single title ever being formally banned.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/16/g-s1-133931/hong-kong-official-warns-booksellers-on-security-risks-after-raids">NPR →</a> · <a href="https://www.france24.com/en/live-news/20260715-hong-kong-police-raid-independent-bookstore-run-by-former-journalists">France 24 →</a></div>
+      <h3>Trump threatens Canada with tariffs over wildfire smoke</h3>
+      <div class="beat"><div class="lab">What it is</div><p>President Trump threatened to add new tariff costs onto what Canada already pays the US, blaming Ottawa for "Willful Negligence" in forest management as smoke from roughly 900 active Canadian wildfires drifted into Minnesota, Illinois, Michigan, and New York, degrading air quality across the US Midwest and Northeast.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Tariffs are a trade tool, meant to respond to trade practices. <em>Applying one to a climate-driven natural disaster reframes a shared, weather-dependent wildfire season as a punishable policy failure by Canada specifically</em> — folding an externality neither government fully controls into the same coercive toolkit already used for fentanyl and digital-tax disputes.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It shows tariff threats becoming a general-purpose lever for pressuring an ally over almost any grievance, and it turns a climate-driven, cross-border air-quality crisis into a trade dispute before any formal action has actually been taken.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/trump-threatens-canada-with-steeper-tariff-costs-over-wildfire-smoke">Al Jazeera →</a> · <a href="https://www.france24.com/en/donald-trump-blames-canada-for-smoke-pollution">France 24 →</a></div>
     </article>
   </section>
 

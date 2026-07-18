@@ -101,3 +101,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-17 | world | Iran retaliation strikes hit Bahrain, Kuwait, Jordan, Oman, Qatar
 2026-07-17 | world | US convenes 60-nation DC summit on left-wing political violence
 2026-07-17 | world | Hong Kong third round of independent bookstore arrests
+2026-07-18 | tech | DeepMind + Isomorphic Labs bioresilience program
+2026-07-18 | tech | OpenAI GPT-Red self-play adversarial red-teaming model
+2026-07-18 | tech | NotebookLM renamed Gemini Notebook, adds code execution
+2026-07-18 | sci | LHS 1140 b first atmosphere on temperate rocky exoplanet
+2026-07-18 | sci | Doudna AI-designed TnpB/Cas12 gene-editing enzyme
+2026-07-18 | sci | Invisible on-skin bioelectronic sensors beat gel electrodes
+2026-07-18 | world | Andy Burnham confirmed Labour leader, becomes UK PM Monday
+2026-07-18 | world | China launches WAICO 29-nation AI governance alliance
+2026-07-18 | world | Trump threatens Canada tariffs over wildfire smoke
