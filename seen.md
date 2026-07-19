@@ -110,3 +110,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-18 | world | Andy Burnham confirmed Labour leader, becomes UK PM Monday
 2026-07-18 | world | China launches WAICO 29-nation AI governance alliance
 2026-07-18 | world | Trump threatens Canada tariffs over wildfire smoke
+2026-07-19 | tech | Long-Horizon-Terminal-Bench dense-reward agent benchmark
+2026-07-19 | tech | OpenAI teen safety blueprint, age-prediction defaults
+2026-07-19 | tech | GitHub Advisory Database vulnerability volume surge, AI-assisted triage
+2026-07-19 | sci | NYC-area 2024 fireball meteorite brine amino acids origin-of-life
+2026-07-19 | sci | RT&T-AMP-MERFISH isoform-resolved spatial transcriptomics mouse brain
+2026-07-19 | sci | Diranersen tau-lowering antisense oligonucleotide Alzheimer's phase 2 CELIA
+2026-07-19 | world | Iran war strikes nuclear plant, Kuwait desalination hit twice, US soldiers killed Jordan
+2026-07-19 | world | Russia largest ballistic-missile barrage on Kyiv since war start
+2026-07-19 | world | WHO warns DRC Ebola true toll may be 2-4x official count

@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-18</title>
+<title>Daily Knowledge Briefing — 2026-07-19</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 012</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 013</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Saturday, 18 July 2026</div>
+    <div class="sub">Sunday, 19 July 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>DeepMind and Isomorphic Labs launch a bioresilience program</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Google DeepMind and its drug-discovery affiliate Isomorphic Labs announced a joint bioresilience program: screening frontier models so they can't be misdirected toward designing biological threats, plus a dedicated Isomorphic Labs unit that governments and biosecurity researchers can call on to design countermeasures during a live outbreak, built through partnerships including Lawrence Livermore National Laboratory, the UK AI Security Institute, and CEPI.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>AlphaFold-style protein-structure prediction already collapses months of lab guesswork about a molecule's shape into a single inference call. <em>Wiring that same prediction engine into an on-call countermeasure-design unit turns it from a research convenience into response infrastructure that can be invoked the moment an outbreak is identified</em>, instead of only after slower conventional discovery has caught up.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a rare instance of a frontier AI lab building deployable biosecurity response capability rather than just publishing a usage policy, pairing defensive misuse-screening with an offensive countermeasure-design arm in one program.</p></div>
-      <div class="src"><a href="https://deepmind.google/blog/our-approach-to-bioresilience/">Google DeepMind →</a></div>
+      <h3>AI agents still stumble on long, multi-step terminal tasks</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A new benchmark, Long-Horizon-Terminal-Bench, tests AI coding agents on 46 extended terminal tasks — reproducing a published experiment, debugging a multi-stage pipeline, running scientific computing workflows — grading not just the final answer but every intermediate step. Across 17 frontier models, the best performer, Grok 4.5, solved only 19.6% of tasks perfectly, despite averaging 9.8 million tokens and 89 minutes of execution per attempt.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Most agent benchmarks score only whether the final answer was right, which reveals nothing about where a failing agent actually went wrong. <em>Decomposing each long task into graded subtasks gives partial credit for correct intermediate progress, turning a single pass/fail bit into a trace of exactly which step in a multi-hour workflow the agent lost the thread.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's evidence that today's frontier models, however fluent on short well-specified tasks, still can't reliably sustain a multi-hour, multi-step plan — the exact capability needed for agents to run real engineering work unsupervised.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2607.08964">arXiv →</a></div>
     </article>
 
     <article class="item">
-      <h3>OpenAI trains an AI model to attack its own models</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI built an internal model, GPT-Red, whose sole job is finding exploitable weaknesses in OpenAI's other models before release — reportedly reaching an 84% attack success rate on novel safety scenarios versus 13% for human red-teamers, and cutting a previously reliable "fake chain-of-thought" jailbreak from over 95% success on GPT-5.1 to under 10% on GPT-5.6 Sol.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A static red-team benchmark goes stale the moment a model is patched against the exact attacks already in the test set. <em>Training an attacker model and a defender model together through self-play reinforcement learning means each side keeps adapting to the other's latest move, so hardening never stops chasing a fixed, memorizable list of known exploits.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The reported six-fold drop in jailbreak success without a matching rise in refusals on legitimate requests suggests automated adversarial training can close real safety gaps without the usual cost of models becoming needlessly more restrictive.</p></div>
-      <div class="src"><a href="https://openai.com/index/unlocking-self-improvement-gpt-red/">OpenAI →</a></div>
+      <h3>OpenAI defends teen access to ChatGPT with age-prediction safeguards</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI published its reasoning for expanding rather than restricting teen access to ChatGPT, noting nearly 9 in 10 teens who use it weekly do so for learning, research, or skill-building. Its approach leans on an automated age-prediction system, expanded parental controls, and a "Study Mode" that walks students through problems with guiding questions instead of handing over direct answers.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A blanket age gate can only be as strict as its most restrictive user, blocking legitimate learning use just to stop a minority of misuse. <em>An age-prediction model instead estimates a likely age band from usage patterns and applies different default safeguards per band, letting the same product serve a 10-year-old and an adult under different rules without asking either to prove who they are.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a concrete bet that inferred-age personalization, not hard verification or blanket restriction, is how a general-purpose AI product can keep serving a legitimately large teen learning audience while still tightening safety defaults.</p></div>
+      <div class="src"><a href="https://openai.com/index/why-teens-deserve-access-safe-ai/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>Google renames NotebookLM to Gemini Notebook, adds code execution</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Google renamed NotebookLM — its source-grounded research tool used by more than 30 million people — to Gemini Notebook, and added a sandboxed "secure cloud computer" that can execute code directly against a user's uploaded sources, rather than only summarizing and citing them.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A tool that only summarizes or quotes source material is limited to restating what's already written in the documents. <em>Giving that same tool a code-execution sandbox lets it derive new numbers, tables, or transformations from the source data instead</em> — the difference between reporting what a spreadsheet says and actually running a calculation on it.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It folds a code-interpreter-style analysis capability into a product built around trustworthy citations, testing whether execution and grounded summarization can coexist without the tool hallucinating results the way general-purpose code interpreters sometimes do.</p></div>
-      <div class="src"><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/">Google Blog →</a></div>
+      <h3>GitHub's vulnerability reports quintupled as AI speeds disclosure</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub disclosed that its Advisory Database published 1,560 reviewed advisories in a single month this year — more than five times its typical output — as private vulnerability reports rose from about 550 a week in January to over 3,000 a week by May, and CVE requests climbed almost tenfold year-over-year.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A disclosure pipeline sized for a steady trickle of reports breaks when the trickle becomes a flood, since expert review time doesn't scale down just because report volume scales up. <em>GitHub's fix was to give curators AI-assisted tooling that speeds up an advisory's fact-gathering step — checking affected versions, prior CVEs, exploit details — while keeping the actual accept/reject judgment human</em>, splitting the pipeline into a machine-scaled search phase and a human-scaled decision phase.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The surge itself is a signal that AI-assisted vulnerability hunting is now finding real bugs faster than human-only triage can process them, and how that bottleneck gets resolved will shape how fast the open-source ecosystem learns about flaws in the code it depends on.</p></div>
+      <div class="src"><a href="https://github.blog/security/supply-chain-security/inside-the-advisory-database-and-what-happens-when-vulnerability-volume-breaks-records/">GitHub Blog →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>First atmosphere detected around a temperate rocky exoplanet</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Astronomers used the WINERED spectrograph on the Magellan Clay telescope to watch LHS 1140 b — a rocky, potentially habitable-zone planet orbiting a nearby red dwarf — transit its star, and detected helium being stripped from its upper atmosphere during 2024 observations; the same signal was absent in 2025.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Helium is light enough that stellar radiation should blow it off a planet's atmosphere and disperse it quickly unless it's constantly replenished from below. <em>Detecting escaping helium in one year and not the next implies a layered atmosphere — a helium-rich upper layer sitting above heavier gases like water vapor closer to the surface — with the escape rate itself tracking the star's own activity cycle.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's the first direct evidence that a temperate rocky planet around a red dwarf — the most common star type in the galaxy, and notoriously hostile to atmospheres — can actually hold onto one, at least in part.</p></div>
-      <div class="src"><a href="https://www.science.org/doi/10.1126/science.aea9708">Science →</a></div>
+      <h3>A 2024 fireball meteorite carried brines that could seed life</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Scientists analyzed a meteorite that fell as a daytime fireball over the New York City area, finding it contains CM1 clasts — fragments rich in water and sodium — laced with amino acids and other organic-chemistry byproducts, preserved in briny pockets from its parent asteroid.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Building the molecules of life from scratch requires phosphate to stay dissolved long enough to react with organics and minerals, but phosphate normally locks into insoluble rock. <em>A salty brine keeps phosphate in solution instead, and this meteorite is direct physical evidence that exactly this kind of chemistry-sustaining brine formed and persisted inside an asteroid</em>, not just in origin-of-life lab simulations.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a rare case where a real extraterrestrial sample, rather than a lab reconstruction, backs up a specific proposed pathway from asteroid chemistry to prebiotic molecules — including rare amino acids not typically made by life on Earth.</p></div>
+      <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.aea2105">Science Advances →</a></div>
     </article>
 
     <article class="item">
-      <h3>AI designs a gene-editing enzyme that beats natural evolution</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Jennifer Doudna's lab at the Innovative Genomics Institute used an AI protein-design pipeline to generate new gene-editing enzymes modeled on the compact TnpB/Cas12 family, then tested them in bacterial, human, and plant cells; two AI-designed variants edited human genes at 46% and 50% efficiency, versus 28% for the natural enzyme.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A natural gene-editing enzyme is shaped by whatever mutations happened to survive billions of years of evolution, not by what edits DNA most efficiently. <em>An inverse protein-folding model can instead generate a wholly new amino acid sequence engineered to fold into the same functional scaffold, and cryo-EM shows the AI-made versions form new stabilizing contacts at the RNA-DNA interface that the natural enzyme never evolved</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's direct evidence that AI protein design can outperform evolution's solution for a specific engineering target, pointing toward custom-built gene-editing tools rather than ones limited to whatever variants nature happens to supply.</p></div>
-      <div class="src"><a href="https://www.science.org/doi/10.1126/science.aed6123">Science →</a></div>
+      <h3>New RNA-imaging method maps gene activity inside intact tissue</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers combined an RNA-amplification step with MERFISH, an error-correcting imaging technique, to image roughly 33,000 distinct RNAs — about 23,000 genes and 10,000 of their splice-variant isoforms — directly inside individual cells within intact mouse brain tissue, rather than in cells dissociated from it.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Standard single-cell sequencing has to break tissue apart to read RNA, destroying exactly the spatial arrangement that determines which cells are signaling to which neighbors. <em>Amplifying each RNA molecule in place before imaging it makes even rare transcripts and their specific splice variants bright enough to detect without removing cells from their native tissue context</em>, so location and identity are captured in the same measurement instead of being traded off against each other.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Resolving isoforms, not just genes, in intact tissue lets researchers map which specific version of a gene's protein a cell is making based on where it physically sits — a level of detail standard spatial transcriptomics discards.</p></div>
+      <div class="src"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00747-6">Cell →</a></div>
     </article>
 
     <article class="item">
-      <h3>On-skin sensors invisible to sight yet beat gel electrodes</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A University of Tokyo-led team built ultrathin, roughly 200-nanometer on-skin electrodes for recording brain, eye-movement, and muscle activity that are effectively invisible and untouchable on the skin, yet register lower skin-electrode impedance — meaning cleaner signal — than standard gel electrodes.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Conventional electrodes are visible mainly because their glossy surface reflects light differently than skin does, not because of their electrical properties. <em>Matching a conductive nanowire film's roughness and reflectance to real skin removes that visual artifact entirely, decoupling how detectable a sensor looks from how well it conducts</em> — the two properties turn out not to trade off against each other at all.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Visible sensors are known to make wearers self-conscious, which can itself distort the brain, muscle, and eye signals being measured; a sensor nobody can see or feel removes that confound for long-duration monitoring.</p></div>
-      <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.aee6417">Science Advances →</a></div>
+      <h3>Tau-lowering drug slows Alzheimer's where antibody drugs failed</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A phase 2 trial of diranersen, a drug that reduces the brain's own production of tau protein, found that after 18 months patients had between one-third and one-half as much tau in their spinal fluid as when they started, with brain imaging showing fewer of the tangles tau forms inside neurons as Alzheimer's progresses.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Most tau-targeting Alzheimer's drugs so far have been antibodies designed to clear out tau tangles after they've already formed, and nearly all of those have failed in trials. <em>Diranersen instead works upstream, using an antisense oligonucleotide to block the cell's machinery from producing tau messenger RNA in the first place, so there's simply less tau protein made to ever tangle.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's the clearest clinical evidence yet that shutting off tau production, rather than mopping it up afterward, can measurably slow the disease — reviving a drug target that a string of antibody failures had made many researchers give up on.</p></div>
+      <div class="src"><a href="https://www.science.org/content/article/alzheimer-s-trial-results-lend-momentum-strategies-targeting-tau">Science →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Andy Burnham confirmed as Labour leader, set to become UK PM</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Andy Burnham was confirmed as leader of Britain's governing Labour Party, the final step before he is sworn in as prime minister on Monday, replacing Keir Starmer, who resigned in June after losing the support of his own MPs. Burnham, previously mayor of Greater Manchester, only became eligible for the job after winning a by-election for a House of Commons seat in June.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A sitting prime minister is normally replaced only through a leadership challenge inside Parliament or a general election. <em>Burnham instead had to win an ordinary parliamentary by-election just to qualify for the job, showing how a governing party can engineer a leadership change entirely within a fixed-term Parliament without ever calling a national vote.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A mid-term change of prime minister shifts a G7 government's policy posture — on the cost of living, devolution, and Ukraine — at a moment when Starmer's authority had already collapsed under a welfare-reform revolt and a scandal involving the UK-US ambassador.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/burnham-confirmed-as-leader-of-uks-governing-labour-party-headed-for-pm">Al Jazeera →</a> · <a href="https://www.france24.com/en/europe/20260717-uk-s-andy-burnham-named-labour-leader-ahead-of-taking-over-as-pm">France 24 →</a></div>
+      <h3>Iran war escalates to a nuclear site and Kuwait's water supply</h3>
+      <div class="beat"><div class="lab">What it is</div><p>On the eighth consecutive night of US strikes on Iran, American forces hit an under-construction Iranian nuclear power plant, while Iran struck a Kuwaiti power and desalination plant for the second time in two days — a country that draws roughly 90% of its water from desalination. The exchange followed the deaths of two US soldiers in an Iranian strike on a base in Jordan.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Desalination and nuclear-power infrastructure are civilian systems, but they are also singular points of failure — destroy the one plant a country's water or power supply depends on, and there's no fast substitute. <em>Once strikes move from military targets to this kind of infrastructure, damage compounds through an entire population instead of staying contained to combatants</em>, which is why targeting it draws a different order of international alarm than a strike on a base does.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A war that began between two countries is now directly endangering the water supply of a third, non-combatant Gulf state, showing how strikes on shared regional infrastructure spread a conflict's costs far beyond the parties actually fighting it.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/19/us-launches-new-iran-strikes-after-two-soldiers-killed-whats-the-latest">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260719-middle-east-live-us-targets-iran-s-revolutionary-guard-in-retaliation-for-killed-troops">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>China launches a 29-nation alliance to govern AI</h3>
-      <div class="beat"><div class="lab">What it is</div><p>At the World AI Conference in Shanghai, Xi Jinping launched the World Artificial Intelligence Cooperation Organisation, a new intergovernmental body with 29 founding members including Russia, Pakistan, Indonesia, Brazil, and South Africa, attended by UN Secretary-General António Guterres; Xi said AI governance "should not be a solo performance by a single country."</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Standards and governance frameworks tend to be set by whoever builds the institution first, not by whoever has the best technology. <em>Facing tightening US semiconductor export controls that limit its access to leading-edge chips, China is responding by building a parallel rule-setting body among Global South nations rather than seeking entry into an already US-aligned governance framework</em> — competing on institutions, not only on hardware.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It signals global AI governance splitting into separate US- and China-led blocs, with Beijing positioning itself as the standard-setter for a large group of developing nations rather than a rule-taker in a system it doesn't control.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/17/nx-s1-5897285/chinas-xi-calls-for-step-up-of-global-effort-in-ai-as-us-curbs-squeeze-chinas-tech-access">NPR →</a></div>
+      <h3>Russia fires its largest missile barrage of the war on Kyiv</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Russia launched 41 missiles — including 25 ballistic missiles, its largest ballistic-missile count of the war according to Ukraine's foreign minister — plus 125 attack drones at Kyiv overnight, killing one person and wounding at least 16 across six districts. Ukrainian air defense intercepted 108 of the drones and 18 of the missiles, shooting down 17 ballistic missiles specifically.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A ballistic missile flies a fast, largely unpowered arc that's far harder to intercept than a slow-moving drone, so a country's missile-defense success rate is really a measure of how many advanced interceptors it still has in stock. <em>Ukraine intercepting most of Saturday's ballistic missiles suggests its interceptor stockpile has been replenished since the US granted Kyiv a license to manufacture its own Patriot interceptors earlier this month</em>, turning a supply-chain decision into a measurable battlefield outcome weeks later.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The record missile count shows Russia still has the capacity to escalate its air war on Kyiv at will, while Ukraine's interception rate is a live test of whether its newly localized interceptor supply can actually keep pace.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war">Al Jazeera →</a> · <a href="https://www.france24.com/en/live-news/20260719-russia-pounds-kyiv-with-ballistic-missiles-in-escalating-air-war">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Trump threatens Canada with tariffs over wildfire smoke</h3>
-      <div class="beat"><div class="lab">What it is</div><p>President Trump threatened to add new tariff costs onto what Canada already pays the US, blaming Ottawa for "Willful Negligence" in forest management as smoke from roughly 900 active Canadian wildfires drifted into Minnesota, Illinois, Michigan, and New York, degrading air quality across the US Midwest and Northeast.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Tariffs are a trade tool, meant to respond to trade practices. <em>Applying one to a climate-driven natural disaster reframes a shared, weather-dependent wildfire season as a punishable policy failure by Canada specifically</em> — folding an externality neither government fully controls into the same coercive toolkit already used for fentanyl and digital-tax disputes.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It shows tariff threats becoming a general-purpose lever for pressuring an ally over almost any grievance, and it turns a climate-driven, cross-border air-quality crisis into a trade dispute before any formal action has actually been taken.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/17/trump-threatens-canada-with-steeper-tariff-costs-over-wildfire-smoke">Al Jazeera →</a> · <a href="https://www.france24.com/en/donald-trump-blames-canada-for-smoke-pollution">France 24 →</a></div>
+      <h3>WHO: Congo's Ebola toll may be four times the official count</h3>
+      <div class="beat"><div class="lab">What it is</div><p>The World Health Organization said the real scale of the DR Congo Ebola outbreak — officially over 2,000 cases and nearly 800 deaths — is likely two to four times the confirmed tally, with 80% of new cases traced to unknown chains of transmission. The outbreak, caused by the rarer Bundibugyo strain, has no approved vaccine, unlike the more common Zaire strain.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>An outbreak's official case count only measures what surveillance actually catches, and once most new infections can't be traced back to a known chain, the gap between confirmed and actual cases compounds rather than closes. <em>WHO's 2-4x multiplier is a modeled correction for that untraceable majority — a sign the outbreak's true spread is running well ahead of the health system's ability to see it, not just contain it.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This is already the third-largest Ebola outbreak on record, reaching 2,000 cases in two months versus over ten months for a comparable 2018-2020 outbreak, and it's spreading through a strain the field's only approved vaccine doesn't cover.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/7/16/ebola-spreading-more-quickly-in-drc-while-uganda-is-close-to-being-virus-free">Al Jazeera →</a> · <a href="https://www.npr.org/2026/07/15/g-s1-133630/ebola-congo-deaths">NPR →</a></div>
     </article>
   </section>
 
