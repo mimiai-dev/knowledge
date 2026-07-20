@@ -119,3 +119,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-19 | world | Iran war strikes nuclear plant, Kuwait desalination hit twice, US soldiers killed Jordan
 2026-07-19 | world | Russia largest ballistic-missile barrage on Kyiv since war start
 2026-07-19 | world | WHO warns DRC Ebola true toll may be 2-4x official count
+2026-07-20 | tech | Anthropic global workspace/J-lens interpretability paper, DeepMind replication
+2026-07-20 | tech | GitHub Actions checkout v7 blocks pull_request_target pwn-request pattern
+2026-07-20 | tech | curl pauses vulnerability reports for July 2026 over AI-slop flood
+2026-07-20 | sci | Frozen testicular tissue transplant restores sperm production after 16 years
+2026-07-20 | sci | BESIII sub-GeV dark scalar null search sets new constraints (PRL)
+2026-07-20 | sci | Quanta profile: Martin Picard's mitochondrial theory of mind
+2026-07-20 | world | Houthis declare naval blockade of Saudi Arabia
+2026-07-20 | world | Japan revises Imperial House Law, still bars female succession
+2026-07-20 | world | Cuban dissident artist Otero Alcántara exiled to Miami after 5 years
