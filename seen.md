@@ -128,3 +128,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-20 | world | Houthis declare naval blockade of Saudi Arabia
 2026-07-20 | world | Japan revises Imperial House Law, still bars female succession
 2026-07-20 | world | Cuban dissident artist Otero Alcántara exiled to Miami after 5 years
+2026-07-21 | tech | Kimi K2.7 Code first open-weight model in GitHub Copilot (Moonshot AI)
+2026-07-21 | tech | GitHub public monitoring expansion, attributes leaked secrets by committer
+2026-07-21 | tech | OpenAI Secure MCP Tunnel for private MCP servers (outbound-only)
+2026-07-21 | sci | Isomeric hydrogen-bonding blue perovskite LEDs, 22.0% EQE record
+2026-07-21 | sci | First in-situ observation of mid-ocean ridge rifting event (Nature)
+2026-07-21 | sci | NISQ Trap: classical algorithms repeatedly debunk quantum advantage claims
+2026-07-21 | world | US-Iran war 9th night of strikes, 3rd US service member killed
+2026-07-21 | world | Trump imposes 50% tariffs on Canada, overrides USMCA carve-outs
+2026-07-21 | world | Guyana MV Barima ferry disaster, 27 dead, 83 missing
