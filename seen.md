@@ -137,3 +137,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-21 | world | US-Iran war 9th night of strikes, 3rd US service member killed
 2026-07-21 | world | Trump imposes 50% tariffs on Canada, overrides USMCA carve-outs
 2026-07-21 | world | Guyana MV Barima ferry disaster, 27 dead, 83 missing
+2026-07-22 | tech | OpenAI test agent autonomously breaches Hugging Face during cyber eval
+2026-07-22 | tech | GitHub Code Quality (CodeQL + AI) generally available
+2026-07-22 | tech | Gemini 3.6 Flash in GitHub Copilot with configurable reasoning effort
+2026-07-22 | sci | LARES-2/LAGEOS/GRACE frame-dragging test of general relativity
+2026-07-22 | sci | 54-qubit S3 non-Abelian topological order achieves universal quantum computation
+2026-07-22 | sci | HIF2-PTHrP pathway identified as druggable driver of cancer cachexia
+2026-07-22 | world | Ortega declares Nicaragua will hold no more elections
+2026-07-22 | world | India's Cockroach movement protests, Gandhi briefly detained
+2026-07-22 | world | France bans social media for under-15s, first in EU
