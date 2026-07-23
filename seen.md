@@ -146,3 +146,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-22 | world | Ortega declares Nicaragua will hold no more elections
 2026-07-22 | world | India's Cockroach movement protests, Gandhi briefly detained
 2026-07-22 | world | France bans social media for under-15s, first in EU
+2026-07-23 | tech | Relay-Bench cross-domain reasoning chain benchmark exposes saturation
+2026-07-23 | tech | Decodability supervision paper: activation-explanation faithfulness test gameable
+2026-07-23 | tech | OpenAI launches Presence enterprise agent guardrails platform
+2026-07-23 | sci | CD-35 2722 B exosatellite, Jupiter-mass companion blurs planet/moon line
+2026-07-23 | sci | Brown bullhead catfish melanoma, 4th naturally transmissible cancer
+2026-07-23 | sci | Proton-shuttle-assisted triplet energy transfer in ZnSe quantum dots
+2026-07-23 | world | Zelenskyy fires Gen. Syrskyi, names Drapatyi after Kyiv protests
+2026-07-23 | world | Wildfires kill 3 firefighters across Sicily, France, Spain
+2026-07-23 | world | US-Saudi civilian nuclear deal allows enrichment, no gold-standard ban
