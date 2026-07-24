@@ -155,3 +155,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-23 | world | Zelenskyy fires Gen. Syrskyi, names Drapatyi after Kyiv protests
 2026-07-23 | world | Wildfires kill 3 firefighters across Sicily, France, Spain
 2026-07-23 | world | US-Saudi civilian nuclear deal allows enrichment, no gold-standard ban
+2026-07-24 | tech | MCP protocol goes stateless, GitHub MCP Server supports next spec
+2026-07-24 | tech | OpenAI launches Health in ChatGPT (Apple Health + medical records)
+2026-07-24 | tech | Gemini 3.5 Flash Cyber, government-only vulnerability-hunting model
+2026-07-24 | sci | Yu Deng wins Fields Medal 2026 for Boltzmann equation, wave kinetics
+2026-07-24 | sci | CRISIS: CRISPR-Cas transcriptionally throttles embedded bacterial defenses
+2026-07-24 | sci | CCHFV RNA polymerase structure reveals druggable antiviral sites
+2026-07-24 | world | Oil tops $100/barrel as Iran claims Strait of Hormuz control
+2026-07-24 | world | Rubio-Lavrov first direct talks in a year, Manila ASEAN sidelines
+2026-07-24 | world | Sonam Wangchuk ends 26-day hunger strike, Cockroach protests continue
