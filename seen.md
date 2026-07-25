@@ -164,3 +164,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-24 | world | Oil tops $100/barrel as Iran claims Strait of Hormuz control
 2026-07-24 | world | Rubio-Lavrov first direct talks in a year, Manila ASEAN sidelines
 2026-07-24 | world | Sonam Wangchuk ends 26-day hunger strike, Cockroach protests continue
+2026-07-25 | tech | GitHub Copilot adds Claude Opus 5 model
+2026-07-25 | tech | SciExplore benchmark for scientific-research AI agents
+2026-07-25 | tech | Lean 4 benchmark for AI theorem-proving in quantum algorithms
+2026-07-25 | sci | Crush-resistant air sacs in Lake Malawi glassworm larvae
+2026-07-25 | sci | AI program synthesis discovers optimal photonic unitary decomposition
+2026-07-25 | sci | Science investigation: hidden gene-editing death in China trial
+2026-07-25 | world | ICC removes chief prosecutor Karim Khan, historic first
+2026-07-25 | world | France/Spain wildfires force 250,000+ evacuations, historic burn
+2026-07-25 | world | India education minister Pradhan resigns after Cockroach protests
