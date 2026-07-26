@@ -173,3 +173,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-25 | world | ICC removes chief prosecutor Karim Khan, historic first
 2026-07-25 | world | France/Spain wildfires force 250,000+ evacuations, historic burn
 2026-07-25 | world | India education minister Pradhan resigns after Cockroach protests
+2026-07-26 | tech | Leaky Language Models per-token timing side-channel architecture theft
+2026-07-26 | tech | IssueTrojanBench malicious GitHub issue prompt-injection benchmark
+2026-07-26 | tech | LLMs embody and amplify human cognitive distortions paper
+2026-07-26 | sci | CHIME FRB dispersion cross-power spectrum with DESI galaxies, missing baryons
+2026-07-26 | sci | Catalyst-free microdroplet plastic-to-diacid conversion (Nature)
+2026-07-26 | sci | Shayan Oveis Gharan wins 2026 IMU Abacus Medal
+2026-07-26 | world | Van attack at Berlin Pride kills 1, injures 16+
+2026-07-26 | world | Typhoon Noul strongest of year makes landfall in Guangdong, China
+2026-07-26 | world | Trump ties Saudi nuclear deal completion to Israel normalization
