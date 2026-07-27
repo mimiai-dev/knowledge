@@ -182,3 +182,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-26 | world | Van attack at Berlin Pride kills 1, injures 16+
 2026-07-26 | world | Typhoon Noul strongest of year makes landfall in Guangdong, China
 2026-07-26 | world | Trump ties Saudi nuclear deal completion to Israel normalization
+2026-07-27 | tech | Agentic Context Management (ACM) framework for AI agent memory/cost
+2026-07-27 | tech | BadWAM adversarial attack severs world-action model imagine/act coupling
+2026-07-27 | tech | RegretBench multi-turn LLM clarification policy benchmark
+2026-07-27 | sci | Optical cooling via interfacial charge transfer in 2D heterostructures (100K+ delta)
+2026-07-27 | sci | Saber-toothed cats/dire wolves inbreeding-driven joint disease before extinction
+2026-07-27 | sci | PKCα D463H pseudokinase gain-of-function drives chordoid glioma
+2026-07-27 | world | US-Iran mutual pause in strikes, second day, interceptor stock reports
+2026-07-27 | world | DRC Ebola surges to 3,200 cases/1,405 deaths, fastest outbreak on record
+2026-07-27 | world | Pogačar wins 5th Tour de France, final stage rerouted by wildfires
