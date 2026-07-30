@@ -191,3 +191,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-27 | world | US-Iran mutual pause in strikes, second day, interceptor stock reports
 2026-07-27 | world | DRC Ebola surges to 3,200 cases/1,405 deaths, fastest outbreak on record
 2026-07-27 | world | Pogačar wins 5th Tour de France, final stage rerouted by wildfires
+2026-07-30 | tech | GitHub Actions auto-holds potentially malicious workflow runs for approval
+2026-07-30 | tech | Position paper: Evaluation Scores Are Perishable Knowledge Claims (trust inflation)
+2026-07-30 | tech | Raven sparse memory routing sequence model for long-context recall
+2026-07-30 | sci | Over 20,000 precolonial earthworks found via lidar in Southwest Amazonia (Nature)
+2026-07-30 | sci | Lattice QCD calculations converge with muon g-2 experiment, undercut dispersive method
+2026-07-30 | sci | Hydrogenobodies: hydrogen-producing organelle in rumen ciliates linked to cattle methane
+2026-07-30 | world | Magnitude 7.1 earthquake hits Kyushu Japan, death toll 25
+2026-07-30 | world | Iran resumes missile strikes on US forces in Jordan, ends mutual pause
+2026-07-30 | world | US Fed holds rates steady 3.50-3.75%, 3 dissents demand hike amid Iran-war inflation
