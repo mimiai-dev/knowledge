@@ -200,3 +200,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-30 | world | Magnitude 7.1 earthquake hits Kyushu Japan, death toll 25
 2026-07-30 | world | Iran resumes missile strikes on US forces in Jordan, ends mutual pause
 2026-07-30 | world | US Fed holds rates steady 3.50-3.75%, 3 dissents demand hike amid Iran-war inflation
+2026-07-31 | tech | GitHub Copilot in Visual Studio ships SDK-based agent with built-in .NET/Azure skills
+2026-07-31 | tech | Copilot code review agent skills and read-only MCP context now GA
+2026-07-31 | tech | Change2Task benchmark mints coding-agent tasks from real merged PRs
+2026-07-31 | sci | Chemical-mechanical polishing yields record-Q GHz mechanical oscillators for quantum memory
+2026-07-31 | sci | Piezochiral effect: mechanical strain induces controllable chirality in achiral crystals
+2026-07-31 | sci | STAND NTPase survey finds 90+ bacterial antiviral sensor families recognizing phage proteome
+2026-07-31 | world | Trump/Board of Peace announce Hamas Gaza disarmament deal, unconfirmed by Hamas/Israel
+2026-07-31 | world | Russian Kh-101 missile crosses into Poland, NATO scrambles jets
+2026-07-31 | world | Ceuta migrant crisis: 60,000+ cross from Morocco, 18-34+ die, Spain deploys military
