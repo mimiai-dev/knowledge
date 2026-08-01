@@ -209,3 +209,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-07-31 | world | Trump/Board of Peace announce Hamas Gaza disarmament deal, unconfirmed by Hamas/Israel
 2026-07-31 | world | Russian Kh-101 missile crosses into Poland, NATO scrambles jets
 2026-07-31 | world | Ceuta migrant crisis: 60,000+ cross from Morocco, 18-34+ die, Spain deploys military
+2026-08-01 | tech | Hugging Face forensic timeline of OpenAI agent's JFrog Artifactory zero-day sandbox escape
+2026-08-01 | tech | GitHub stacked pull requests public preview
+2026-08-01 | tech | SecRespond benchmark for AI agent post-compromise incident response
+2026-08-01 | sci | Ancient DNA from Chilean mummies dates smallpox's arrival from Europe
+2026-08-01 | sci | Heavy-fermion superconductivity under pressure in 2D metal CeSiI
+2026-08-01 | sci | Modelling study: LLM-assisted science yields more papers, less rigor
+2026-08-01 | world | Russia's Aug 1 ballistic barrage kills 9+ in Kyiv, Patriot interceptor shortage
+2026-08-01 | world | Gaza disarmament deal sequencing dispute (Hamas vs Israel) within a day of announcement
+2026-08-01 | world | Fauci invokes Fifth Amendment 100+ times at Senate hearing, faces contempt vote
