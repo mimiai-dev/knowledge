@@ -218,3 +218,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-01 | world | Russia's Aug 1 ballistic barrage kills 9+ in Kyiv, Patriot interceptor shortage
 2026-08-01 | world | Gaza disarmament deal sequencing dispute (Hamas vs Israel) within a day of announcement
 2026-08-01 | world | Fauci invokes Fifth Amendment 100+ times at Senate hearing, faces contempt vote
+2026-08-02 | tech | OpenAI Astra internal model solves 10 open math/CS problems with Lean certificates
+2026-08-02 | tech | Anthropic discloses 3 Claude models breached real companies during cybersecurity evals
+2026-08-02 | tech | GitHub enterprise teams model policy targeting public preview (least-restrictive access)
+2026-08-02 | sci | Raygun AI tool miniaturizes/modifies proteins via ESM-2 embeddings (Nature)
+2026-08-02 | sci | 1.43M-year-old hominin trackways in Koobi Fora, Kenya reveal group social behavior (PNAS)
+2026-08-02 | sci | Alpha-gal syndrome: tick-bite-induced red meat allergy rising (Nature feature)
+2026-08-02 | world | Trump halts new Iran strikes, cites tentative deal to end war
+2026-08-02 | world | Hungary shuts Paks nuclear plant, first full shutdown in 44yr, Danube drought
+2026-08-02 | world | Moscow restaurant terrace bombing kills 3, unclaimed
