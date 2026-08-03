@@ -227,3 +227,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-02 | world | Trump halts new Iran strikes, cites tentative deal to end war
 2026-08-02 | world | Hungary shuts Paks nuclear plant, first full shutdown in 44yr, Danube drought
 2026-08-02 | world | Moscow restaurant terrace bombing kills 3, unclaimed
+2026-08-03 | tech | GitHub Copilot code review: Unix-style tool workflow redesign cuts cost 20%
+2026-08-03 | tech | CircuitKIT open toolkit standardizes mechanistic-interpretability circuit discovery
+2026-08-03 | tech | Adversarial Pragmatics benchmark tests LLM manipulation via embedded/indirect instructions
+2026-08-03 | sci | Santa Lucía tropical mammoth mitogenomes reveal distinct Mexican lineage (Science)
+2026-08-03 | sci | Layered ferroelectric Bi4Ti3O12 perpendicular polarization switching (Nature)
+2026-08-03 | sci | CARDIB anthozoan protein reveals alternate antiviral signalling evolution (Nat Ecol Evol)
+2026-08-03 | world | US-Japan joint yen intervention, first since 2011, halts 40yr-low slide
+2026-08-03 | world | Iran-Oman near deal on new Strait of Hormuz route, new US-Iran talks set Monday
+2026-08-03 | world | Israel voices "serious security concerns" to US over Hamas Gaza disarmament deal
