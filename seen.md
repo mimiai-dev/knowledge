@@ -236,3 +236,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-03 | world | US-Japan joint yen intervention, first since 2011, halts 40yr-low slide
 2026-08-03 | world | Iran-Oman near deal on new Strait of Hormuz route, new US-Iran talks set Monday
 2026-08-03 | world | Israel voices "serious security concerns" to US over Hamas Gaza disarmament deal
+2026-08-04 | tech | arXiv longitudinal human-AI interaction measurement methodology paper
+2026-08-04 | tech | WorldExam world-model reactivity benchmark
+2026-08-04 | tech | GitHub enterprise team specialization for managed settings (overridable AI policy)
+2026-08-04 | sci | Recent active rifting on Venus, wide rift flank uplifts (Nature Geoscience)
+2026-08-04 | sci | Silicon quantum processors solve cryogenic control-wiring bottleneck (HRL + Undseth, Nature)
+2026-08-04 | sci | Horizyn-1 dual-encoder contrastive learning enzyme discovery (PNAS)
+2026-08-04 | world | Spokane WA wildfires, arson suspect arrested, 65,000 evacuated
+2026-08-04 | world | Nauru completes name change to Republic of Naoero
+2026-08-04 | world | Indonesia ferry fire off Madura, Mutiara Sentosa 2, 5+ dead 41 missing
