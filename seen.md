@@ -245,3 +245,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-04 | world | Spokane WA wildfires, arson suspect arrested, 65,000 evacuated
 2026-08-04 | world | Nauru completes name change to Republic of Naoero
 2026-08-04 | world | Indonesia ferry fire off Madura, Mutiara Sentosa 2, 5+ dead 41 missing
+2026-08-05 | tech | GitHub Spark AI app builder retired, broke when dependent GitHub Models inference service was killed first
+2026-08-05 | tech | GitHub Copilot cloud agent adds per-task configurable reasoning level (test-time compute dial)
+2026-08-05 | tech | Multicolor Ramsey numbers of odd cycles proven superexponential, extending OpenAI-credited recursive construction (arXiv 2608.02537)
+2026-08-05 | sci | NASA PUNCH mission could pinpoint solar storm arrival within ~30min vs 12hr window (May 2025 storm retrospective)
+2026-08-05 | sci | Submersible captures active mid-ocean-ridge eruption in progress, redefines hydrothermal iron budget
+2026-08-05 | sci | Antimalarial pesticide resistance mutation linked to sharper mosquito hearing/mate-finding (kdr sodium channel pleiotropy)
+2026-08-05 | world | Russian missile/drone barrage kills 17+ in Kyiv region, warehouse hit, Zelensky urges more interceptors
+2026-08-05 | world | Brazil expels Argentine ambassador, downgrades mission to charge d'affaires amid Milei-Lula feud
+2026-08-05 | world | Europe heat wave drives Danube/Rhine drought, wildfires, energy supply fears (plant cooling + barge draft)
