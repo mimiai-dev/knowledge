@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-08-05</title>
+<title>Daily Knowledge Briefing — 2026-08-06</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 028</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 029</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Wednesday, 5 August 2026</div>
+    <div class="sub">Thursday, 6 August 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>GitHub retires its AI app builder over a dependency it also killed</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub is shutting down Spark, its natural-language AI app builder: no new users or apps as of August 4, and existing apps stop working entirely by August 31. Spark let anyone describe an app in plain English and get a working one, with a built-in llm() function handling the AI features.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Spark's llm() calls were served by GitHub Models, a separate first-party inference service GitHub retired on July 30 — five days before it announced Spark itself was being shut down. Every Spark app's AI features silently broke before the platform hosting them was even declared dead. <em>An app is only as durable as the least-committed dependency it was built on, and a first-party "convenience" service can be retired with less notice than the product built on top of it.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a cautionary case for any low-code AI platform that bundles its own hosted inference rather than letting a developer point at a model endpoint they control — the app's lifespan quietly becomes bounded by the platform's, not by the developer's own choices.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/">GitHub Changelog →</a></div>
+      <h3>OpenAI's new voice model listens and speaks at once</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI shipped GPT-Live, a new voice model now powering ChatGPT Voice for both paid and free users, built on a full-duplex architecture that keeps processing microphone input while it is still generating its own speech.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Earlier voice assistants, including ChatGPT's own prior Advanced Voice Mode, worked in discrete turns: transcribe what the user said, wait for a pause, then generate and speak a reply. GPT-Live instead streams input and output continuously, making a decision many times per second — keep talking, pause, listen, or interrupt. <em>Removing the turn boundary entirely, so listening and speaking run concurrently instead of alternating, is what makes an exchange feel like a conversation instead of a walkie-talkie.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Turn-based dialogue has been the default architecture for voice AI since the first chatbot; a mainstream product shipping full-duplex by default signals the constraint was engineering debt, not a fundamental limit.</p></div>
+      <div class="src"><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>Copilot cloud agent gets a dial for how hard it thinks</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub Copilot's cloud agent now lets you choose a reasoning level, alongside the model, when you hand it a task, for any model that supports it — a higher level improves answers to complex problems but costs more tokens and credits.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Reasoning level controls how much test-time compute the model spends deliberating before it answers: more reasoning tokens mean more intermediate steps checked before committing to an answer, which raises accuracy on hard problems at the cost of latency and spend. <em>Reasoning level is a knob on test-time compute — spend more thinking to buy more accuracy, or spend less to buy speed.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It turns a tradeoff that used to be baked into which model you picked into something adjustable per task, so a routine rename doesn't burn the same compute budget as a gnarly concurrency bug.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-08-03-customize-the-reasoning-level-for-copilot-cloud-agent/">GitHub Changelog →</a></div>
+      <h3>GitHub ships a supported path off GitLab</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub Enterprise Importer can now migrate repositories, commit history, issues, and pull/merge requests directly from GitLab.com or GitLab Self-Managed into GitHub Enterprise Cloud, generally available as of August 3.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A git history migration alone is trivial — clone and push. What is hard is metadata, since issues, merge requests, and comments live in each platform's own database, not in git objects. A real importer has to walk the source platform's API for every issue and merge request and replay each one through the destination's API, preserving authorship and timestamps along the way. <em>Migrating a codebase between platforms is really two separate migrations — the git history, which is trivial, and the metadata living outside git, which is not.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A supported, first-party migration path lowers the switching cost between code-hosting platforms, which matters more as GitHub leans harder into Copilot-bundled pricing that competitors don't match.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-08-03-migrate-from-gitlab-to-github-with-github-enterprise-importer/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>A new proof shows Ramsey numbers grow faster than thought</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A short paper extends a recent breakthrough credited to OpenAI — that the k-color Ramsey number of a triangle grows super-exponentially in the number of colors — to show the same holds for every fixed odd cycle, not just the triangle.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Ramsey lower bounds are built by coloring a graph's edges so no monochromatic copy of the target shape appears anywhere. The new proof nests a small avoiding-coloring inside a bigger copy of itself, recursively, so each added layer multiplies rather than adds to the avoidance guarantee. <em>Nesting a small construction inside a larger copy of itself, recursively, is what turns additive growth in a lower bound into multiplicative growth.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Ramsey-number lower bounds had crept upward slowly for decades; this is a case where a construction credited to an AI system's automated search produced a genuinely new proof technique, not just a faster search over known ones.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2608.02537">arXiv →</a></div>
+      <h3>Proof: quantum circuits can provably outdo classical LLMs</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A new theoretical computer-science paper proves an unconditional separation: there exist tasks that constant-depth quantum circuits can solve, or sample from, that no classical language model of bounded size and depth — including diffusion-based models with chain-of-thought — can match, even approximately.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Showing today's models fail a benchmark only proves those particular trained models are weak on that task; it says nothing about whether a bigger or differently trained classical model could eventually succeed. An unconditional separation instead constructs a specific task and mathematically proves no classical model within a defined resource class can ever solve it, no matter how it's built or trained. <em>An unconditional proof that no classical model of any size in a resource class can succeed is a fundamentally stronger claim than an empirical benchmark showing today's models fail.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Genuine, provable quantum advantage claims are rare because they are this hard to establish; results like this give a real mathematical floor to compare classical language-model architectures against, rather than another leaderboard number.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2608.03962">arXiv →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>A NASA mission could time solar storms to the minute</h3>
-      <div class="beat"><div class="lab">What it is</div><p>NASA's PUNCH mission — small spacecraft imaging the space between the Sun and Earth in 3D — showed after the fact that it could have forecast a May 2025 solar storm's arrival within about 30 minutes, against the roughly 12-hour-wide window actually used to warn satellite operators and grid managers at the time.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Older forecasts clock a solar eruption's speed as it leaves the Sun and extrapolate forward, assuming that speed holds. PUNCH instead keeps imaging the erupting plasma cloud continuously as it crosses the gap to Earth, so the forecast updates from the cloud's actual tracked position rather than an assumption made once at launch. <em>Continuously tracking a moving target's actual position beats projecting forward from one early speed measurement.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Solar storms can knock out satellites, disrupt aviation, and trip power grids; shrinking the warning window from half a day to half an hour is the difference between a general alert and a precise "protective mode now."</p></div>
-      <div class="src"><a href="https://www.science.org/content/article/nasa-mission-predicts-solar-explosion-s-arrival-earth-stunning-precision">Science →</a></div>
+      <h3>Coral's oxygen-pumping cilia fail past a heat threshold</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Reef coral use hair-like cilia on their surface to beat in coordinated waves that spin tiny vortices, pulling oxygen-rich water across their tissue. A new study found that as water warms, that beating first speeds up to compensate — but above roughly 37°C, the coordination across cilia collapses outright and oxygen delivery crashes within hours.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Below the threshold, faster beating means more water movement and more oxygen delivered, a simple compensating response. But the vortices only work because thousands of cilia beat in a synchronized wave; that synchrony is itself a fragile process that can lose coherence under stress. <em>The same stress that boosts a biological pump's output up to a point can cause its coordination to fail catastrophically past that point, rather than the output simply declining.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This oxygen collapse happens before any visible coral bleaching, meaning a coral colony can be dying from suffocation well before the usual warning sign — the whitening of its tissue — ever appears.</p></div>
+      <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.aeg0950">Science Advances →</a></div>
     </article>
 
     <article class="item">
-      <h3>Researchers stumble onto an eruption remaking the ocean floor</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A research team's submersible dive happened onto an active mid-ocean-ridge eruption in progress: seafloor water normally near freezing spiked to 10°C, and over about 10 hours the eruption released iron equal to roughly 8% of what all the world's steady hydrothermal vents are thought to deliver to the ocean in a year.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>New oceanic crust is continuously created at mid-ocean ridges, where magma rises, cools, and solidifies as tectonic plates spread apart; almost everything known about that process previously came from reading the frozen record in old rock, because catching an eruption in progress is rare. Watching one directly showed a single short pulse can outweigh long stretches of the slow, steady venting most ocean-chemistry budgets are built around. <em>A short, violent pulse can move more material than a long stretch of the steady process that models are usually built around measuring.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Iron delivered by hydrothermal vents feeds phytoplankton growth far from shore and factors into the ocean carbon cycle; if pulses like this are common and under-counted, existing nutrient-supply budgets built on steady-vent measurements are systematically too low.</p></div>
-      <div class="src"><a href="https://www.science.org/content/article/lucky-dive-scientists-get-front-row-view-creation-earth-s-surface">Science →</a></div>
+      <h3>Record 2,400-atom array boosts neutral-atom quantum tech</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers loaded 2,400 ytterbium-174 atoms into an optical-tweezer array at 83.5% efficiency — the largest alkaline-earth-like atom array built to date — by tuning the color of the loading light to control how colliding atom pairs are ejected.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>When two atoms land in the same microscopic trap, they normally collide and both get knocked out at random, capping loading efficiency near 50%. By using blue-detuned light during loading, the collision instead reliably ejects one atom while leaving the other trapped. <em>Tuning the color of the loading light turns random atom-pair collisions from a loss mechanism into a sorting mechanism that reliably leaves exactly one atom per trap.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Neutral-atom arrays are one of the leading platforms for quantum computing and precision clocks; each atom is a potential qubit, so denser, more reliable loading directly scales up how much a single array can do.</p></div>
+      <div class="src"><a href="https://journals.aps.org/prl/abstract/10.1103/bp6k-8zmd">Physical Review Letters →</a></div>
     </article>
 
     <article class="item">
-      <h3>A resistance mutation may help mosquitoes hear better, too</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A mutation that lets mosquitoes survive an antimalarial pesticide by blocking the toxin's target also appears, unexpectedly, to sharpen their hearing — the opposite of what researchers expected from a mutation that otherwise makes the insects measurably less active.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The mutation sits in a sodium-channel gene the pesticide normally locks open to kill the insect; that same channel also drives the auditory neurons mosquitoes use to detect a mate's wingbeat frequency, so one genetic change blocks the pesticide's mechanism and reshapes an unrelated sense at once. The researchers flag this as a proposed mechanism — they didn't directly test whether it changes female mate choice. <em>A single mutation can be selected for surviving a toxin while incidentally reshaping a completely unrelated sense, because both traits run through the same gene.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Resistance mutations are usually judged only by the fitness cost they carry; if some also confer a hidden benefit through an unrelated pathway, that changes how fast and how far resistance is predicted to spread through mosquito populations, with direct consequences for malaria control.</p></div>
-      <div class="src"><a href="https://www.science.org/content/article/antimalaria-pesticide-may-have-backfired-helping-mosquitoes-find-love">Science →</a></div>
+      <h3>First measurement of neutrinos leaking from spent fuel</h3>
+      <div class="beat"><div class="lab">What it is</div><p>The Double Chooz experiment in France made the first quantitative measurement of the faint antineutrino flux still emitted by spent nuclear fuel and a shut-down reactor core, using 17 days of data collected while the reactor was off.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Fission products left inside nuclear fuel keep undergoing beta decay long after a reactor shuts down, and every beta decay emits an antineutrino alongside its electron. Antineutrinos pass through concrete, steel, and earth essentially unimpeded, so the rate at which they stream out of a facility is a direct physical signature of the fissile material actually present. <em>Antineutrinos escape any shielding that could conceal fissile material, so their measured rate is a physical proof of what fuel is present, not a declaration that can be falsified.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a proof of concept for remote, tamper-proof nuclear safeguards — verifying what fuel a reactor or storage site actually holds without needing physical access, relevant well beyond this one French test reactor.</p></div>
+      <div class="src"><a href="https://journals.aps.org/prl/abstract/10.1103/dr26-j19g">Physical Review Letters →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Russia's overnight barrage on Kyiv kills at least 17</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Russian missiles and drones struck Kyiv and the surrounding region overnight into August 5, killing at least 17 people and wounding dozens more; one strike hit a food warehouse. President Zelensky said more ballistic-missile interceptors "could have saved lives."</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A layered air-defense battery can only track and fire at a limited number of threats at once — a saturation point. Mixing many cheap decoy drones in with fewer real ballistic missiles forces the defense to spend interceptors or radar attention on decoys, so a larger fraction of real missiles get through even when the defender's interceptor stockpile hasn't changed. <em>An attacker can defeat a fixed air-defense capacity by changing the size and mix of an attack wave, not just its own missile count.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The shortfall being debated isn't only how many interceptors allies supply, but whether current stockpiles can keep pace with attacks engineered specifically to saturate them.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/08/05/nx-s1-5921194/russian-missile-drone-barrage">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/8/4/russia-strikes-ukrainian-capital-kyiv-with-ballistic-missiles">Al Jazeera →</a> · <a href="https://www.france24.com/en/europe/20260805-ukraine-live-russian-strikes-kill-at-least-15-in-kyiv-and-surrounding-region">France 24 →</a></div>
+      <h3>DRC's Ebola outbreak becomes the fastest ever recorded</h3>
+      <div class="beat"><div class="lab">What it is</div><p>The Ebola outbreak in the Democratic Republic of Congo, caused by the rare Bundibugyo strain, has killed more than 1,700 people out of roughly 3,800 cases since being declared in May. It is now the second-largest Ebola outbreak ever recorded and, by pace, the fastest-growing — reaching 1,000 deaths in under 10 weeks, versus roughly eight months for the previous record-holder.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>How fast an outbreak grows and how large it ultimately becomes are two different numbers. Early growth rate is driven mostly by the reproduction number and how long cases go undetected, while final size depends on how quickly containment measures catch up and hold. <em>A fast start doesn't guarantee the largest eventual total, but it is exactly what makes losing early response time so costly — that early window is when the growth rate is least constrained.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>There is no approved vaccine or treatment for the Bundibugyo strain specifically, and the response is fighting armed-group violence against health facilities and foreign-aid cuts at the same time as the virus itself.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/4/dr-congo-ebola-outbreak-kills-more-than-1700-as-who-accelerates-trials">Al Jazeera →</a> · <a href="https://www.france24.com/en/dr-congo-s-ebola-outbreak-becomes-fastest-ever-recorded">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Brazil downgrades ties with Argentina over Milei's insults to Lula</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Brazil asked Argentina's ambassador to leave Brasília and cut its own mission in Buenos Aires to chargé d'affaires level, after repeated public insults from Argentine President Javier Milei directed at Brazilian President Lula.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Expelling an ambassador and dropping a mission's rank to chargé d'affaires is a graduated diplomatic signal — a step below fully severing relations but well above a formal protest. It keeps the two countries technically in contact through a lower-ranking channel while publicly removing the highest-level one. <em>Downgrading a mission's rank rather than closing it lets a state register serious displeasure while keeping a channel of contact technically open.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Brazil and Argentina are South America's two largest economies and anchor the Mercosur trade bloc, so a prolonged freeze between their capitals complicates regional trade and security coordination even while goods keep crossing the border.</p></div>
-      <div class="src"><a href="https://www.france24.com/fr/am%C3%A9riques/20260805-le-br%C3%A9sil-demande-le-d%C3%A9part-de-l-ambassadeur-argentin-sur-fond-de-tensions-avec-javier-milei">France 24 →</a></div>
+      <h3>Israel and Lebanon's Rome talks stall on Hezbollah's arms</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A seventh round of US-brokered talks between Israel and Lebanon in Rome remains split over the sequencing of Hezbollah's disarmament versus an Israeli withdrawal from contested border points, even as Israel resumed strikes on southern Lebanon this week, saying Hezbollah had violated the ceasefire.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Each side wants the other to move first, because whichever side disarms or withdraws first gives up its only real leverage before the other side is bound to reciprocate — a commitment problem structurally identical to arms-control negotiations generally, not a disagreement over the actual end state. <em>When neither side will act first because doing so surrenders its only leverage before the other side must reciprocate, a deal can stall on sequencing even when both sides already agree on the outcome.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Cross-border strikes are continuing during the talks, putting the framework agreement both sides signed in June at risk of unraveling before it's ever implemented.</p></div>
+      <div class="src"><a href="https://www.france24.com/en/middle-east/20260805-israel-resumes-military-strikes-on-southern-lebanon-as-rome-hosts-peace-talks">France 24 →</a> · <a href="https://www.aljazeera.com/news/2026/8/5/lebanon-and-israel-still-split-over-disarming-hezbollah-at-rome-talks">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Europe's heat wave turns rivers into an energy chokepoint</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Weeks of extreme heat across Europe have driven the Danube and Rhine to drought-level flows, fueled wildfires including in Greece, and raised concern about energy supply as the region heads deeper into summer.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Rivers like the Rhine and Danube both cool thermal and nuclear power plants and carry fuel by barge; low, warm water forces plants to throttle output so they don't discharge water hot enough to harm river ecosystems, while shallow channels stop barges carrying coal and fuel oil from loading fully. <em>A heat wave becomes an energy crisis through two separate physical bottlenecks — plant cooling limits and shipping draft — not just from higher demand.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This is the same drought-energy feedback that forced Hungary's Paks nuclear plant into a full shutdown days earlier; it's increasingly a systemic risk to Europe's power grid each summer, not an isolated incident.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/08/04/nx-s1-5919214/europe-heatwave-danube-rhine-wildfires">NPR →</a></div>
+      <h3>Explosive drone found at Germany's Ukraine supply-line airport</h3>
+      <div class="beat"><div class="lab">What it is</div><p>An airport worker spotted a drone carrying an explosive device at Leipzig/Halle airport, which flies Western military aid to Ukraine and hosts Ukraine's own Antonov Airlines. Flights were diverted and a runway closed while a bomb-disposal robot removed the detonator; a second flying object apparently struck a freight plane that had aborted its landing. German counterterrorism prosecutors have taken over the investigation.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>This fits a pattern of hybrid-warfare sabotage: deniable, low-cost incidents using commercial drones against infrastructure that is simultaneously civilian and military, designed to raise cost and uncertainty without crossing a line that forces open retaliation. <em>A drone incident at a civilian airport that also happens to move military cargo is a deliberately ambiguous target — hard to prove was an attack, and hard to ignore if it was.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>German authorities already suspect Russia of a broader sabotage campaign against facilities supporting Ukraine; this incident hits a hub that feeds Ukraine's war effort directly, not just infrastructure near it.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/5/germany-investigates-explosive-device-attached-to-drone-at-leipzig-airport">Al Jazeera →</a> · <a href="https://www.france24.com/en/bomb-disposal-robot-and-drone-with-explosives-discovered-at-germany-s-leipzig-airport">France 24 →</a></div>
     </article>
   </section>
 

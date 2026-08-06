@@ -254,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-05 | world | Russian missile/drone barrage kills 17+ in Kyiv region, warehouse hit, Zelensky urges more interceptors
 2026-08-05 | world | Brazil expels Argentine ambassador, downgrades mission to charge d'affaires amid Milei-Lula feud
 2026-08-05 | world | Europe heat wave drives Danube/Rhine drought, wildfires, energy supply fears (plant cooling + barge draft)
+2026-08-06 | tech | OpenAI GPT-Live full-duplex continuous voice architecture ships in ChatGPT
+2026-08-06 | tech | GitHub Enterprise Importer: GitLab to GitHub Enterprise Cloud migration GA
+2026-08-06 | tech | Unconditional complexity proof separates quantum circuits from classical LLMs (arXiv 2608.03962)
+2026-08-06 | sci | Coral ciliary vortex ventilation collapses above ~37°C, driving oxygen crash before bleaching (Science Advances)
+2026-08-06 | sci | Record 2,400-atom Yb-174 optical tweezer array via light-assisted collision loading (PRL)
+2026-08-06 | sci | Double Chooz first quantitative measurement of residual antineutrinos from spent nuclear fuel (PRL)
+2026-08-06 | world | DRC Ebola outbreak (Bundibugyo strain) becomes fastest-growing on record, 1,700+ dead
+2026-08-06 | world | Israel-Lebanon Rome talks (7th round) stall on Hezbollah disarmament sequencing, Israel resumes Lebanon strikes
+2026-08-06 | world | Explosive-laden drone found at Leipzig/Halle airport, Ukraine military-supply hub; German counterterrorism investigates
