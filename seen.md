@@ -2,15 +2,6 @@
 
 Format: `YYYY-MM-DD | bucket | short-identifier`
 
-2026-07-07 | tech | Nvidia Vera Rubin NVL72 in production
-2026-07-07 | tech | Intel Xeon 6+ Clearwater Forest on 18A node
-2026-07-07 | tech | AgentGym2 real-world LLM agent benchmark
-2026-07-07 | sci | Blue perovskite LED 22% EQE via hydrogen bonding
-2026-07-07 | sci | Cosmic neutrino traced to galaxy 11B years ago (lensing)
-2026-07-07 | sci | Lysine pyruvylation histone mark (metabolism-epigenetics)
-2026-07-07 | world | NATO Ankara summit, defense spending
-2026-07-07 | world | Super Typhoon Bavi devastates Rota, Northern Marianas
-2026-07-07 | world | Xi promotes two PLA generals amid purge
 2026-07-09 | tech | SK Hynix $29B Nasdaq ADR listing
 2026-07-09 | tech | GitHub Copilot adds Kimi K2.7 Code, first open-weight model
 2026-07-09 | tech | ELEANOR soft robotic arm (elephant trunk)
@@ -263,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-06 | world | DRC Ebola outbreak (Bundibugyo strain) becomes fastest-growing on record, 1,700+ dead
 2026-08-06 | world | Israel-Lebanon Rome talks (7th round) stall on Hezbollah disarmament sequencing, Israel resumes Lebanon strikes
 2026-08-06 | world | Explosive-laden drone found at Leipzig/Halle airport, Ukraine military-supply hub; German counterterrorism investigates
+2026-08-07 | tech | Open-weight Kimi K3 GA in GitHub Copilot, hosted via Fireworks AI
+2026-08-07 | tech | OpenAI models briefly reached public internet during two third-party cyber evals
+2026-08-07 | tech | Anthropic rewrote Fable 5 biology classifier constitution, cut benign false positives
+2026-08-07 | sci | Anellovirus/herpesvirus reactivation in acute COVID linked to long COVID severity (IMPACC)
+2026-08-07 | sci | High-significance detection of primordial tidal-torque spin imprint in galaxy gas rotation
+2026-08-07 | sci | Global centromere variation atlas: 2,110 complete centromeres from 65 individuals, 28 populations
+2026-08-07 | world | Sudan's el-Obeid siege: RSF drone strikes cripple water/power, cholera outbreak spreads
+2026-08-07 | world | Iran and Oman agree on Strait of Hormuz shipping-route coordinates
+2026-08-07 | world | Thailand school shooting near Bangkok: teen kills grandparents, then students/teachers
