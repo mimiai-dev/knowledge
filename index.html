@@ -1,197 +1,43 @@
-<meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-07-09</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- Every link here is an outbound source. One <base> beats target= on each
-     anchor, and browsers imply rel=noopener for target=_blank. -->
-<base target="_blank">
-<style>
-  :root{
-    --paper:#f5f8f7; --card:#ffffff; --ink:#22282a; --muted:#6f7a7d;
-    --hair:#e3e9e8; --faint:#eef2f1;
-    --tech:#2c6a88;   /* petrol  */
-    --sci:#3e7458;    /* moss    */
-    --world:#74559a;  /* violet  */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daily Knowledge Briefing — 2026-08-08</title>
+  <base target="_blank">
+  <style>
+    :root{--paper:#f5f8f7;--card:#fff;--ink:#22282a;--muted:#6f7a7d;--hair:#e3e9e8;--faint:#eef2f1;--tech:#2c6a88;--sci:#3e7458;--world:#74559a;--display:"Helvetica Neue","Segoe UI",system-ui,sans-serif;--body:"Avenir Next","Avenir","Segoe UI",system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.7;-webkit-font-smoothing:antialiased;color-scheme:light}
+    .wrap{max-width:1720px;margin:auto;padding:clamp(1.75rem,3vw,3.5rem) clamp(1.25rem,3vw,3rem) 5rem;display:grid;gap:clamp(1.5rem,2.5vw,3rem);grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+    .mast,footer{grid-column:1/-1}.mast{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:1rem}.kick{order:-1;flex-basis:100%;font:600 .68rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}.kick .sig{color:var(--ink)}h1{font:300 clamp(2.1rem,4.4vw,3.6rem)/1.02 var(--display);letter-spacing:-.035em;margin:0;max-width:14ch}.sub{font:.75rem var(--mono);color:var(--muted);padding-bottom:.4rem}
+    .sec{display:flex;flex-direction:column;gap:clamp(1rem,1.4vw,1.5rem);min-width:0}.sec[data-b=tech]{--accent:var(--tech)}.sec[data-b=sci]{--accent:var(--sci)}.sec[data-b=world]{--accent:var(--world)}.sec-head{position:sticky;top:0;z-index:2;background:var(--paper);padding:.85rem 0 .7rem}.sec-head h2{font:600 .72rem var(--mono);letter-spacing:.19em;text-transform:uppercase;margin:0 0 .7rem;color:var(--accent)}.rule{display:block;height:3px;border-radius:2px;background:var(--accent)}
+    .item{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:clamp(1.4rem,1.7vw,1.9rem);min-width:0}.item h3{font:500 1.28rem/1.25 var(--display);letter-spacing:-.018em;margin:0 0 1.3rem}.beat{padding:.9rem 0}.beat+.beat{border-top:1px solid var(--faint)}.lab{font:600 .63rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}.beat p{margin:0;font-size:.96rem;line-height:1.75}.beat em{font-style:normal;font-weight:600;color:var(--accent)}.src{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--faint);font:.7rem var(--mono)}.src a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--hair)}.src a:hover{color:var(--accent);border-color:var(--accent)}footer{margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid var(--hair);font:.68rem/1.9 var(--mono);color:var(--muted)}
+    @media(max-width:62rem){.wrap{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){.sec-head{position:static}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header class="mast"><div class="kick"><span class="sig">Nº 004</span><span>9 items · 3 per field · first principles</span></div><h1>Daily Knowledge Briefing</h1><div class="sub">Saturday, 8 August 2026</div></header>
 
-    --display:"Helvetica Neue","Segoe UI",system-ui,sans-serif;
-    --body:"Avenir Next","Avenir","Segoe UI",system-ui,sans-serif;
-    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  }
-  /* ponytail: light only. "Calm and airy" is the brief; a dark variant would
-     silently override the one thing that was asked for. */
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
-    line-height:1.7;-webkit-font-smoothing:antialiased;color-scheme:light}
-
-  /* Three sections become three columns. Header and footer span them.
-     ponytail: exactly 3 tracks, never auto-fit. auto-fit packs a phantom 4th
-     track on wide screens and degrades to 2+1 at middling widths — either way
-     the bucket-per-column mapping breaks. Collapse straight to one column. */
-  .wrap{
-    max-width:1720px;margin:0 auto;
-    padding:clamp(1.75rem,3vw,3.5rem) clamp(1.25rem,3vw,3rem) 5rem;
-    display:grid;gap:clamp(1.5rem,2.5vw,3rem);
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    align-items:start;
-  }
-  @media (max-width:62rem){ .wrap{grid-template-columns:1fr} }
-
-  /* ── Masthead ── */
-  .mast{grid-column:1/-1;display:flex;justify-content:space-between;align-items:flex-end;
-    flex-wrap:wrap;gap:1.5rem;margin-bottom:1rem}
-  h1{font-family:var(--display);font-weight:300;
-    font-size:clamp(2.1rem,4.4vw,3.6rem);line-height:1.02;letter-spacing:-.035em;
-    margin:0;max-width:14ch;text-wrap:balance}
-  .kick{order:-1;flex-basis:100%;font-family:var(--mono);font-size:.68rem;
-    letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
-    display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
-  .kick .sig{color:var(--ink)}
-  .sub{font-family:var(--mono);font-size:.75rem;color:var(--muted);
-    font-variant-numeric:tabular-nums;padding-bottom:.4rem}
-
-  /* ── Column ── */
-  .sec{display:flex;flex-direction:column;gap:clamp(1rem,1.4vw,1.5rem);min-width:0}
-  .sec[data-b="tech"] {--accent:var(--tech)}
-  .sec[data-b="sci"]  {--accent:var(--sci)}
-  .sec[data-b="world"]{--accent:var(--world)}
-
-  /* The three rules read across as one segmented bar labelling the columns.
-     Sticky, so it rides along and you always know which bucket you're in. */
-  .sec-head{position:sticky;top:0;z-index:2;background:var(--paper);
-    padding:.85rem 0 .7rem}
-  .sec-head .no{display:none}          /* sections aren't a sequence — no numbering */
-  .sec-head h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.19em;
-    text-transform:uppercase;margin:0 0 .7rem;font-weight:600;color:var(--accent)}
-  .sec-head .rule{display:block;height:3px;border-radius:2px;background:var(--accent)}
-
-  /* ── Card ── */
-  .item{background:var(--card);border:1px solid var(--hair);border-radius:16px;
-    padding:clamp(1.4rem,1.7vw,1.9rem);min-width:0;
-    animation:rise .5s cubic-bezier(.2,.8,.3,1) both}
-  .sec .item:nth-child(2){animation-delay:.06s}
-  .sec .item:nth-child(3){animation-delay:.12s}
-  .sec .item:nth-child(4){animation-delay:.18s}
-  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-
-  .item h3{font-family:var(--display);font-size:1.28rem;line-height:1.25;
-    letter-spacing:-.018em;margin:0 0 1.3rem;font-weight:500;text-wrap:balance}
-
-  .beat{padding:.9rem 0}
-  .beat + .beat{border-top:1px solid var(--faint)}
-  .beat .lab{font-family:var(--mono);font-size:.63rem;letter-spacing:.18em;
-    text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:.55rem}
-  .beat p{margin:0;font-size:.96rem;line-height:1.75;max-width:64ch}
-  .beat em{font-style:normal;font-weight:600;color:var(--accent)}
-
-  .src{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--faint);
-    font-family:var(--mono);font-size:.7rem}
-  .src a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--hair)}
-  .src a:hover{color:var(--accent);border-color:var(--accent)}
-  .src a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-
-  footer{grid-column:1/-1;margin-top:2.5rem;padding-top:1.4rem;
-    border-top:1px solid var(--hair);
-    font-family:var(--mono);font-size:.68rem;color:var(--muted);line-height:1.9}
-
-  @media (prefers-reduced-motion:reduce){
-    .item{animation:none}
-    .sec-head{position:static}
-  }
-</style>
-
-<div class="wrap">
-  <header class="mast">
-    <div class="kick"><span class="sig">Nº 003</span><span>9 items · 3 per bucket · first principles</span></div>
-    <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Thursday, 9 July 2026</div>
-  </header>
-
-  <section class="sec" data-b="tech">
-    <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
-
-    <article class="item">
-      <h3>OpenAI launches GPT-5.6's Sol, Terra and Luna</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI publicly released three new model variants — Sol (frontier reasoning/agentic), Terra (balanced everyday model), and Luna (cheapest, fastest) — to all ChatGPT users and API developers, after a government-mandated preview period ended.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Rather than ship one model, OpenAI segments capability into cost/latency tiers because different tasks warrant different depth of computation — pricing tracks compute cost roughly linearly ($5/$30 per million tokens for Sol vs. $1/$6 for Luna). The real skill is <em>picking the cheapest model that clears the accuracy bar for a given task</em>, not always reaching for the frontier one.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Frontier AI economics are moving toward tiered "compute per query" markets, where routing — choosing which model handles which request — becomes as competitively important as raw capability progress.</p></div>
-      <div class="src"><a href="https://openai.com/index/previewing-gpt-5-6-sol/">OpenAI →</a></div>
-    </article>
-
-    <article class="item">
-      <h3>SpaceXAI launches Grok 4.5, an "Opus-class" model</h3>
-      <div class="beat"><div class="lab">What it is</div><p>SpaceXAI (xAI) publicly released Grok 4.5, trained on Nvidia's newest GB300 GPUs and tuned on real coding-agent trajectories after xAI's Cursor acquisition, with a 500K-token context window at $2/$6 per million tokens.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The model's biggest jump over its predecessor is on agentic/tool-use benchmarks rather than general knowledge — training on real agent trajectories teaches the <em>propose-a-tool-call, observe, recover</em> loop directly, something raw next-token pretraining on text doesn't teach as efficiently.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The AI frontier race is bifurcating into competition over agentic/tool-use ability — advantage increasingly comes from what a model does across many tool calls, not what it says in one shot.</p></div>
-      <div class="src"><a href="https://x.ai/news/grok-4-5">x.ai →</a></div>
-    </article>
-
-    <article class="item">
-      <h3>Sony's PlayStation can delete your digital games after 3 years</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A clause in Sony's European PlayStation Network Terms of Service — resurfacing in wide discussion this week — lets Sony close any account inactive for 36 months, permanently revoking access to every digital game tied to it.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Buying a "digital game" is legally a license to access it on the platform's terms, not ownership of a copy — the license persists only as long as the account and platform choose to honor it. EU privacy law actually pressures Sony to <em>eventually delete dormant accounts' data</em> rather than hold it indefinitely.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A stark reminder that the shift to all-digital game libraries trades ownership for continued access — a risk invisible until a policy nobody read gets enforced.</p></div>
-      <div class="src"><a href="https://www.playstation.com/en-us/legal/terms-of-service/">PlayStation Terms of Service →</a></div>
-    </article>
+  <section class="sec" data-b="tech"><div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
+    <article class="item"><h3>xAI challenges Minnesota's AI nudification ban</h3><div class="beat"><div class="lab">What it is</div><p>Elon Musk's xAI sued Minnesota over its first-in-the-nation law banning AI tools that digitally remove clothing from images.</p></div><div class="beat"><div class="lab">The principle</div><p>Generative models can be regulated at several layers: the model, the service distributing it, and the person misusing it. The case tests whether a state may restrict the <em>capability itself</em> without violating constitutional protections.</p></div><div class="beat"><div class="lab">Why it matters</div><p>The ruling could influence how other states write deepfake laws and where courts draw the boundary between software, speech, and harmful conduct.</p></div><div class="src"><a href="https://apnews.com/article/minnesota-artificial-intelligence-nudification-x-elon-musk-deepfake-131184be939d540de093b567b12c9e16">Associated Press →</a></div></article>
+    <article class="item"><h3>Instagram and YouTube found liable in addiction trial</h3><div class="beat"><div class="lab">What it is</div><p>A jury found Instagram and YouTube liable in a landmark case alleging that their product designs contributed to social-media addiction.</p></div><div class="beat"><div class="lab">The principle</div><p>Platforms have often framed harms as consequences of user-posted content. This verdict instead focuses on <em>product architecture</em>—recommendation loops, notifications, and engagement incentives designed by the companies.</p></div><div class="beat"><div class="lab">Why it matters</div><p>If the reasoning survives appeals, technology companies may face greater responsibility for how their systems shape behavior, especially among younger users.</p></div><div class="src"><a href="https://apnews.com/article/social-media-addiction-trial-la-5e54075023d837ccdc76c4ca512e925d">Associated Press →</a></div></article>
+    <article class="item"><h3>FAA orders inspections of 471 Boeing 737 Max jets</h3><div class="beat"><div class="lab">What it is</div><p>The FAA ordered urgent inspections after cracks were reported in older Boeing 737 models, extending the check to hundreds of 737 Max aircraft.</p></div><div class="beat"><div class="lab">The principle</div><p>Aircraft structures accumulate fatigue through repeated pressurization and loading cycles. Inspection programs look for microscopic damage before it grows beyond a component's <em>damage-tolerant design limits</em>.</p></div><div class="beat"><div class="lab">Why it matters</div><p>The order is preventive, but it can affect maintenance schedules and reinforces scrutiny of Boeing's manufacturing and safety systems.</p></div><div class="src"><a href="https://apnews.com/article/boeing-737-max-crack-inspections-faa-f9d4c01a70c760f82520f09ea91137ac">Associated Press →</a></div></article>
   </section>
 
-  <section class="sec" data-b="sci">
-    <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
-
-    <article class="item">
-      <h3>AI co-scientists publish real drug candidates in Nature</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Two independent multi-agent AI systems — Google DeepMind's Co-Scientist (built on Gemini 2.0) and FutureHouse's Robin (built on OpenAI o4-mini + Claude 3.7) — appear in Nature's July 9 issue. Robin proposed and helped validate two drug candidates for dry age-related macular degeneration, a leading cause of blindness.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The system runs as a closed loop, not a single query: literature-review agents generate a hypothesis, an experiment-design agent proposes an assay, real lab results come back, and an analysis agent revises the hypothesis. The reported 200x speedup comes from <em>the loop iterating far faster than a human research cycle</em>, not from any single smarter guess.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This moves AI from a tool that answers questions about existing literature to one that participates in generating new experimental knowledge — with real drug-discovery output already produced.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10652-y">Nature →</a></div>
-    </article>
-
-    <article class="item">
-      <h3>Oak trees keep absorbing carbon long after they stop growing</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A multi-year field study across US oak forests found trees keep photosynthesizing and pulling in CO2 for months after their annual wood growth has already stopped — up to 36% of a tree's yearly carbon uptake happens after growth has ended.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Wood growth requires sustained internal water pressure in growing cells, which collapses almost immediately once conditions turn hot and dry — while photosynthesis, run by different cellular machinery, keeps operating under the same stress. Because the two processes are gated by <em>different physical constraints</em>, carbon absorbed doesn't automatically become carbon locked into wood.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Climate models that treat "carbon absorbed" as a stand-in for "carbon stored in forest biomass" may be systematically overestimating how much carbon hotter, drier future forests can actually lock away.</p></div>
-      <div class="src"><a href="https://www.science.org/doi/10.1126/sciadv.ady7139">Science Advances →</a></div>
-    </article>
-
-    <article class="item">
-      <h3>Sharp central vision forms by cone conversion, not migration</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Using lab-grown human retinal tissue, researchers found that the eye's central high-acuity spot (the foveola) gets its sharp-vision cone layout not by cells migrating into place, but by existing blue-sensing cones converting into red- and green-sensing cones during fetal development.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Retinoic acid first suppresses blue-cone formation at the retina's center, then thyroid hormone pushes the remaining blue cones already sitting there to change identity. A cone's final sensory function isn't fixed at the cell's birth — it's <em>set later by its chemical surroundings</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This overturns a 30-year assumption about how sharp central vision forms and gives a chemical recipe that could let scientists grow patterned, human-like retinal tissue for transplant or disease modeling.</p></div>
-      <div class="src"><a href="https://www.pnas.org/doi/10.1073/pnas.2602950123">PNAS →</a></div>
-    </article>
+  <section class="sec" data-b="sci"><div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
+    <article class="item"><h3>FDA approves Moderna's mRNA flu vaccine for older adults</h3><div class="beat"><div class="lab">What it is</div><p>The FDA approved Moderna's mFlusiva, bringing mRNA vaccine technology to seasonal influenza protection for older people.</p></div><div class="beat"><div class="lab">The principle</div><p>Instead of supplying an antigen directly, an mRNA vaccine gives cells temporary instructions for making it. That can shorten redesign and manufacturing cycles when the target strain changes.</p></div><div class="beat"><div class="lab">Why it matters</div><p>The approval expands the mRNA platform beyond COVID-19 and provides another option for a population at elevated risk from influenza.</p></div><div class="src"><a href="https://apnews.com/article/flu-vaccine-moderna-mrna-fda-mflusiva-59d991a6bf70c26e2f0c210cc8ca87f1">Associated Press →</a></div></article>
+    <article class="item"><h3>Vaccines are being tested to intercept inherited cancers</h3><div class="beat"><div class="lab">What it is</div><p>Researchers are testing experimental vaccines intended to prevent or delay cancers associated with Lynch syndrome, a common inherited cause of colorectal and uterine cancers.</p></div><div class="beat"><div class="lab">The principle</div><p>Inherited repair defects cause predictable mutations. A preventive vaccine aims to train immune cells to recognize mutation-linked signals <em>before a tumor becomes established</em>.</p></div><div class="beat"><div class="lab">Why it matters</div><p>Success would shift some cancer care from repeated screening and early detection toward active biological prevention, but the approach remains experimental.</p></div><div class="src"><a href="https://apnews.com/article/colon-cancer-lynch-vaccines-inherited-87bfce56a19c6b304587f9952acdba99">Associated Press →</a></div></article>
+    <article class="item"><h3>A Colorado River conservation trade-off</h3><div class="beat"><div class="lab">What it is</div><p>Officials declined to release additional cool reservoir water intended to help threatened humpback chub in the Colorado River.</p></div><div class="beat"><div class="lab">The principle</div><p>Reservoir operations jointly manage water supply, temperature, hydropower, and habitat. Improving one variable can consume scarce water or worsen another, turning ecology into a <em>multi-objective optimization problem</em>.</p></div><div class="beat"><div class="lab">Why it matters</div><p>As the basin becomes hotter and drier, environmental protections will increasingly compete with municipal, agricultural, and energy demands.</p></div><div class="src"><a href="https://apnews.com/article/colorado-river-humpback-chub-cool-water-mix-e7744293ecbba8287c50353dadd9f029">Associated Press →</a></div></article>
   </section>
 
-  <section class="sec" data-b="world">
-    <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
-
-    <article class="item">
-      <h3>Trump renews Greenland claim, straining NATO further</h3>
-      <div class="beat"><div class="lab">What it is</div><p>At the NATO summit in Ankara, Trump repeated demands that the US should control Greenland "for the protection of the world," blamed Denmark's refusal for straining US-NATO relations, and floated withdrawing US troops from Europe. Danish PM Mette Frederiksen said Greenland "is of course not for sale."</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Greenland sits astride Arctic shipping lanes opening as sea ice retreats and holds rare-earth reserves currently routed almost entirely through China. A NATO member publicly floating annexation of another member's territory tests the alliance's core premise — that members defend each other, <em>not annex each other</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A treaty ally openly floating annexation of an ally's territory, even rhetorically, erodes the mutual-defense logic holding NATO together, with a live war in Ukraine testing that same logic in parallel.</p></div>
-      <div class="src"><a href="https://www.npr.org/">NPR →</a> · <a href="https://www.france24.com/en/france/20260707-live-french-far-right-leader-marine-le-pen-faces-key-ruling-in-race-for-president">France 24 →</a></div>
-    </article>
-
-    <article class="item">
-      <h3>Court clears Marine Le Pen to run for French president</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A Paris appeals court upheld Marine Le Pen's conviction for embezzling roughly €2.8M in European Parliament funds, but cut her office ban from 5 years to 45 months and converted her sentence to a monitored house-arrest bracelet — clearing her, for now, to run in France's 2027 election.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>French law lets a candidate run while a conviction is still contested on final appeal, so a court's practical ability to bar a frontrunner from the ballot before that appeal resolves is <em>much narrower than the original sentence suggested</em>.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This removes the single biggest legal obstacle to the frontrunner in current French polling, reshaping the 2027 race regardless of how the final appeal eventually lands.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/07/08/g-s1-132467/le-pen-court-ordered-monitor">NPR →</a> · <a href="https://www.france24.com/en/france/20260707-france-s-le-pen-says-still-running-for-president">France 24 →</a></div>
-    </article>
-
-    <article class="item">
-      <h3>US moves to delist Syria as a state sponsor of terrorism</h3>
-      <div class="beat"><div class="lab">What it is</div><p>The US State Department formally began removing Syria's "state sponsor of terrorism" designation — held since 1979 — after President Ahmed al-Sharaa gave "formal assurances" on terrorism. The change takes effect in 45 days unless Congress blocks it, leaving only Iran, North Korea and Cuba on the list.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The designation legally triggers sanctions blocking access to international banking, investment and arms sales. Removing it doesn't change anything on the ground directly, but it <em>unlocks the financial and legal plumbing</em> any real economic recovery requires.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A 47-year-old US sanctions designation ending is a major, concrete bet by Washington on Syria's post-Assad government — reversible in 45 days, but otherwise a real opening for foreign investment.</p></div>
-      <div class="src"><a href="https://www.state.gov/releases/office-of-the-spokesperson/2026/07/initiating-rescission-process-of-syrias-designation-as-a-state-sponsor-of-terrorism/">US State Dept →</a> · <a href="https://www.aljazeera.com/news/2026/7/8/us-moves-to-delist-syria-as-a-state-sponsor-of-terrorism">Al Jazeera →</a></div>
-    </article>
+  <section class="sec" data-b="world"><div class="sec-head"><h2>World</h2><span class="rule"></span></div>
+    <article class="item"><h3>Iran bets on leverage over the Strait of Hormuz</h3><div class="beat"><div class="lab">What it is</div><p>Iran's leadership appears to believe control and disruption risks around the Strait of Hormuz can pressure the United States toward a compromise.</p></div><div class="beat"><div class="lab">The principle</div><p>A narrow maritime chokepoint concentrates global energy flows, so even the threat of disruption can raise shipping costs and oil-price risk. That creates leverage—but also gives affected powers a reason to intervene.</p></div><div class="beat"><div class="lab">Why it matters</div><p>The strategy ties military escalation directly to global energy markets, making miscalculation costly far beyond the region.</p></div><div class="src"><a href="https://apnews.com/article/iran-us-war-strait-hormuz-goals-diplomacy-77d91b276db6d749711619b0aa1c5c3f">Associated Press →</a></div></article>
+    <article class="item"><h3>Saudi Arabia, Turkey and Pakistan sign defense agreement</h3><div class="beat"><div class="lab">What it is</div><p>The three countries signed a new defense agreement as regional governments reassess their security relationships.</p></div><div class="beat"><div class="lab">The principle</div><p>Defense agreements reduce uncertainty by defining cooperation before a crisis. They also signal to rivals that pressure on one partner may activate resources from others.</p></div><div class="beat"><div class="lab">Why it matters</div><p>The pact connects three influential military powers and may reshape regional deterrence, procurement, and diplomatic alignment.</p></div><div class="src"><a href="https://apnews.com/article/saudi-arabia-turkey-pakistan-defense-agreement-58048d4a100befd4d2c18e0cbae58b7c">Associated Press →</a></div></article>
+    <article class="item"><h3>Court halts Trump's White House ballroom project</h3><div class="beat"><div class="lab">What it is</div><p>A federal appeals court ruled that the White House ballroom project cannot proceed without congressional approval.</p></div><div class="beat"><div class="lab">The principle</div><p>The dispute is about separation of powers: even when the executive controls a property operationally, Congress controls appropriations and can set legal limits on major federal construction.</p></div><div class="beat"><div class="lab">Why it matters</div><p>The decision reinforces Congress's institutional role in changes to nationally significant public property and constrains unilateral executive action.</p></div><div class="src"><a href="https://apnews.com/article/trump-ballroom-court-ruling-1528247275ec6103da892d271d4ee883">Associated Press →</a></div></article>
   </section>
 
-  <footer>
-    Every item links its source — follow it. Tech and science link primary sources (arXiv, journals, lab press releases, vendor changelogs), so the claim can be checked against the paper.<br>
-    World items are weaker: the wire services (Reuters, AP, AFP, BBC) block the search crawler, so this section draws on whatever reputable outlets remain reachable. Treat it as a pointer, not a verdict.<br>
-    Written by a language model each morning from the last ~24–48h. No human has checked it.
-  </footer>
-</div>
+  <footer>Every item links to its source. Published from reporting available on 8 August 2026; developing stories may change. Written by a language model and not independently reviewed by a human.</footer>
+</main>
+</body>
+</html>
