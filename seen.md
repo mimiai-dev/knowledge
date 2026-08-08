@@ -263,3 +263,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-07 | world | Sudan's el-Obeid siege: RSF drone strikes cripple water/power, cholera outbreak spreads
 2026-08-07 | world | Iran and Oman agree on Strait of Hormuz shipping-route coordinates
 2026-08-07 | world | Thailand school shooting near Bangkok: teen kills grandparents, then students/teachers
+2026-08-08 | tech | AMD acquires Taalas, hardwires AI model weights directly into inference silicon
+2026-08-08 | tech | GitHub Code Quality auto-generates code coverage workflows with AI
+2026-08-08 | tech | QRAQ: quantum advantage for one-bit post-training LLM quantization (arXiv)
+2026-08-08 | sci | Global neutrino detector network (JUNO) maps Earth's radiogenic heat engine
+2026-08-08 | sci | FNIP1 loss-of-function variants cut cardiometabolic disease risk ~60% (1M genomes)
+2026-08-08 | sci | AlCl3 dechlorination upcycles PVC waste into polyalphaolefin motor lubricant
+2026-08-08 | world | Saudi Arabia-Pakistan-Turkiye sign Mecca Joint Defence Agreement mutual-defense pact
+2026-08-08 | world | Zelenskyy's first Serbia visit as Russian strikes kill 3 including child near Kyiv
+2026-08-08 | world | PML-N dominates Pakistan-administered Kashmir election amid deadly boycott protests
