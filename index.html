@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-08-08</title>
+<title>Daily Knowledge Briefing — 2026-08-09</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 031</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 032</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Saturday, 8 August 2026</div>
+    <div class="sub">Sunday, 9 August 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>AMD buys startup that hardwires AI weights into silicon</h3>
-      <div class="beat"><div class="lab">What it is</div><p>AMD announced a definitive agreement to acquire Taalas, a Toronto AI-inference-silicon startup founded in 2023, whose chips etch a specific model's weights directly into the hardware itself rather than storing them in external memory. A demo chip running Llama 3.1-8B hit over 16,000 tokens/sec per user.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Standard GPU inference has to shuttle every weight out of DRAM into compute units for every token generated — a "memory wall" that caps speed no matter how fast the compute itself is. Taalas's chips remove that wall by making the weights permanent hardware instead of data that has to be fetched, at the cost of locking the chip to one model. <em>Trading a general-purpose chip's flexibility for a single model's permanent hardware buys speed by eliminating the very need to move data.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a bet that as inference — not training — becomes AI's dominant cost, dedicated single-model silicon can beat general-purpose GPUs the way ASICs beat CPUs for a narrow task, pressuring Nvidia's inference margins if it works at scale.</p></div>
-      <div class="src"><a href="https://newsroom.amd.com/news/amd-acquires-taalas-ai-inference/">AMD Newsroom →</a></div>
+      <h3>GitHub Copilot gives agent sessions isolated git worktrees</h3>
+      <div class="beat"><div class="lab">What it is</div><p>This week's GitHub Copilot release lets every agent chat session run inside its own git worktree — a full separate checkout sharing the same underlying repository — plus a new /rewind command that restores prior conversation and file states without touching git history, and a redesigned sessions sidebar for managing several running agents at once.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A git worktree lets multiple branches be checked out into separate directories while all of them share one underlying object database, so an agent editing files in its own worktree can never collide with the branch you're actively viewing. <em>Isolating each agent in its own real checkout, rather than a shared one, is what makes running several coding agents on the same repo at once safe by construction rather than by convention.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>As developers run more agents concurrently rather than one at a time, this kind of structural isolation — not better prompting — is what actually prevents agents from stepping on each other's changes.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>GitHub adds AI-generated code coverage workflows</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub's Code Quality settings now include a "Generate workflow with AI" option: an agent reads your repository, drafts a CI workflow that builds the code, runs tests, produces a coverage report, and uploads it with least-privilege permissions by default, then opens a pull request for review rather than merging directly.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Writing a correct CI workflow requires knowing a repo's build system, test runner, and permission model — mostly boilerplate that varies just enough between projects to be tedious rather than hard. An agent that can already read the repo has everything it needs to infer that boilerplate. <em>Handing boilerplate configuration to an agent that can read the surrounding code turns a lookup task into a review task, a categorically faster job for a human to do.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Coverage setup is a common first-week yak-shave for new repos; folding it into a one-click, PR-gated AI action lowers the activation energy for teams to adopt coverage tracking at all.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings/">GitHub Changelog →</a></div>
+      <h3>OpenAI retires its Atlas browser, folds it into ChatGPT</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI's standalone Atlas browser, launched as a dedicated app for AI-native web browsing, stops working on August 9, 2026. Its agentic capabilities — multi-tab browsing, downloads, account logins — are moving directly into ChatGPT and Codex instead of surviving as a separate product.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Atlas bet that agentic browsing needed its own dedicated application shell, distinct from the general chat interface. Retiring it in favor of building the same capability into ChatGPT reflects a broader pattern in AI products: <em>a new capability tends to consolidate into whichever interface already has the most users, rather than surviving as a standalone app people have to remember to open.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a signal that "AI browser" hasn't yet proven itself a durable separate product category — for now, the winning distribution channel for agentic web capability is the assistant people already have open.</p></div>
+      <div class="src"><a href="https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work">OpenAI Help Center →</a></div>
     </article>
 
     <article class="item">
-      <h3>Quantum trick could sharpen one-bit AI compression</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A new arXiv paper proposes Quantum Random Access Quantization (QRAQ): a scheme for compressing neural-network weights to one bit each, where a single qubit encodes several context-dependent sign patterns for a weight and retrieves the right one via a context-matched measurement, instead of forcing every deployment context to share one fixed sign.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Standard 1-bit quantization must pick one binary sign per weight that works across every input the model sees, even though the "best" sign can differ by context — a compromise that costs accuracy. A qubit can yield different classical answers depending on how it's measured, so packing several context-optimal signs into one qubit sidesteps that compromise. <em>A quantum bit's ability to answer differently depending on how it's measured lets one unit of storage serve multiple context-specific purposes a classical bit is forced to average over.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The authors are explicit this is a logical model, not a hardware claim — it assumes measurement primitives that don't exist in deployable form yet — but it's a concrete, provable case where quantum information theory offers a real edge for a mainstream AI engineering problem, not just an abstract algorithm.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2608.05240">arXiv →</a></div>
+      <h3>Quantum computing's next bottleneck is industrial, not physical</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A new arXiv paper argues that quantum computing can no longer make progress by improving hardware and algorithms in isolation — it needs to be developed in constant, two-way contact with real industrial decision problems, like which drug candidate to advance or how to design a molecule.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A proven quantum speedup is worthless if the computation it accelerates doesn't sit at an actual decision point inside someone's existing workflow. The paper's central claim is that <em>algorithmic tractability and industrial relevance have to be developed together from the start, not discovered separately and matched up afterward</em> — tractable-but-irrelevant results and relevant-but-intractable ones are both dead ends.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It reframes what counts as progress in the field: fewer papers proving speedups on toy problems, more collaborations that start from an actual bottleneck on a factory floor or in a drug-discovery pipeline.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2608.04936">arXiv →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Neutrino detectors reveal what heats Earth's interior</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Quanta profiles a growing global network of neutrino detectors — Borexino and KamLAND, both winding down, plus the newly online, far larger JUNO in China — assembling the first detailed picture of how much of Earth's internal heat comes from radioactive decay of uranium, thorium, and potassium in the crust and mantle, versus primordial heat left from planet formation.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Radioactive decay inside the Earth releases both heat and antineutrinos in a fixed, known ratio, and unlike heat, antineutrinos pass through thousands of kilometers of rock almost unimpeded — so a surface detector can "see" the decay rate happening deep in the mantle and back-calculate its share of the planet's heat budget. <em>A particle that barely interacts with matter is exactly the messenger needed to measure a process happening somewhere you can never physically reach.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Roughly 40% of Earth's heat flow appears to be radiogenic, and that heat drives mantle convection, powering plate tectonics, volcanism, and the magnetic field. JUNO alone should detect more geoneutrinos in its first year than every prior detector combined has over decades.</p></div>
-      <div class="src"><a href="https://www.quantamagazine.org/neutrinos-from-deep-inside-earth-provide-a-new-picture-of-the-mantle-20260807/">Quanta Magazine →</a></div>
+      <h3>AI systems start cracking open Erdős's list of problems</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Mathematicians are using large language models paired with formal proof-checking systems — like the Lean-based verifier Aristotle — to resolve open questions from the legendary problem list left by Paul Erdős, including Erdős Problem #728, solved with no prior literature on it to draw from.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The method that actually works isn't asking one model for a proof and trusting it — it's an adversarial pipeline where one model proposes an argument, a second model or formal verifier tries to break it, and the cycle repeats until only a machine-checkable proof survives. <em>Formal verification, not a model's confidence, is what turns an AI's mathematical guess into an actual theorem.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Erdős problems were curated specifically as clean, isolated, checkable questions, making them an unusually honest benchmark for whether AI mathematical reasoning is real progress or just plausible-sounding text — checked against Lean, some of it is holding up.</p></div>
+      <div class="src"><a href="https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/">Quanta Magazine →</a></div>
     </article>
 
     <article class="item">
-      <h3>One gene variant cuts cardiometabolic risk 60%</h3>
-      <div class="beat"><div class="lab">What it is</div><p>An exome-sequencing study of just over 1 million people across the US, Europe, and Asia found that carriers of rare loss-of-function variants in the FNIP1 gene — about 1 in 7,000 people — have more muscle, less liver and belly fat, better blood sugar control, and roughly 60% lower odds of cardiometabolic disease. Silencing the same pathway in mice reproduces the fat-burning effect.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>FNIP1 normally acts as a brake in the cellular pathway that senses nutrients and decides whether to store or burn energy. People born with a naturally broken copy of that brake have run a permanently different metabolic setting their whole lives, and a million-person dataset contains enough of them to read as a natural experiment. <em>A large enough population contains people whose bodies have already run any given genetic experiment for a lifetime, and finding them can be more informative than running the intervention artificially.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>23 of the 59 candidate genes flagged as master metabolic regulators in this study are already approved drug targets or in clinical trials, so this evidence can help prioritize which existing or in-development drugs are actually likely to shift disease risk in people.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10864-2">Nature →</a></div>
+      <h3>A second route to 'hidden' magnetism, made of loop currents</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A Physical Review Letters paper shows that altermagnetism — a magnetic state discovered only in the last few years — can arise purely from circulating electric currents flowing on a lattice's sublattices, not just from how magnetic atoms happen to be arranged in a crystal.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Altermagnetism's signature trait is that electrons of opposite spin behave differently depending on which direction they travel, normally explained by the geometric arrangement of magnetic atoms in a crystal. Using the Haldane-Hubbard model as its proof case, this paper shows <em>circulating sublattice currents that break time-reversal symmetry can produce the identical electronic signature with no magnetic atoms involved at all.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Decoupling this property from a specific magnetic crystal chemistry means it could potentially be engineered into a far wider range of materials — including nonmagnetic ones — than researchers previously thought possible.</p></div>
+      <div class="src"><a href="https://journals.aps.org/prl/abstract/10.1103/c8pd-2fs4">Physical Review Letters →</a></div>
     </article>
 
     <article class="item">
-      <h3>Hated plastic PVC upcycled into motor lubricant</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers found that PVC — one of the hardest plastics to recycle, because burning or heating it releases toxic chlorine compounds — can be converted into polyalphaolefin (PAO), a premium synthetic motor lubricant, by stirring it with aluminum trichloride and alpha-olefins at a mild 70°C for about three hours.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>PVC's chlorine atoms are exactly what make it hazardous to simply burn or melt, but a Lewis acid like aluminum trichloride can pull those atoms off the polymer backbone under mild heat, and the resulting reactive carbon fragments immediately grab onto the added alpha-olefins instead of recombining into more chlorinated byproducts. <em>Turning a material's most hazardous component into the very handle a mild reagent uses to pull the whole structure apart converts a disposal problem into a synthesis route.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Motor lubricants are normally made from petroleum, so producing them instead from a notoriously unrecyclable waste plastic, at a temperature low enough to run economically, offers a route to both waste diversion and reduced virgin-oil demand at once.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10867-z">Nature →</a></div>
+      <h3>Largest scan yet of Alzheimer's spinal-fluid markers finds new genes</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A genome-wide meta-analysis of nearly 19,000 people identified 12 gene regions linked to levels of amyloid-beta and tau — the proteins doctors measure in spinal fluid to track Alzheimer's — eight of which had never been implicated before.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A genome-wide association study scans the entire genome of thousands of people for DNA variants that statistically track with a measurable trait, rather than starting from a guess about which gene should matter. <em>The newly found genes cluster in lipid-metabolism and cellular-cleanup pathways that operate independently of APOE</em>, the one gene that has dominated Alzheimer's genetics for 30 years.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Because these pathways sit outside APOE entirely, they represent fresh, largely untapped drug targets for a disease whose known genetic risk has mostly funneled through a single gene for three decades.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/s41467-026-71682-8">Nature Communications →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Saudi Arabia, Pakistan, Turkiye sign mutual defense pact</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Saudi Arabia, Pakistan, and Turkiye signed the "Mecca Joint Defence Agreement" in Jeddah, stipulating that an armed attack on any one signatory will be treated as an attack on all three — capping roughly a year of negotiation that began after October 2023 and accelerated during the recent US-Israel war on Iran.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A mutual-defense clause only deters if the combined capability behind it is credible and complementary: Pakistan brings a battle-tested military and nuclear arsenal, Turkiye brings NATO-grade drone technology, and Saudi Arabia brings the capital to fund it all. <em>A defense pact's deterrent power comes less from its signatories' agreement in principle than from how well their individual military capabilities complement each other's gaps.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It signals Gulf and South Asian states hedging away from sole reliance on US security guarantees after watching the US-Israel-Iran war unfold, and creates a new nuclear-armed collective-defense bloc in an already destabilized region.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/7/saudi-%E2%81%A0arabia-pakistan-and-turkiye-sign-defence-deal-amid-regional-turmoil">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260807-saudi-arabia-pakistan-and-turkey-sign-mutual-defence-agreement">France 24 →</a></div>
+      <h3>Iran lists six conditions for reopening the Strait of Hormuz</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Iran's Supreme National Security Council secretary, Mohammad Bagher Zolghadr, publicly laid out six explicit demands — from lifting the US naval blockade around Iran to releasing frozen Iranian assets and ending strikes on its regional allies — that Washington must meet before Tehran will fully reopen the strait, even as President Pezeshkian pushes to end the current standoff.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The Strait of Hormuz carries roughly a fifth of the world's oil trade through a chokepoint barely 33 kilometers wide at its narrowest. <em>Control of a geographic chokepoint is a lever whose power comes from geometry, not military size</em> — it lets a regional power impose costs on the global economy disproportionate to its own strength.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Naming specific, enumerated conditions rather than vague demands converts an open-ended conflict into a checklist that can actually be evaluated and met — often itself a precursor to de-escalation rather than an escalation.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/9/iran-issues-new-demands-as-pezeshkian-seeks-deal">Al Jazeera →</a> · <a href="https://www.france24.com/en/live-news/20260809-iran-issues-demands-for-reopening-of-hormuz">France 24 →</a> · <a href="https://www.npr.org/2026/08/09/nx-s1-5926387/yemens-houthis-claim-attack-on-aramco-oil-facility-in-saudi-arabia-and-other-middle-east-news">NPR →</a></div>
     </article>
 
     <article class="item">
-      <h3>Zelenskyy visits Serbia as strikes kill child near Kyiv</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Russian strikes on the Boryspil district outside Kyiv killed three people, including a child, on the same day Ukrainian President Volodymyr Zelenskyy arrived in Belgrade for his first official visit to Serbia — a country that has stayed diplomatically close to Moscow throughout the war — to discuss economic ties and Serbia's EU relationship.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Serbia has walked a rare line among European states: pursuing EU membership while declining to sanction Russia or fully align with NATO on Ukraine, largely on historical Orthodox and Slavic ties to Moscow. <em>Diplomatic visits to a war's neutral-leaning bystanders are themselves a form of pressure, aimed at shrinking the number of capitals an aggressor can still call a friend.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The trip, called "a slap in the face for the Russians" by a senior Ukrainian official, tests whether Moscow's closest remaining European partner will be seen engaging with Kyiv, at a moment Ukraine badly needs to show it isn't diplomatically isolated.</p></div>
-      <div class="src"><a href="https://www.france24.com/en/europe/20260808-russian-missile-strikes-near-kyiv-kill-three-including-a-child">France 24 →</a> · <a href="https://www.aljazeera.com/news/2026/8/8/russian-strikes-near-ukrainian-capital-kill-three-including-child">Al Jazeera →</a></div>
+      <h3>Nagasaki marks 81 years as Japan's nuclear taboo softens</h3>
+      <div class="beat"><div class="lab">What it is</div><p>At Sunday's memorial ceremony, Nagasaki's mayor warned that nuclear deterrence is "extremely dangerous and fragile," while Prime Minister Sanae Takaichi again declined to reaffirm Japan's three postwar non-nuclear principles, amid growing doubt in Tokyo over how reliable the US security umbrella still is against China.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Japan's non-nuclear principles were never a law — they're a political convention adopted in 1967 that has held mainly because no sitting prime minister would openly break it. <em>Ambiguity from a leader, rather than an explicit reversal, is how such a taboo actually erodes</em> — the policy doesn't change on paper, but what a leader can say without political cost quietly expands.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Japan is the only nation to have suffered a nuclear attack; any real shift in its nuclear posture would be one of the most consequential nonproliferation developments in decades.</p></div>
+      <div class="src"><a href="https://www.france24.com/en/asia-pacific/20260809-japan-nuclear-debate-unnerves-proponents-of-pacifism">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Ruling party dominates violence-marked Kashmir election</h3>
-      <div class="beat"><div class="lab">What it is</div><p>In the second of three voting phases for the Pakistan-administered Kashmir legislative assembly, Prime Minister Shehbaz Sharif's PML-N won 14 of 18 declared seats (after 9 of 13 in phase one), extending a commanding lead despite an opposition boycott call and at least 40 deaths in vote-related unrest reported by Amnesty International.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The protests center on 12 assembly seats reserved for Kashmiri refugees living outside the region, which critics say let the ruling party import votes it couldn't otherwise win locally. <em>An opposition's boycott only weakens a government's mandate if it actually depresses turnout — a boycott voters ignore instead validates the very result it was meant to deny.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A ruling party under fire converting protest and boycott calls into a commanding electoral margin, rather than a runoff or coalition, sets the template for how Islamabad will treat similar seat-allocation disputes in other Pakistan-administered regions.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/08/05/g-s1-137449/pakistans-ruling-party-leads-in-kashmir-vote-despite-boycott-call-by-banned-group">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/8/3/protests-boycott-cast-shadow-on-pakistan-administered-kashmir-election">Al Jazeera →</a></div>
+      <h3>Houthi drone strike hits Saudi Aramco refinery again</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A fire broke out early Sunday at Aramco's Jazan refinery on Saudi Arabia's Red Sea coast. Houthi military spokesperson Yahya Saree claimed a precision drone strike on the facility, and the Saudi Energy Ministry confirmed firefighters extinguished the blaze with no injuries reported — the second attack on the same refinery since it was partly shut down after a July 27 strike.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The Houthis have spent this war substituting cheap, one-way attack drones for the naval and air power they don't have. <em>A low-cost weapon repeated often enough becomes a credible standing threat against a much larger state's infrastructure</em>, even when any single strike does limited damage.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A refinery processing 400,000 barrels a day being hit twice in two weeks keeps Gulf energy-security risk elevated even during lulls on the main Iran-US front.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan">Al Jazeera →</a> · <a href="https://www.npr.org/2026/08/09/nx-s1-5926387/yemens-houthis-claim-attack-on-aramco-oil-facility-in-saudi-arabia-and-other-middle-east-news">NPR →</a></div>
     </article>
   </section>
 

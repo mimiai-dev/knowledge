@@ -2,24 +2,6 @@
 
 Format: `YYYY-MM-DD | bucket | short-identifier`
 
-2026-07-09 | tech | SK Hynix $29B Nasdaq ADR listing
-2026-07-09 | tech | GitHub Copilot adds Kimi K2.7 Code, first open-weight model
-2026-07-09 | tech | ELEANOR soft robotic arm (elephant trunk)
-2026-07-09 | sci | Heidelberg unified quantum impurity theory (Fermi sea)
-2026-07-09 | sci | First real-time observation of oceanic crust formation (Indian Ocean ridge)
-2026-07-09 | sci | Bacterial docking-domain mechanism for combinatorial anti-cancer drugs
-2026-07-09 | world | US-Iran ceasefire fractures, Strait of Hormuz strikes
-2026-07-09 | world | Trump grants Ukraine Patriot interceptor manufacturing license
-2026-07-09 | world | India Gen Z "cockroach" protest movement
-2026-07-09 | tech | OpenAI GPT-5.6 Sol/Terra/Luna public launch
-2026-07-09 | tech | SpaceXAI Grok 4.5 launch
-2026-07-09 | tech | Sony PlayStation EU ToS digital game deletion after 3yr inactivity
-2026-07-09 | sci | Nature AI co-scientist/Robin drug discovery papers
-2026-07-09 | sci | Oak tree decoupled carbon assimilation from growth (Science Advances)
-2026-07-09 | sci | PNAS foveola cone-conversion mechanism for sharp vision
-2026-07-09 | world | Trump Greenland claim at NATO summit, Denmark pushback
-2026-07-09 | world | Marine Le Pen cleared to run 2027 French presidency
-2026-07-09 | world | US delists Syria as state sponsor of terrorism
 2026-07-10 | tech | Claude Cowork expands to mobile and web
 2026-07-10 | tech | OpenAI merges ChatGPT and Codex, launches ChatGPT Work
 2026-07-10 | tech | GitHub Code Quality exits preview as paid product
@@ -272,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-08 | world | Saudi Arabia-Pakistan-Turkiye sign Mecca Joint Defence Agreement mutual-defense pact
 2026-08-08 | world | Zelenskyy's first Serbia visit as Russian strikes kill 3 including child near Kyiv
 2026-08-08 | world | PML-N dominates Pakistan-administered Kashmir election amid deadly boycott protests
+2026-08-09 | tech | GitHub Copilot agent sessions get git-worktree isolation, /rewind, sessions sidebar
+2026-08-09 | tech | OpenAI retires Atlas browser, folds agentic browsing into ChatGPT/Codex
+2026-08-09 | tech | arXiv paper argues quantum computing needs industry-coupled development, not just algorithms
+2026-08-09 | sci | AI (LLM + Lean verifier Aristotle) resolves Erdős Problem #728 and others, Tao-verified
+2026-08-09 | sci | Odd-parity altermagnetism from sublattice currents, Haldane-Hubbard model (PRL)
+2026-08-09 | sci | GWAS meta-analysis of 19K people finds 12 CSF Alzheimer's biomarker loci, 8 novel
+2026-08-09 | world | Iran issues six formal conditions to reopen Strait of Hormuz
+2026-08-09 | world | Nagasaki 81st anniversary, Takaichi avoids reaffirming non-nuclear principles
+2026-08-09 | world | Houthi drone strike hits Saudi Aramco Jizan refinery again, fire extinguished
