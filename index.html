@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-08-09</title>
+<title>Daily Knowledge Briefing — 2026-08-10</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 032</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 033</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Sunday, 9 August 2026</div>
+    <div class="sub">Monday, 10 August 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>GitHub Copilot gives agent sessions isolated git worktrees</h3>
-      <div class="beat"><div class="lab">What it is</div><p>This week's GitHub Copilot release lets every agent chat session run inside its own git worktree — a full separate checkout sharing the same underlying repository — plus a new /rewind command that restores prior conversation and file states without touching git history, and a redesigned sessions sidebar for managing several running agents at once.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A git worktree lets multiple branches be checked out into separate directories while all of them share one underlying object database, so an agent editing files in its own worktree can never collide with the branch you're actively viewing. <em>Isolating each agent in its own real checkout, rather than a shared one, is what makes running several coding agents on the same repo at once safe by construction rather than by convention.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>As developers run more agents concurrently rather than one at a time, this kind of structural isolation — not better prompting — is what actually prevents agents from stepping on each other's changes.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3/">GitHub Changelog →</a></div>
+      <h3>Hassabis hands off Google DeepMind's day-to-day operations</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Google announced Demis Hassabis is stepping down as Google DeepMind's operating CEO to become Chair of DeepMind and Chief Scientist of Alphabet, handing day-to-day leadership — Gemini development, frontier research, the Gemini app and developer teams — to his longtime deputy Koray Kavukcuoglu, newly promoted to SVP. Veteran Google engineer Jeff Dean is departing the company as part of the reorganization.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A research lab's CEO and its chief scientist are different jobs that tend to collide once the lab scales — one is about running an organization serving hundreds of millions of users, the other about steering long-range research bets. <em>Splitting the roles lets Hassabis concentrate on the underlying research trajectory without also carrying the operational load of a product business the size of Gemini.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a structural bet that Google's AI division has outgrown a single unified leader, and a signal of how seriously Alphabet now treats the distinction between running an AI product business and directing frontier research.</p></div>
+      <div class="src"><a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/">Google Blog →</a></div>
     </article>
 
     <article class="item">
-      <h3>OpenAI retires its Atlas browser, folds it into ChatGPT</h3>
-      <div class="beat"><div class="lab">What it is</div><p>OpenAI's standalone Atlas browser, launched as a dedicated app for AI-native web browsing, stops working on August 9, 2026. Its agentic capabilities — multi-tab browsing, downloads, account logins — are moving directly into ChatGPT and Codex instead of surviving as a separate product.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Atlas bet that agentic browsing needed its own dedicated application shell, distinct from the general chat interface. Retiring it in favor of building the same capability into ChatGPT reflects a broader pattern in AI products: <em>a new capability tends to consolidate into whichever interface already has the most users, rather than surviving as a standalone app people have to remember to open.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It's a signal that "AI browser" hasn't yet proven itself a durable separate product category — for now, the winning distribution channel for agentic web capability is the assistant people already have open.</p></div>
-      <div class="src"><a href="https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work">OpenAI Help Center →</a></div>
+      <h3>GitHub enterprises can now install any public app at once</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub now lets enterprise owners install a public GitHub App built by any third-party developer directly at the enterprise level, rather than requiring every individual organization inside that enterprise to install and configure the app separately.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Previously, an integration had to be installed org-by-org inside a large enterprise, so a single security tool or compliance bot needed separate setup and permissions review per team. <em>Moving the unit of installation from "organization" to "enterprise" turns a linear per-team integration cost into one decision</em>, which is what actually makes third-party tooling adoptable at large-company scale.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>For companies running dozens or hundreds of GitHub organizations, this removes a real adoption barrier for external security and workflow tools — the difference between a good integration existing and it actually getting used.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps/">GitHub Changelog →</a></div>
     </article>
 
     <article class="item">
-      <h3>Quantum computing's next bottleneck is industrial, not physical</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A new arXiv paper argues that quantum computing can no longer make progress by improving hardware and algorithms in isolation — it needs to be developed in constant, two-way contact with real industrial decision problems, like which drug candidate to advance or how to design a molecule.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A proven quantum speedup is worthless if the computation it accelerates doesn't sit at an actual decision point inside someone's existing workflow. The paper's central claim is that <em>algorithmic tractability and industrial relevance have to be developed together from the start, not discovered separately and matched up afterward</em> — tractable-but-irrelevant results and relevant-but-intractable ones are both dead ends.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>It reframes what counts as progress in the field: fewer papers proving speedups on toy problems, more collaborations that start from an actual bottleneck on a factory floor or in a drug-discovery pipeline.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2608.04936">arXiv →</a></div>
+      <h3>Cloudflare launches an operating system built around agents</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Cloudflare released Cloudflare OS, an internal platform where employees start from a chat conversation grounded in the company's own curated knowledge and tools, with agents given an isolated runtime to write and run code and a new governance layer that tracks exactly which internal resources each agent touched.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The hard problem in letting AI agents touch internal company data isn't capability, it's accountability — once an agent reads a resource and someone else opens what it produced, that second person needs guaranteed access to everything the output depended on. <em>Cloudflare OS attaches a persistent record of every resource an agent observed to its output, then checks a viewer's permissions against that whole chain</em>, not just the final document.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>It's a concrete answer to the access-control problem that has kept many companies from letting agents touch real internal systems, built by a company whose business is internet infrastructure and security.</p></div>
+      <div class="src"><a href="https://blog.cloudflare.com/cloudflare-os/">Cloudflare Blog →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>AI systems start cracking open Erdős's list of problems</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Mathematicians are using large language models paired with formal proof-checking systems — like the Lean-based verifier Aristotle — to resolve open questions from the legendary problem list left by Paul Erdős, including Erdős Problem #728, solved with no prior literature on it to draw from.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The method that actually works isn't asking one model for a proof and trusting it — it's an adversarial pipeline where one model proposes an argument, a second model or formal verifier tries to break it, and the cycle repeats until only a machine-checkable proof survives. <em>Formal verification, not a model's confidence, is what turns an AI's mathematical guess into an actual theorem.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Erdős problems were curated specifically as clean, isolated, checkable questions, making them an unusually honest benchmark for whether AI mathematical reasoning is real progress or just plausible-sounding text — checked against Lean, some of it is holding up.</p></div>
-      <div class="src"><a href="https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/">Quanta Magazine →</a></div>
+      <h3>A 1929 geometry conjecture falls to a computer proof</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Two independent groups of mathematicians disproved the Pompeiu problem and the closely related Schiffer conjecture, both open since 1929, by constructing an explicit non-circular domain whose boundary supports a "constant on the boundary" vibration mode — something the conjectures said should be impossible outside a perfect disk or ball.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The conjecture asked whether only a disk can have a special vibration mode that stays perfectly level all along its edge. <em>Both teams found their counterexample not through pure reasoning but by numerically hunting for a domain shape at a razor-precise wave number where the disallowed solution actually exists, then rigorously verifying it</em> — a computer-assisted proof rather than a hand-derived one.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The Pompeiu problem sits underneath results in medical imaging, radar, and signal processing that assume only round shapes have this property; a confirmed counterexample forces a rethink of which of those downstream results actually depend on that assumption holding everywhere.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2608.01579">arXiv →</a> · <a href="https://arxiv.org/abs/2608.05114">arXiv →</a></div>
     </article>
 
     <article class="item">
-      <h3>A second route to 'hidden' magnetism, made of loop currents</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A Physical Review Letters paper shows that altermagnetism — a magnetic state discovered only in the last few years — can arise purely from circulating electric currents flowing on a lattice's sublattices, not just from how magnetic atoms happen to be arranged in a crystal.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Altermagnetism's signature trait is that electrons of opposite spin behave differently depending on which direction they travel, normally explained by the geometric arrangement of magnetic atoms in a crystal. Using the Haldane-Hubbard model as its proof case, this paper shows <em>circulating sublattice currents that break time-reversal symmetry can produce the identical electronic signature with no magnetic atoms involved at all.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Decoupling this property from a specific magnetic crystal chemistry means it could potentially be engineered into a far wider range of materials — including nonmagnetic ones — than researchers previously thought possible.</p></div>
-      <div class="src"><a href="https://journals.aps.org/prl/abstract/10.1103/c8pd-2fs4">Physical Review Letters →</a></div>
+      <h3>Scientists complete the first full map of the vagus nerve</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers dissected 30 pairs of vagus nerves from human cadavers and combined micro-CT scanning, protein-stained cross-sections, and machine learning to trace thousands of individual fibers in this nerve highway from the brainstem out to the heart, lungs, and gut, sorting each one by whether it carries signals toward the brain or commands away from it.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The vagus nerve is actually a bundle of more than 100,000 individually routed fibers, not one uniform cable, and existing vagus-nerve-stimulation therapies work by simply activating the whole bundle at once. <em>Mapping which fibers within that bundle go where is what makes it possible, for the first time, to target a device at only the fibers responsible for one specific organ</em> rather than firing indiscriminately into all of them.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Vagus nerve stimulation is already an approved treatment for epilepsy and depression; a fiber-level map is the prerequisite for making it more precise and for expanding it to new conditions without the side effects of stimulating unrelated fibers.</p></div>
+      <div class="src"><a href="https://www.science.org/content/article/major-highway-human-nervous-system-gets-complete-road-map">Science →</a></div>
     </article>
 
     <article class="item">
-      <h3>Largest scan yet of Alzheimer's spinal-fluid markers finds new genes</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A genome-wide meta-analysis of nearly 19,000 people identified 12 gene regions linked to levels of amyloid-beta and tau — the proteins doctors measure in spinal fluid to track Alzheimer's — eight of which had never been implicated before.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A genome-wide association study scans the entire genome of thousands of people for DNA variants that statistically track with a measurable trait, rather than starting from a guess about which gene should matter. <em>The newly found genes cluster in lipid-metabolism and cellular-cleanup pathways that operate independently of APOE</em>, the one gene that has dominated Alzheimer's genetics for 30 years.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Because these pathways sit outside APOE entirely, they represent fresh, largely untapped drug targets for a disease whose known genetic risk has mostly funneled through a single gene for three decades.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41467-026-71682-8">Nature Communications →</a></div>
+      <h3>Physicists demonstrate a vote no authority can see</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Two independent teams built and ran small-scale quantum voting systems — one with four voters and two candidates, the other scaling to eight voters and sixteen candidates — that let people cast and tally votes with no central election authority able to learn how any individual voted.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A standard electronic vote has to trust some server or authority to both count correctly and keep individual ballots secret — a single point where that trust can fail. <em>The quantum protocol instead distributes an entangled multi-party state, called a GHZ state, across all voters simultaneously, so the tally emerges from measurements on that shared state itself rather than from a central party who has to be trusted not to peek.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Classical cryptographic voting schemes grow more vulnerable as computing power increases; this is an early physical demonstration that election privacy can, in principle, be guaranteed by the laws of physics rather than by trusting an institution.</p></div>
+      <div class="src"><a href="https://journals.aps.org/prl/abstract/10.1103/scjl-5ygh">Physical Review Letters →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Iran lists six conditions for reopening the Strait of Hormuz</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Iran's Supreme National Security Council secretary, Mohammad Bagher Zolghadr, publicly laid out six explicit demands — from lifting the US naval blockade around Iran to releasing frozen Iranian assets and ending strikes on its regional allies — that Washington must meet before Tehran will fully reopen the strait, even as President Pezeshkian pushes to end the current standoff.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The Strait of Hormuz carries roughly a fifth of the world's oil trade through a chokepoint barely 33 kilometers wide at its narrowest. <em>Control of a geographic chokepoint is a lever whose power comes from geometry, not military size</em> — it lets a regional power impose costs on the global economy disproportionate to its own strength.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Naming specific, enumerated conditions rather than vague demands converts an open-ended conflict into a checklist that can actually be evaluated and met — often itself a precursor to de-escalation rather than an escalation.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/9/iran-issues-new-demands-as-pezeshkian-seeks-deal">Al Jazeera →</a> · <a href="https://www.france24.com/en/live-news/20260809-iran-issues-demands-for-reopening-of-hormuz">France 24 →</a> · <a href="https://www.npr.org/2026/08/09/nx-s1-5926387/yemens-houthis-claim-attack-on-aramco-oil-facility-in-saudi-arabia-and-other-middle-east-news">NPR →</a></div>
+      <h3>Netanyahu rejects Trump's 15-point Gaza peace plan</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Israeli Prime Minister Benjamin Netanyahu publicly rejected the US-brokered Board of Peace's 15-point plan for Gaza, telling his cabinet that Israeli forces will not withdraw until Hamas has been "genuinely disarmed" — even though Hamas had reportedly endorsed the plan and the Board's own chair called it "the only way forward."</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The plan's core design was sequencing — a phased process where Israeli withdrawal and Hamas disarmament happen in tandem, each step building trust for the next. <em>Netanyahu's rejection reopens the exact sequencing question mediators spent months trying to close: who has to move first, the side giving up territory or the side giving up weapons</em> — neither wants to go first without a guarantee the other follows.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A rejection this direct, from the plan's own supposed enforcement partner, puts Trump's signature Gaza diplomacy in open jeopardy just as it seemed to be converging.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/9/israel-rejects-trumps-15-point-plan-for-gaza">Al Jazeera →</a> · <a href="https://www.npr.org/2026/08/09/nx-s1-5926459/netanyahu-rejects-trump-gaza-peace-plan-israel-hamas">NPR →</a> · <a href="https://www.france24.com/en/middle-east/20260809-netanyahu-rejects-gaza-plan-in-new-break-from-trump">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Nagasaki marks 81 years as Japan's nuclear taboo softens</h3>
-      <div class="beat"><div class="lab">What it is</div><p>At Sunday's memorial ceremony, Nagasaki's mayor warned that nuclear deterrence is "extremely dangerous and fragile," while Prime Minister Sanae Takaichi again declined to reaffirm Japan's three postwar non-nuclear principles, amid growing doubt in Tokyo over how reliable the US security umbrella still is against China.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Japan's non-nuclear principles were never a law — they're a political convention adopted in 1967 that has held mainly because no sitting prime minister would openly break it. <em>Ambiguity from a leader, rather than an explicit reversal, is how such a taboo actually erodes</em> — the policy doesn't change on paper, but what a leader can say without political cost quietly expands.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Japan is the only nation to have suffered a nuclear attack; any real shift in its nuclear posture would be one of the most consequential nonproliferation developments in decades.</p></div>
-      <div class="src"><a href="https://www.france24.com/en/asia-pacific/20260809-japan-nuclear-debate-unnerves-proponents-of-pacifism">France 24 →</a></div>
+      <h3>Syria reclaims its Russian military bases from Moscow</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Syria's government said it reached a memorandum of understanding with Moscow to end Russia's military use of the Hmeimim air base and Tartus naval base — the two Mediterranean footholds Russia used to prop up Bashar al-Assad — converting both into "joint training and capacity-building centres" within three months.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Assad's government granted Russia basing rights as the price of military support during the civil war; once Assad fell, those bases became an open question about whether Syria's new government controlled its own territory or merely inherited its predecessor's foreign obligations. <em>Converting active foreign military bases into jointly-run training centres is a way to formally end one government's military dependency without a total, immediate rupture with the patron that kept the previous regime in power.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Russia has already drawn down from over 100 bases across Syria to just these two; losing military use of both would remove its last significant naval and air presence on the Mediterranean's eastern shore.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/9/syria-says-it-reached-deal-with-moscow-on-future-of-russian-bases">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260809-syria-russia-agree-to-end-military-use-of-key-mediterranean-bases">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Houthi drone strike hits Saudi Aramco refinery again</h3>
-      <div class="beat"><div class="lab">What it is</div><p>A fire broke out early Sunday at Aramco's Jazan refinery on Saudi Arabia's Red Sea coast. Houthi military spokesperson Yahya Saree claimed a precision drone strike on the facility, and the Saudi Energy Ministry confirmed firefighters extinguished the blaze with no injuries reported — the second attack on the same refinery since it was partly shut down after a July 27 strike.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The Houthis have spent this war substituting cheap, one-way attack drones for the naval and air power they don't have. <em>A low-cost weapon repeated often enough becomes a credible standing threat against a much larger state's infrastructure</em>, even when any single strike does limited damage.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A refinery processing 400,000 barrels a day being hit twice in two weeks keeps Gulf energy-security risk elevated even during lulls on the main Iran-US front.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan">Al Jazeera →</a> · <a href="https://www.npr.org/2026/08/09/nx-s1-5926387/yemens-houthis-claim-attack-on-aramco-oil-facility-in-saudi-arabia-and-other-middle-east-news">NPR →</a></div>
+      <h3>Typhoon Dolphin, this year's strongest, slams into China</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Typhoon Dolphin made landfall near Yuhuan in eastern Zhejiang province with sustained winds of 151 km/h, the strongest storm to hit China this year, after already injuring five people and cutting power to 14,000 buildings in Okinawa, Japan. Chinese authorities evacuated more than a million people and cancelled over 1,000 flights.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A typhoon's destructive potential comes from two separable things: the wind itself, and the flooding and landslides it triggers once it moves inland and slows down. <em>China's red alert and mass evacuation were triggered less by the landfall winds than by the storm's forecast track deep into Hubei and Henan</em>, where slow-moving remnants dump the heaviest rain far from the coast.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Evacuating over a million people on short notice is only possible because of accurate multi-day track forecasting — a capability that has visibly improved even as this year's storms have gotten stronger.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/10/tropical-storm-dolphin-batters-eastern-china-with-heavy-rain-strong-winds">Al Jazeera →</a> · <a href="https://www.france24.com/en/asia-pacific/20260809-flight-cancellations-evacuations-in-china-as-typhoon-dolphin-looms">France 24 →</a></div>
     </article>
   </section>
 

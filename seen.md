@@ -263,3 +263,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-09 | world | Iran issues six formal conditions to reopen Strait of Hormuz
 2026-08-09 | world | Nagasaki 81st anniversary, Takaichi avoids reaffirming non-nuclear principles
 2026-08-09 | world | Houthi drone strike hits Saudi Aramco Jizan refinery again, fire extinguished
+2026-08-10 | tech | Google DeepMind leadership reshuffle: Hassabis to Chair/Alphabet Chief Scientist, Kavukcuoglu to SVP, Jeff Dean departs
+2026-08-10 | tech | GitHub enterprises can now install any public third-party GitHub App at the enterprise level
+2026-08-10 | tech | Cloudflare launches Cloudflare OS, an agent-centric internal work platform with resource-tracking governance
+2026-08-10 | sci | Two independent papers disprove 1929 Pompeiu problem / Schiffer conjecture via computer-assisted counterexample
+2026-08-10 | sci | First complete fiber-level map of the human vagus nerve (Science)
+2026-08-10 | sci | Experimental quantum electronic voting demonstrated via GHZ states (PRL)
+2026-08-10 | world | Netanyahu rejects Trump's 15-point Gaza peace plan, break with Board of Peace
+2026-08-10 | world | Syria-Russia deal ends military use of Hmeimim airbase and Tartus naval base, converts to joint training centres
+2026-08-10 | world | Typhoon Dolphin, strongest of the year, makes landfall in Zhejiang China after hitting Okinawa, 1M+ evacuated
