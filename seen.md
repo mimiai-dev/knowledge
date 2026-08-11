@@ -272,3 +272,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-10 | world | Netanyahu rejects Trump's 15-point Gaza peace plan, break with Board of Peace
 2026-08-10 | world | Syria-Russia deal ends military use of Hmeimim airbase and Tartus naval base, converts to joint training centres
 2026-08-10 | world | Typhoon Dolphin, strongest of the year, makes landfall in Zhejiang China after hitting Okinawa, 1M+ evacuated
+2026-08-11 | tech | Meta releases Muse Glimmer, 30B open-weight agentic model distilled to run on single consumer GPU
+2026-08-11 | tech | GitHub ships Copilot SDK for Java, completing SDK parity across Node/Python/Go/.NET/Rust/Java
+2026-08-11 | tech | arXiv paper demonstrates prompt injection propagating across LLM-controlled multi-agent robot teams
+2026-08-11 | sci | DKIST finds Kelvin-Helmholtz instabilities ubiquitous across solar photosphere, driving plasma mixing (Nature)
+2026-08-11 | sci | Paleogenomics of 160 bison genomes overturns cattle-ancestry assumptions, dates fragmentation to 19th-century collapse (Science)
+2026-08-11 | sci | Goniopolar kagome metals (LuCo6Ge6) achieve zero-field room-temp transverse thermoelectricity (Nature Materials)
+2026-08-11 | world | Colombia M7.4 earthquake near San José del Palmar kills 132+, strongest this century, 2,700+ missing
+2026-08-11 | world | Turkey parliament passes 468-88 conditional PKK amnesty law, excludes Öcalan, frees ~3,500 detainees
+2026-08-11 | world | Russia's mixed-missile barrage (N. Korean ballistic + Zircon + guided bombs) kills 9+ in Zaporizhzhia/Kyiv
