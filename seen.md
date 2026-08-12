@@ -2,33 +2,6 @@
 
 Format: `YYYY-MM-DD | bucket | short-identifier`
 
-2026-07-10 | tech | Claude Cowork expands to mobile and web
-2026-07-10 | tech | OpenAI merges ChatGPT and Codex, launches ChatGPT Work
-2026-07-10 | tech | GitHub Code Quality exits preview as paid product
-2026-07-10 | sci | Quantinuum Helios 98-qubit all-to-all trapped-ion computer
-2026-07-10 | sci | ML-guided discovery of kagome superconductors YRu3B2/LuRu3B2
-2026-07-10 | sci | Harvard silicon chip parallel enzymatic DNA synthesis
-2026-07-10 | world | DR Congo Ebola outbreak tops 600 deaths, workers strike
-2026-07-10 | world | Andy Burnham on track to become UK prime minister
-2026-07-10 | world | UN $300M appeal for Venezuela earthquake survivors
-2026-07-11 | tech | Claude for Government beta (FedRAMP High)
-2026-07-11 | tech | GitHub Copilot adds Codex as agent provider (JetBrains)
-2026-07-11 | tech | Mistral Robostral Navigate single-camera robot navigation
-2026-07-11 | sci | TOI-791 b/c super-puff planets in 5:3 resonance
-2026-07-11 | sci | Dyson sphere candidates: background galaxy contamination diagnostics
-2026-07-11 | sci | Fibre-optic analogue Hawking radiation backreaction measured
-2026-07-11 | world | Iran power shift to IRGC post-Khamenei funeral
-2026-07-11 | world | Spain Almeria wildfire kills 12+, deadliest in 20 years
-2026-07-11 | world | US housing affordability bill becomes law without Trump signature
-2026-07-12 | tech | CodeQL 2.26.0 AI prompt-injection static detection
-2026-07-12 | tech | OpenAI retracts SWE-Bench Pro recommendation
-2026-07-12 | tech | Meta Muse Spark 1.1 + paid Meta Model API
-2026-07-12 | sci | Floquet rotational super-radiance (black-hole analog)
-2026-07-12 | sci | Caltech 74-femtosecond metasurface beam steering
-2026-07-12 | sci | GPNMB CAR-T dual tumor/myeloid glioblastoma targeting
-2026-07-12 | world | DOJ subpoenas NYT reporters over Air Force One story
-2026-07-12 | world | Israel controls ~70-80% of Gaza, 9mo into ceasefire
-2026-07-12 | world | UN finds Sudan genocide in el-Fasher, el-Obeid siege
 2026-07-13 | tech | OpenAI GPT-Live full-duplex real-time voice model
 2026-07-13 | tech | GitHub Copilot browser tools GA in VS Code
 2026-07-13 | tech | Video generation models as general-purpose vision learners (arxiv)
@@ -281,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-11 | world | Colombia M7.4 earthquake near San José del Palmar kills 132+, strongest this century, 2,700+ missing
 2026-08-11 | world | Turkey parliament passes 468-88 conditional PKK amnesty law, excludes Öcalan, frees ~3,500 detainees
 2026-08-11 | world | Russia's mixed-missile barrage (N. Korean ballistic + Zircon + guided bombs) kills 9+ in Zaporizhzhia/Kyiv
+2026-08-12 | tech | GitHub Copilot for JetBrains adds Copilot Memory and Ollama BYOK local models
+2026-08-12 | tech | OpenAI expands Daybreak Red, ships GPT-5.6-Cyber for vetted cyber defenders
+2026-08-12 | tech | REDAgentBench executable red-teaming benchmark for LLM agent systems (arXiv)
+2026-08-12 | sci | IXPE confirms vacuum birefringence in magnetar 1E 1547.0-5408 X-ray polarization (QED test)
+2026-08-12 | sci | Total solar eclipse (Arctic/Iceland/Spain) coronal heating research campaign
+2026-08-12 | sci | N332-GT5 germline-targeting HIV vaccine primes bnAb precursors in 8/8 rhesus macaques
+2026-08-12 | world | Bashar al-Assad, Maher al-Assad, Atef Najib sentenced to death in absentia by Syrian court
+2026-08-12 | world | US Navy disables cargo ship Vela Nova for breaking Iran port blockade
+2026-08-12 | world | Washington DC National Guard deployment marks one year, no crime-reduction effect found
