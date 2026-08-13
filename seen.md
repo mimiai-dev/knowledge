@@ -2,15 +2,6 @@
 
 Format: `YYYY-MM-DD | bucket | short-identifier`
 
-2026-07-13 | tech | OpenAI GPT-Live full-duplex real-time voice model
-2026-07-13 | tech | GitHub Copilot browser tools GA in VS Code
-2026-07-13 | tech | Video generation models as general-purpose vision learners (arxiv)
-2026-07-13 | sci | Google Willow chip self-recalibrates mid-computation
-2026-07-13 | sci | Euclid telescope finds 31 quasars, redshift 7.77 record
-2026-07-13 | sci | STEM-PD off-the-shelf dopamine neuron implant for Parkinson's
-2026-07-13 | world | Senator Lindsey Graham dies suddenly at 71
-2026-07-13 | world | Zelenskyy wartime cabinet reshuffle, replaces PM Svyrydenko
-2026-07-13 | world | Bangkok pub fire kills 27+
 2026-07-14 | tech | GitHub Models fully retired July 30
 2026-07-14 | tech | Gemini 3.5 Live Translate speech-to-speech
 2026-07-14 | tech | VERaiPHY AI verification framework for physics discovery
@@ -263,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-12 | world | Bashar al-Assad, Maher al-Assad, Atef Najib sentenced to death in absentia by Syrian court
 2026-08-12 | world | US Navy disables cargo ship Vela Nova for breaking Iran port blockade
 2026-08-12 | world | Washington DC National Guard deployment marks one year, no crime-reduction effect found
+2026-08-13 | tech | MAI-Code-1.1-Flash small coding model with vision ships in GitHub Copilot
+2026-08-13 | tech | Model Discovery Agent LLM-Bayesian framework designs its own science experiments (arxiv)
+2026-08-13 | tech | GitHub blog on AI-first open-source contributors and AGENTS.md convention
+2026-08-13 | sci | BESIII finds glueball evidence via X(2370) spin-parity determination
+2026-08-13 | sci | Glucose-responsive engineered probiotic controls diabetes in mice/monkeys (Nature)
+2026-08-13 | sci | 1342-1343 cascading medieval megafloods across Europe expose flood-planning gap (Nature)
+2026-08-13 | world | Zhu Rongji, architect of China's 1990s market reforms, dies at 97
+2026-08-13 | world | Houthi double-tap missile strike kills 6 on Red Sea cargo ship Tihamah
+2026-08-13 | world | Putin's first Kuril Islands visit as president draws Japan protest
