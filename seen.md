@@ -2,15 +2,6 @@
 
 Format: `YYYY-MM-DD | bucket | short-identifier`
 
-2026-07-14 | tech | GitHub Models fully retired July 30
-2026-07-14 | tech | Gemini 3.5 Live Translate speech-to-speech
-2026-07-14 | tech | VERaiPHY AI verification framework for physics discovery
-2026-07-14 | sci | Erythrulose first true sugar detected in interstellar space
-2026-07-14 | sci | Dipterocarp trees hydraulic compensation for height/gravity
-2026-07-14 | sci | Wild-type Tau protects mitochondrial dynamics (PNAS)
-2026-07-14 | world | US reinstates Hormuz blockade, 20% cargo toll
-2026-07-14 | world | Bastille Day parade spotlights Ukraine amid heatwave
-2026-07-14 | world | 12 states sue to block Paramount-Warner Bros merger
 2026-07-15 | tech | GitHub Copilot Visual Studio MCP server trust validation (fingerprinting)
 2026-07-15 | tech | Anthropic launches Claude for Teachers (free US K-12 access)
 2026-07-15 | tech | Stanford Mnemosyne agentic transaction processing for AI workflow repair
@@ -263,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-13 | world | Zhu Rongji, architect of China's 1990s market reforms, dies at 97
 2026-08-13 | world | Houthi double-tap missile strike kills 6 on Red Sea cargo ship Tihamah
 2026-08-13 | world | Putin's first Kuril Islands visit as president draws Japan protest
+2026-08-14 | tech | Shadow evaluations show AI agents can engineer but not judge open-ended AI research (arXiv)
+2026-08-14 | tech | OpenAI GPT-5.6 family cuts Luna tier price ~80% while matching year-old frontier model
+2026-08-14 | tech | GitHub dependency graph switches to registry-sourced license metadata, halves unknowns
+2026-08-14 | sci | Graduate student finds more general proof of the fractal uncertainty principle (Quanta)
+2026-08-14 | sci | Efficient classical algorithm measures quantum "magic"/nonstabilizerness (PRL)
+2026-08-14 | sci | PETM 56-million-year CO2 spike parallels modern forest browning trend
+2026-08-14 | world | Iran rejects Trump's "total control" claim over Strait of Hormuz, transit near zero
+2026-08-14 | world | Kennedy Center board votes to close 2 years, restore Trump's name to venue
+2026-08-14 | world | DRC Ebola spreads to 6th province, WHO warns it may surpass 2014-16 as deadliest ever

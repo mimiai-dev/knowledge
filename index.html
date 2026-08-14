@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Daily Knowledge Briefing — 2026-08-13</title>
+<title>Daily Knowledge Briefing — 2026-08-14</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- Every link here is an outbound source. One <base> beats target= on each
      anchor, and browsers imply rel=noopener for target=_blank. -->
@@ -100,36 +100,36 @@
 
 <div class="wrap">
   <header class="mast">
-    <div class="kick"><span class="sig">Nº 036</span><span>9 items · 3 per bucket · first principles</span></div>
+    <div class="kick"><span class="sig">Nº 037</span><span>9 items · 3 per bucket · first principles</span></div>
     <h1>Daily Knowledge Briefing</h1>
-    <div class="sub">Thursday, 13 August 2026</div>
+    <div class="sub">Friday, 14 August 2026</div>
   </header>
 
   <section class="sec" data-b="tech">
     <div class="sec-head"><h2>Edge Tech</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Microsoft's small coding model adds vision, cuts cost</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub Copilot began rolling out MAI-Code-1.1-Flash, Microsoft's latest small-tier coding model, replacing MAI-Code-1-Flash (deprecated, retiring September 10). The new version adds native vision support — reasoning over screenshots, diagrams and other images alongside code — plus gains in coding quality, instruction-following and tool use, at a 73% lower list price than its predecessor.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Small models exist as a distinct tier because most coding tasks — a quick refactor, a one-line fix, an autocomplete suggestion — don't need a frontier model's full reasoning depth, only speed and low cost. <em>Adding a new capability like vision while cutting price shows the gain came from more efficient training and serving, not from throwing more parameters at the problem</em>, which is the only way a "small" tier keeps its reason for existing as frontier models get cheaper too.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>Cheap, capable small models are what make AI coding assistance viable for high-frequency, low-stakes calls — autocomplete, quick lint fixes — where a large model's cost and latency would be wasted.</p></div>
-      <div class="src"><a href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">GitHub Blog →</a></div>
+      <h3>AI agents can engineer research, but not yet judge it</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Researchers introduced "shadow evaluations": an AI agent takes on the central, open-ended research question of a high-quality unpublished paper, and the paper's own original authors grade the agent's output. They ran two shadow evaluations on unpublished NeurIPS 2026 submissions, giving frontier agents — built on Claude Opus 4.8 in a modified OpenClaw scaffold — six days and thousands of dollars of compute each. Agents handled the engineering competently but struggled with the judgment calls at the core of the research.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Prior AI-research benchmarks either constrained agents to narrow, verifiable tasks that exclude open-ended work, or submitted AI-written papers to blind peer review, which is overstretched and stochastic. <em>Shadow evaluations solve this by handing the agent a real unresolved research question and letting the people who originally posed it judge whether the agent's answer holds up</em> — a sharper test than having the agent grade itself.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>This gives forecasts of "AI automating AI research" an actual data point instead of speculation, and it's a mixed one: research progress requires judgment under uncertainty, not just the ability to write and run code — and that's where today's agents still fall short.</p></div>
+      <div class="src"><a href="https://arxiv.org/abs/2607.27191">arXiv →</a></div>
     </article>
 
     <article class="item">
-      <h3>An AI agent that designs its own experiments</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers built the Model Discovery Agent (MDA), pairing a large language model — used to propose candidate causal structures — with Bayesian tools: sequential Monte Carlo to track which structures remain plausible, simulation-based inference for intractable likelihoods, and value-of-information scoring to pick the next experiment. Tested on physics, chemistry and biology benchmarks, MDA recovered underlying mechanistic models using far fewer experiments than LLM-only baselines.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A system's true mechanism is often unidentifiable from passively observed data alone, since many different causal structures can produce the same observations — only deliberately perturbing the system breaks that ambiguity. <em>Because real experiments are expensive, the LLM's job isn't to guess the answer but to propose which experiment would be most informative to run next</em>, letting the discovery itself be validated by the Bayesian machinery rather than merely asserted by the model.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>This targets a real weakness of LLMs used for science — fluent guesses ungrounded in evidence — by making the model one component in a pipeline where every claim about the mechanism must survive contact with real or simulated data.</p></div>
-      <div class="src"><a href="https://arxiv.org/abs/2608.09696">arXiv →</a></div>
+      <h3>OpenAI cuts prices sharply with GPT-5.6, not scores</h3>
+      <div class="beat"><div class="lab">What it is</div><p>OpenAI released the GPT-5.6 family — Sol (flagship), Terra (balanced), and Luna (cheapest) — with Luna priced at $0.20 per million input tokens and $1.20 per million output tokens, roughly 80% below its predecessor tier. On Agents' Last Exam, Luna matches a model that was frontier-class a year ago at about 6 cents on the dollar and nearly nine times the speed, while Sol posts state-of-the-art results using fewer tokens than rival models.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A model's cost per completed task depends on three separate levers — price per token, tokens needed to reach an answer, and how fast it runs. <em>OpenAI's gains came from optimizing all three at once: the model, the inference stack, and the agent harness shared by Codex and ChatGPT</em>, rather than a discount subsidized elsewhere.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>When a "cheaper" tier matches yesterday's frontier at a fraction of the cost, it pushes down what high-volume agentic workloads cost across the whole market, not just for OpenAI's own products.</p></div>
+      <div class="src"><a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/">OpenAI →</a></div>
     </article>
 
     <article class="item">
-      <h3>Open-source projects face a flood of AI-written PRs</h3>
-      <div class="beat"><div class="lab">What it is</div><p>GitHub's blog profiled how open-source maintainers are handling pull request queues increasingly filled with AI-agent-authored code — one project, AutoGPT, had roughly 150 open pull requests, a large share written by agents including Copilot, OpenClaw and its own internal tooling — and the conventions projects are adopting in response, including AGENTS.md, a machine-readable instructions file for AI coding agents, and settings that restrict who can open a pull request at all.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A maintainer's real bottleneck was never writing code, it was reviewing and trusting it, and that bottleneck doesn't shrink just because the code arrives faster. <em>AGENTS.md works the same way robots.txt works for web crawlers — a plain-text convention that tells autonomous software what's expected of it before it acts</em>, rather than relying on every agent's operator to already know a project's norms.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A January 2026 study cited in the piece found agent-generated code introduces more redundancy and technical debt per change than human-written code, so the norms maintainers build now will shape whether AI contribution raises or erodes open-source code quality at scale.</p></div>
-      <div class="src"><a href="https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project/">GitHub Blog →</a></div>
+      <h3>GitHub swaps file-scanning for registry license metadata</h3>
+      <div class="beat"><div class="lab">What it is</div><p>GitHub changed how it determines a package's open-source license for its dependency graph, SBOMs, and license-compliance tooling. Instead of relying primarily on ClearlyDefined's file-by-file scanning, it now pulls license metadata directly from package registries like npm and PyPI, falling back to ClearlyDefined only when the registry has nothing. The change cut the share of packages with no known license across GitHub's 170-million-package dependency graph from 45% to 24%.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A license can be determined two ways — read a package's files and infer the license from their content, or trust the metadata the maintainer explicitly declared at publish time. <em>File-scanning is thorough but noisy; declared registry metadata is narrower in coverage but is the license the maintainer actually asserted</em>, so it wins whenever present.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>License-compliance tooling is only as trustworthy as the data behind it, and halving the "unknown license" rate across the world's largest dependency graph materially improves the accuracy of compliance checks organizations already rely on.</p></div>
+      <div class="src"><a href="https://github.blog/changelog/2026-08-13-license-data-quality-improvements/">GitHub Blog →</a></div>
     </article>
   </section>
 
@@ -137,27 +137,27 @@
     <div class="sec-head"><h2>Science</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Physicists find the first particle made of pure force</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Physicists at the BESIII experiment in Beijing presented strong evidence that X(2370), first spotted in 2011, is a glueball — a composite particle built entirely from gluons, with no quarks of its own. Using a sample of 10 billion J/ψ decays, the collaboration determined X(2370)'s spin-parity to be 0⁻⁺, matching predictions for the lightest glueball, with a statistical significance of 7.6 sigma.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Ordinary particles like protons are made of quarks held together by gluons, but quantum chromodynamics also predicts gluons can bind to each other directly, with no quarks involved, because unlike the photon, the gluon itself carries the "color charge" it transmits. <em>A glueball would be direct evidence that the strong force's own carrier particle can interact with itself and build matter on its own</em> — something no other known force does.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The prediction is nearly as old as QCD itself; confirming it closes a decades-long search and validates a feature of the strong force with no analog in electromagnetism or gravity.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/d41586-026-02498-1">Nature →</a></div>
+      <h3>A more general proof of the fractal uncertainty principle</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A graduate student found a more general proof of the "fractal uncertainty principle," a result physicist Jean Bourgain and mathematician Semyon Dyatlov established for one-dimensional fractal sets in 2016. The principle says no wave function can be tightly localized in both position and frequency near a fractal set.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The Heisenberg uncertainty principle already says a particle can't have both a precise position and momentum; the fractal version pushes that idea onto the geometry of the region itself. <em>Because a fractal's self-similar structure repeats at every scale it's examined, extending the result required a genuinely new proof technique, not just a stronger calculation.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The fractal uncertainty principle underpins results in quantum chaos, including bounds on how "spread out" a wavefunction must be on chaotically curved surfaces, so a more general proof extends those consequences to a wider class of geometric settings.</p></div>
+      <div class="src"><a href="https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/">Quanta Magazine →</a></div>
     </article>
 
     <article class="item">
-      <h3>Engineered gut bacteria sense sugar, treat diabetes</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers engineered a probiotic bacterium with a synthetic genetic circuit that senses rising blood glucose and, in response, secretes a therapeutic factor directly in the gut. The engineered strain transiently colonizes the gut rather than remaining permanently, and demonstrated glycemic control in both mice and monkeys.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Most drug delivery floods the body with a fixed dose on a fixed schedule, whether or not the body needs it at that moment; a sense-and-respond system instead only acts when its sensor detects the triggering condition. <em>Building the sensor and the drug factory into the same living cell lets the therapy respond continuously and locally, at the moment glucose actually rises</em>, without a wearable sensor or patient-timed dosing.</p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>A transient, self-limiting oral probiotic that only manufactures its payload when needed could reduce the dosing burden of chronic disease management while avoiding the risks of a permanently colonizing engineered organism.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10909-6">Nature →</a></div>
+      <h3>A fast new way to measure quantum "magic"</h3>
+      <div class="beat"><div class="lab">What it is</div><p>Physicists published an efficient classical method for measuring "quantum magic," formally nonstabilizerness — a property quantifying how far a quantum state departs from the stabilizer states classical computers can already simulate efficiently. The method cuts the cost of sampling from exponential to linear in system size, with sample counts that didn't grow as systems got larger in their tests.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>States built purely from "stabilizer" (Clifford) operations can be tracked efficiently on an ordinary computer, so a quantum computer's real speedup has to come from the resource stabilizer states lack. <em>Magic is that resource: measuring how much of it a state contains tells you how much of its computational power a classical computer genuinely cannot fake</em>, rather than assuming every quantum circuit is equally hard.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>An efficient way to quantify magic gives researchers a practical diagnostic for where a quantum algorithm's real advantage comes from — useful both for checking claimed quantum speedups and for designing more efficient circuits.</p></div>
+      <div class="src"><a href="https://journals.aps.org/prl/abstract/10.1103/v3f2-ldr1">Physical Review Letters →</a></div>
     </article>
 
     <article class="item">
-      <h3>700-year-old floods expose a gap in flood planning</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Researchers reconstructed a sequence of 16 major floods across Europe between late 1341 and 1343, four of which had "return periods" of 500 to 1,000 years. The single year 1342 saw more extreme floods than any other year in the past 700 years, with 1343 ranking among the top ten.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A flood's "return period" describes long-term average frequency, not a guarantee of spacing between events — a 500-year flood can, in principle, be followed by another the very next year, because each year's odds are independent of what came before. <em>Modern flood defenses are typically sized for a single worst-case event, not a rapid cluster of several, so a medieval sequence like 1342–1343 is exactly the scenario current infrastructure isn't built to survive twice in a row.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>As climate change is expected to make extreme-precipitation events more frequent, a documented case of multiple back-to-back "impossible" floods argues for redesigning flood management around clustered extremes, not just single worst-case events.</p></div>
-      <div class="src"><a href="https://www.nature.com/articles/s41586-026-10888-8">Nature →</a></div>
+      <h3>A 56-million-year-old CO2 spike previews forest loss today</h3>
+      <div class="beat"><div class="lab">What it is</div><p>A new study reported by Nature reconstructed how forests responded to the Paleocene-Eocene Thermal Maximum, a sudden global-warming event roughly 56 million years ago driven by a massive release of carbon into the atmosphere, finding it triggered a widespread decline in forest cover. The authors point to a modern parallel: satellite data show a "browning trend" across the planet's forests since the turn of the century.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>Vegetation can normally track a changing climate by shifting range or adapting over generations — but both responses take time. <em>The PETM shows what happens when warming outpaces the rate forests can migrate or evolve to keep up: productivity collapses rather than merely relocating</em>, because adaptation has a speed limit a fast-enough climate shock can exceed.</p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>Because the PETM is one of the best-preserved ancient analogs for a fast, large carbon release, its forest-collapse signature gives researchers a real historical benchmark for how much warming a forest can absorb before productivity — not just species range — breaks down.</p></div>
+      <div class="src"><a href="https://www.nature.com/articles/d41586-026-02544-y">Nature →</a></div>
     </article>
   </section>
 
@@ -165,27 +165,27 @@
     <div class="sec-head"><h2>World</h2><span class="rule"></span></div>
 
     <article class="item">
-      <h3>Architect of China's market reforms dies at 97</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Zhu Rongji, China's premier from 1998 to 2003, has died at 97. A trained engineer known for blunt technocratic style, he drove sweeping 1990s economic reforms — including privatizing unprofitable state-owned enterprises, a program that eliminated an estimated 30 million jobs over five years — that pushed China toward a more market-oriented financial system while the Communist Party retained control over the economy.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>Restructuring a state-planned economy toward market pricing and private ownership routinely produces fast aggregate growth, because resources move to more productive uses, and sharply rising inequality, because the workers displaced from inefficient state enterprises bear the initial cost while the gains concentrate elsewhere. <em>Zhu's reforms are remembered as the clearest domestic example of that tradeoff — the same policies credited with lifting millions out of poverty are also blamed for the inequality that followed.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>His death comes as China's leadership has moved away from his market-liberalizing playbook under Xi Jinping, making his passing a moment for reassessing a reform era whose legacy remains contested inside China itself.</p></div>
-      <div class="src"><a href="https://www.npr.org/2026/08/12/1196705508/zhu-rongji-china-former-premier-dead">NPR →</a> · <a href="https://www.france24.com/en/live-news/20260812-zhu-rongji-trailblazing-ex-premier-who-transformed-china-s-economy">France 24 →</a></div>
+      <h3>Iran rejects Trump's claim of "total control" over Hormuz</h3>
+      <div class="beat"><div class="lab">What it is</div><p>President Trump said the US has "total control" of the Strait of Hormuz, calling the US naval blockade of Iranian ports a "wall of steel." Iran's joint military command and a senior paramilitary commander rejected the claim, saying no vessel can transit without Tehran's permission and calling US claims of normal passage "lies and falsehoods." Shipping data cited in the dispute shows only about eight ships transited the strait on Tuesday, versus 130–140 per day before the war.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>In an active blockade, "control" of a strait is asserted rather than demonstrated by either side — the US claims it through naval presence, Iran through its ability to deter transit. <em>The low actual shipping volume, not either side's public statement, is the real evidence of who is currently constraining the strait.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The dispute over who controls Hormuz is really a dispute over how the war ends: US claims of "total control" support keeping the blockade in place indefinitely, while Iran's rejection signals it won't concede the point that would legitimize the blockade's continuation.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/13/iran-says-strait-of-hormuz-under-its-control-rejects-trump-claims">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260813-iran-says-trump-lied-about-us-control-over-strait-of-hormuz">France 24 →</a></div>
     </article>
 
     <article class="item">
-      <h3>Houthi missile strike kills six aboard cargo ship</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Yemen's internationally recognized government said Houthi forces fired ballistic missiles at the Egyptian-owned cargo vessel Tihamah in the Bab al-Mandeb strait in a "double-tap" strike — a first missile that started a fire, followed by a second fired as rescuers evacuated casualties — killing at least six crew members and wounding ten.</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>A double-tap strike, a second munition aimed at the same target after first responders arrive, is a tactic normally meant to maximize casualties among rescuers rather than simply disable a target. <em>These are the first shipping deaths attributed to the Houthis since the US and Israel opened their war on Iran in February, marking a return to lethal Red Sea shipping attacks after a period of relative restraint.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The strike threatens to reopen the Bab al-Mandeb corridor as an active war-risk zone for commercial shipping just as the region already absorbs disruption from the Strait of Hormuz standoff, raising insurance costs and rerouting pressure on a second major chokepoint simultaneously.</p></div>
-      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/12/six-killed-in-houthi-attack-on-bab-al-mandeb-ship-yemens-government-says">Al Jazeera →</a> · <a href="https://www.france24.com/en/middle-east/20260811-three-killed-in-suspected-houthi-attack-on-egyptian-ship-in-the-red-sea">France 24 →</a></div>
+      <h3>Kennedy Center board votes to close, restore Trump's name</h3>
+      <div class="beat"><div class="lab">What it is</div><p>The Kennedy Center's board voted a second time to close the Washington, D.C. arts complex's main building for a two-year, $250 million renovation, reopening in summer 2028, while keeping the smaller REACH annex open. The board also voted to rename the center "Restored and Renovated by President Donald J. Trump," months after a federal judge ruled in May that adding Trump's name to the center was unlawful.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>A board can repeat a vote a court has already ruled unlawful because a judicial ruling against one specific version of an action doesn't automatically bar every future attempt at a similar action. <em>The board is testing whether a second vote, or different surrounding circumstances, produces a legally distinct outcome from the one a judge already struck down.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>The closure removes a major US arts venue from public use for two years, and the renaming vote sets up a fresh legal fight over whether a federally chartered cultural institution can be named for a sitting president.</p></div>
+      <div class="src"><a href="https://www.npr.org/2026/08/13/nx-s1-5930349/kennedy-center-shut-down-board-vote-trump">NPR →</a> · <a href="https://www.aljazeera.com/news/2026/8/13/kennedy-center-votes-to-restore-trumps-name-to-venue-close-for-two-years">Al Jazeera →</a></div>
     </article>
 
     <article class="item">
-      <h3>Putin's first Kuril Islands visit draws Japan's protest</h3>
-      <div class="beat"><div class="lab">What it is</div><p>Vladimir Putin visited Russia's Kuril Islands for the first time as president, touring a fish-processing plant, hospital and school on the southernmost island, Iturup. Japan's foreign minister summoned Russia's ambassador to lodge a "strong protest," calling the islands "an inherent part of Japan's territory."</p></div>
-      <div class="beat"><div class="lab">The principle</div><p>The islands, seized by the Soviet Union from Japan at the close of World War II in 1945, remain formally disputed because the two countries never signed a peace treaty ending that war, leaving sovereignty legally unresolved eight decades later. <em>A sitting head of state physically visiting contested territory is itself a diplomatic act — Putin's presence, not just Russian policy statements, asserts control in a way words alone don't.</em></p></div>
-      <div class="beat"><div class="lab">Why it matters</div><p>The visit lands amid broader Russia-Japan estrangement over the Ukraine war; a president visiting for the first time signals Moscow sees little remaining diplomatic cost to asserting the islands are settled, non-negotiable Russian territory.</p></div>
-      <div class="src"><a href="https://www.france24.com/en/asia-pacific/20260813-putin-visits-kuril-islands-claimed-by-japan">France 24 →</a> · <a href="https://www.aljazeera.com/news/2026/8/13/japan-protests-as-russias-putin-visits-disputed-kuril-islands">Al Jazeera →</a></div>
+      <h3>DRC Ebola outbreak now the fastest-growing on record</h3>
+      <div class="beat"><div class="lab">What it is</div><p>The Ebola outbreak in the Democratic Republic of Congo has spread to a sixth province and reached 4,381 confirmed cases and 2,011 deaths. WHO Director-General Tedros Adhanom Ghebreyesus said the outbreak, driven by the rare Bundibugyo strain for which there is no approved vaccine or treatment, is expanding faster than any previous Ebola epidemic and, at its current pace, is on track to surpass the 2014–2016 West African outbreak that killed more than 11,000 people as the deadliest on record.</p></div>
+      <div class="beat"><div class="lab">The principle</div><p>The 2014–2016 outbreak took about eight months to reach 1,000 deaths; this one reached that mark in under ten weeks, then doubled again in about three weeks. <em>An outbreak's "record" is set by the rate cases accumulate, not just the eventual total, so a fast-doubling outbreak can be more dangerous in the moment than a slower-moving larger one.</em></p></div>
+      <div class="beat"><div class="lab">Why it matters</div><p>A Bundibugyo-strain outbreak spreading this fast, with no approved vaccine or treatment and health workers on strike over unpaid wages, is a live test of whether global outbreak response can outpace a virus once containment falls behind.</p></div>
+      <div class="src"><a href="https://www.aljazeera.com/news/2026/8/13/dr-congo-ebola-outbreak-spreads-to-a-sixth-province">Al Jazeera →</a> · <a href="https://www.france24.com/en/africa/20260811-thousands-die-as-dr-congo-faces-fastest-growing-ebola-outbreak-on-record">France 24 →</a></div>
     </article>
   </section>
 
