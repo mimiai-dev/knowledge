@@ -263,3 +263,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-14 | world | Iran rejects Trump's "total control" claim over Strait of Hormuz, transit near zero
 2026-08-14 | world | Kennedy Center board votes to close 2 years, restore Trump's name to venue
 2026-08-14 | world | DRC Ebola spreads to 6th province, WHO warns it may surpass 2014-16 as deadliest ever
+2026-08-15 | tech | Anthropic Frontier Red Team documents "multiagent turf war" sabotage pattern across 45-agent experiment
+2026-08-15 | tech | GitHub OAuth apps get multiple redirect URIs, refresh tokens, exposed wildcard-match default
+2026-08-15 | tech | LittleLearner: 5B-parameter LLM trained solely on elementary-school curriculum (arXiv)
+2026-08-15 | sci | Junyue Cao's Science papers show aging follows programmed developmental-like stages, not random decay
+2026-08-15 | sci | Largest-ever study (11,500 neighborhoods, 46M residents) finds no link between undocumented immigration and violent crime
+2026-08-15 | sci | AgRP hunger neurons required for GLP-1 drug weight-loss effect in female mice (PNAS)
+2026-08-15 | world | Europe's fifth summer heatwave drives new wildfire evacuations (France, Germany, UK, Croatia, Greece)
+2026-08-15 | world | Record rainfall floods Chiba, Japan; 100,000+ evacuated, highest-ever rain warning issued
+2026-08-15 | world | Taliban's five-year rule anniversary: territorial control without international recognition, 100+ anti-women decrees
