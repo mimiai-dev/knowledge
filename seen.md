@@ -2,24 +2,6 @@
 
 Format: `YYYY-MM-DD | bucket | short-identifier`
 
-2026-07-15 | tech | GitHub Copilot Visual Studio MCP server trust validation (fingerprinting)
-2026-07-15 | tech | Anthropic launches Claude for Teachers (free US K-12 access)
-2026-07-15 | tech | Stanford Mnemosyne agentic transaction processing for AI workflow repair
-2026-07-15 | sci | Grid-state (GKP) bosonic qubit sub-10^-3 SPAM error record
-2026-07-15 | sci | Simple non-elastic fluid found to fracture like a solid
-2026-07-15 | sci | AT2 lung stem cells reprogram fibroblast niche (PNAS)
-2026-07-15 | world | US strikes Iran's coast for 7 hours, Iran hits Bahrain/Kuwait/Jordan
-2026-07-15 | world | DRC Ebola outbreak outruns contact tracing, 700+ deaths, 5 provinces
-2026-07-15 | world | Fontainebleau forest fire near Paris, south-France water bombers deployed
-2026-07-16 | tech | Thinking Machines releases Inkling, 975B MoE open-weights model
-2026-07-16 | tech | GitHub Copilot CLI plan-mode runtime-layer file-edit lockdown
-2026-07-16 | tech | OpenAI Codex Micro keyboard with physical reasoning-effort dial
-2026-07-16 | sci | PNAS physically intelligent capsule robots (hydrogel logic, no chips)
-2026-07-16 | sci | Deep-sea fiber-optic cables repurposed as seismic sensor network
-2026-07-16 | sci | Quanta thermodynamic computers harness noise as computation
-2026-07-16 | world | Zelenskyy fires Defense Minister Fedorov, Kyiv protests erupt
-2026-07-16 | world | Lebanon-Israel Rome talks agree on pilot-zone withdrawal structure
-2026-07-16 | world | US disables Iran tanker near Kharg Island, Iran threatens Bab el-Mandeb
 2026-07-17 | tech | Moonshot Kimi K3, 2.8T-parameter open-weight MoE model
 2026-07-17 | tech | GitHub Projects advanced search (boolean AND/OR) GA
 2026-07-17 | tech | GitHub secret scanning adds APIclub/Resend, VolcEngine push protection
@@ -272,3 +254,12 @@ Format: `YYYY-MM-DD | bucket | short-identifier`
 2026-08-15 | world | Europe's fifth summer heatwave drives new wildfire evacuations (France, Germany, UK, Croatia, Greece)
 2026-08-15 | world | Record rainfall floods Chiba, Japan; 100,000+ evacuated, highest-ever rain warning issued
 2026-08-15 | world | Taliban's five-year rule anniversary: territorial control without international recognition, 100+ anti-women decrees
+2026-08-16 | tech | Information Abundance Paradox: long-context pretraining hurts parametric knowledge past optimum (arXiv)
+2026-08-16 | tech | Validation-centric AI agent GPU-ports 250K-line legacy weather code, 5.1x speedup (arXiv)
+2026-08-16 | tech | Faraday: 27B RL-trained AI Scientist agent beats larger models at replicating published results (arXiv)
+2026-08-16 | sci | Universal ~0.6 power-law scaling links river delta channel length to drainage area (Quanta)
+2026-08-16 | sci | Science investigation finds altered data/images behind celebrated Alzheimer's-protective gene mutations
+2026-08-16 | sci | 1860 county-level slavery share predicts 20x larger Black-white mortality gap in 2010-2020
+2026-08-16 | world | Magnitude 7.7 earthquake hits Flores Island Indonesia, 51+ dead, 5,000 evacuated
+2026-08-16 | world | Ukraine's 600-drone strike on Moscow draws Russian ballistic missile reprisal on Kyiv/Kryvyi Rih
+2026-08-16 | world | Indiana declares flood emergency, 5+ dead, Midwest flood watches Iowa to West Virginia
